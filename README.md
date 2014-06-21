@@ -11,7 +11,9 @@ Bookmark? Evernote?
 
 However you may share and save it will most likely get lost, and never found again.
 
-Basket will provide a one-stop shop for easily sharing and saving your favorite links. 
+Through a combination of collaborative folders, your facebook friend list, and a chrome extension, Basket will provide a one-stop shop for easily sharing and saving your favorite links.
+
+Saving in Pocket + Sharing in Spotify = Basket
 
 Trello:
 https://trello.com/b/FaOlJdKQ/basket
