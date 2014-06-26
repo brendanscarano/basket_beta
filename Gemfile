@@ -46,6 +46,8 @@ group :test do
   gem 'database_cleaner'
 end
 
+gem 'omniauth'
+gem 'omniauth-facebook', '~> 1.4.1'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
