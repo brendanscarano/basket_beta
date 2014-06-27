@@ -15,7 +15,7 @@
       <a class="brand" href="#">basket</a>
       <ul class="nav">
         <% if current_user %>
-          <li><%= current_user.image %></li>
+          <li class="span1 offset8"><img alt="FB_Pic" src=<%= current_user.image %>></li>
           <li><strong><%= current_user.name %></strong></li>
           <li><%= link_to "Sign out", signout_path, id: "sign_out" %></li>
         <% else %>
@@ -32,7 +32,7 @@
         <%= yield %>
       </div>
       <div class="span2">
-        <h1>Facebook Friends</h1>
+        <h1>Friends</h1>
       </div>
     </div>
   </div>  
