@@ -1,4 +1,4 @@
-class User < ActiceRecord::Base
+class User < ActiveRecord::Base
 
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
