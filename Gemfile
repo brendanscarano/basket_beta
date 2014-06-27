@@ -30,6 +30,10 @@ gem 'omniauth'
 gem 'omniauth-facebook', '~> 1.4.1'
 gem 'figaro'
 
+gem "therubyracer"
+gem "less-rails"
+gem 'twitter-bootstrap-rails'
+
 group :development, :test do
   gem 'pry-rails'
   gem 'pry-remote'
