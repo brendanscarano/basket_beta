@@ -2,22 +2,41 @@
 <html>
 <head>
   <title>Basket</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
+  <link href="//fonts.googleapis.com/css?family=Lato:100italic,100,300italic,300,400italic,400,700italic,700,900italic,900" rel="stylesheet" type="text/css">
 </head>
+
 <body>
 
-<div>
-  <% if current_user %>
-    Signed in as <strong><%= current_user.name %></strong>!
-    <%= link_to "Sign out", signout_path, id: "sign_out" %>
-  <% else %>
-    <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
-  <% end %>
-</div>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <a class="brand" href="#">basket</a>
+      <ul class="nav">
+        <% if current_user %>
+          <li><%= current_user.image %></li>
+          <li><strong><%= current_user.name %></strong></li>
+          <li><%= link_to "Sign out", signout_path, id: "sign_out" %></li>
+        <% else %>
+          <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
 
-<%= yield %>
+  <div class="container">
+    <div class="row">
+      <div class="span2"><h1>Baskets</h1></div>
+      <div class="span8">
+        <%= yield %>
+      </div>
+      <div class="span2">
+        <h1>Facebook Friends</h1>
+      </div>
+    </div>
+  </div>  
+
 
 </body>
 </html>
