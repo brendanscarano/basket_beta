@@ -15,11 +15,5 @@ Through a combination of collaborative folders, your facebook friend list, and a
 
 Saving in Pocket + Sharing in Spotify = Basket
 
-Git Workflow:
-Branches named:
-- feature
-- chore
-- bug_fix
-
 Trello:
 https://trello.com/b/FaOlJdKQ/basket
