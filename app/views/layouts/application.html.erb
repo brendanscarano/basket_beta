@@ -27,7 +27,19 @@
 
   <div class="container">
     <div class="row">
-      <div class="span2"><h1>Baskets</h1></div>
+      <div class="span2">
+        <h1>Baskets</h1>
+        <br>
+          <%= link_to "New Basket", new_folder_path %>
+          <br><br>
+          
+          <% @folders = UserFolder.where(user_id: current_user.id) %>
+
+          <% @folders.each do |folder| %>
+            <%= link_to "#{Folder.find(folder.folder_id).name}", folder_path(Folder.find(folder.folder_id)) %><br />
+          <% end %>
+
+      </div>
       <div class="span8">
         <%= yield %>
       </div>
