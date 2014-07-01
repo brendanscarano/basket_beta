@@ -6477,3 +6477,896 @@ Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-30 19:36:25 -
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-30 19:36:25 -0400
+
+
+Started POST "/folders" for 127.0.0.1 at 2014-06-30 19:51:53 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FoldersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2wVvqn4M6ysguTDd89ieseXSVO3MKnh2QD3Nx6Z4wvo=", "folder"=>{"name"=>"Another test basket"}, "commit"=>"Create Folder"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "folders" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Another test basket"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Completed 500 Internal Server Error in 40ms
+
+ArgumentError (Unknown key: :depedent. Valid keys are: :class_name, :class, :foreign_key, :validate, :autosave, :remote, :dependent, :primary_key, :inverse_of, :foreign_type, :polymorphic, :touch, :counter_cache):
+  app/models/user_folder.rb:4:in `<class:UserFolder>'
+  app/models/user_folder.rb:1:in `<top (required)>'
+  app/controllers/folders_controller.rb:18:in `create'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.9ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2014-06-30 19:52:21 -0400
+Processing by FoldersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2wVvqn4M6ysguTDd89ieseXSVO3MKnh2QD3Nx6Z4wvo=", "folder"=>{"name"=>"Another test basket"}, "commit"=>"Create Folder"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "folders" ("name") VALUES ($1) RETURNING "id"  [["name", "Another test basket"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 22]]
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "user_folders" ("folder_id", "user_id") VALUES ($1, $2) RETURNING "id"  [["folder_id", 22], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  Rendered folders/create.html.erb within layouts/application (0.4ms)
+  [1m[35mUserFolder Load (0.5ms)[0m  SELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 22]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 22]]
+Completed 200 OK in 269ms (Views: 204.1ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:22 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-06-30 19:52:22 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-30 19:52:22 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:22 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:22 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:22 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:22 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:22 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:22 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:22 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:22 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:22 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:22 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:22 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:22 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:22 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:22 -0400
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:22 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:22 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:22 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:22 -0400
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-06-30 19:52:26 -0400
+Processing by FoldersController#new as HTML
+  Rendered folders/new.html.erb within layouts/application (21.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserFolder Load (0.3ms)[0m  SELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 22]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 22]]
+Completed 200 OK in 41ms (Views: 38.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:26 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-30 19:52:26 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:26 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:26 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-06-30 19:52:26 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:26 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:26 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:26 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:26 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:26 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:26 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:26 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:26 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:26 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:26 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:26 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:26 -0400
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:26 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:26 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:26 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:26 -0400
+
+
+Started POST "/folders" for 127.0.0.1 at 2014-06-30 19:52:33 -0400
+Processing by FoldersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2wVvqn4M6ysguTDd89ieseXSVO3MKnh2QD3Nx6Z4wvo=", "folder"=>{"name"=>"JavaScript"}, "commit"=>"Create Folder"}
+  [1m[36m (2.9ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "folders" ("name") VALUES ($1) RETURNING "id"  [["name", "JavaScript"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 23]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_folders" ("folder_id", "user_id") VALUES ($1, $2) RETURNING "id"  [["folder_id", 23], ["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  Rendered folders/create.html.erb within layouts/application (0.1ms)
+  [1m[35mUserFolder Load (0.9ms)[0m  SELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1
+  [1m[36mFolder Load (0.8ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 22]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 22]]
+  [1m[36mFolder Load (0.5ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 23]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 23]]
+Completed 200 OK in 45ms (Views: 27.6ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-30 19:52:33 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:33 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-06-30 19:52:33 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:33 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:33 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:33 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:33 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:33 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:33 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:33 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:33 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:33 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:33 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:33 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:33 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:33 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:33 -0400
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:33 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:33 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:33 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:33 -0400
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-06-30 19:52:35 -0400
+Processing by FoldersController#new as HTML
+  Rendered folders/new.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserFolder Load (0.4ms)[0m  SELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1
+  [1m[36mFolder Load (0.2ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 22]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 22]]
+  [1m[36mFolder Load (0.2ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 23]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 23]]
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:35 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-30 19:52:35 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-06-30 19:52:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:35 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:35 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:35 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:35 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:35 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:35 -0400
+
+
+Started POST "/folders" for 127.0.0.1 at 2014-06-30 19:52:39 -0400
+Processing by FoldersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2wVvqn4M6ysguTDd89ieseXSVO3MKnh2QD3Nx6Z4wvo=", "folder"=>{"name"=>"Video Games"}, "commit"=>"Create Folder"}
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "folders" ("name") VALUES ($1) RETURNING "id"  [["name", "Video Games"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (2.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 24]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "user_folders" ("folder_id", "user_id") VALUES ($1, $2) RETURNING "id"  [["folder_id", 24], ["user_id", 1]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  Rendered folders/create.html.erb within layouts/application (0.0ms)
+  [1m[35mUserFolder Load (0.8ms)[0m  SELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 22]]
+  [1m[35mCACHE (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 22]]
+  [1m[36mFolder Load (0.7ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 23]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 23]]
+  [1m[36mFolder Load (0.8ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 24]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 24]]
+Completed 200 OK in 56ms (Views: 29.9ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-30 19:52:40 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:40 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:40 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:40 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:40 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:40 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:40 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:40 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:40 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:40 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:40 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:40 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:40 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:40 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-06-30 19:52:40 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:40 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:40 -0400
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:40 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:40 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:40 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:40 -0400
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-06-30 19:52:43 -0400
+Processing by FoldersController#new as HTML
+  Rendered folders/new.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserFolder Load (0.3ms)[0m  SELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1
+  [1m[36mFolder Load (0.2ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 22]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 22]]
+  [1m[36mFolder Load (0.2ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 23]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 23]]
+  [1m[36mFolder Load (0.1ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 24]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 24]]
+Completed 200 OK in 21ms (Views: 18.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-06-30 19:52:43 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:43 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-30 19:52:43 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:43 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:43 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:43 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:43 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:43 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:43 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:43 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:43 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:43 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:43 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:43 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:43 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:43 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:43 -0400
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:43 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:43 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:43 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:43 -0400
+
+
+Started POST "/folders" for 127.0.0.1 at 2014-06-30 19:52:48 -0400
+Processing by FoldersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2wVvqn4M6ysguTDd89ieseXSVO3MKnh2QD3Nx6Z4wvo=", "folder"=>{"name"=>"Testing Basket"}, "commit"=>"Create Folder"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "folders" ("name") VALUES ($1) RETURNING "id"  [["name", "Testing Basket"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (4.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mSQL (2.8ms)[0m  INSERT INTO "user_folders" ("folder_id", "user_id") VALUES ($1, $2) RETURNING "id"  [["folder_id", 25], ["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  Rendered folders/create.html.erb within layouts/application (0.0ms)
+  [1m[35mUserFolder Load (0.4ms)[0m  SELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1
+  [1m[36mFolder Load (0.2ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 22]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 22]]
+  [1m[36mFolder Load (0.2ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 23]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 23]]
+  [1m[36mFolder Load (0.2ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 24]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 24]]
+  [1m[36mFolder Load (0.5ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 25]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 25]]
+Completed 200 OK in 44ms (Views: 22.2ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-30 19:52:48 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-06-30 19:52:48 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:48 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:48 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:48 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:48 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:48 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:48 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:48 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:48 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:48 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:48 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:48 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:48 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:48 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:48 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:48 -0400
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:48 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:48 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:48 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-30 19:52:48 -0400
+
+
+Started GET "/folders" for 127.0.0.1 at 2014-06-30 19:53:49 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FoldersController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered folders/index.html.erb within layouts/application (2.5ms)
+  [1m[36mUserFolder Load (0.7ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (1.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 22]]
+Completed 500 Internal Server Error in 219ms
+
+ActiveRecord::RecordNotFound (Couldn't find Folder with 'id'=22):
+  app/views/layouts/application.html.erb:39:in `block in _app_views_layouts_application_html_erb__1652450359973230680_2162284260'
+  app/views/layouts/application.html.erb:38:in `_app_views_layouts_application_html_erb__1652450359973230680_2162284260'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.5ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2014-06-30 20:05:03 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FoldersController#index as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered folders/index.html.erb within layouts/application (2.5ms)
+  [1m[36mUserFolder Load (0.7ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+Completed 500 Internal Server Error in 216ms
+
+ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Koala):
+    46:       <div class="span2">
+    47:         <h1>Friends</h1>
+    48: 
+    49:         <% @graph = Koala::Facebook::API.new(oauth_access_token) %>
+    50:         <% friends = @graph.get_connections("me", "friends") %>
+    51: 
+    52:       </div>
+  app/views/layouts/application.html.erb:49:in `_app_views_layouts_application_html_erb__427622999324690546_2204358580'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.2ms)
+
+
+Started GET "/folders" for 127.0.0.1 at 2014-06-30 20:06:04 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FoldersController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered folders/index.html.erb within layouts/application (2.7ms)
+  [1m[36mUserFolder Load (0.7ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1
+Completed 500 Internal Server Error in 220ms
+
+ActionView::Template::Error (undefined local variable or method `oauth_access_token' for #<#<Class:0x00000106e5a7c0>:0x00000106e59ca8>):
+    46:       <div class="span2">
+    47:         <h1>Friends</h1>
+    48: 
+    49:         <% @graph = Koala::Facebook::API.new(oauth_access_token) %>
+    50:         <% friends = @graph.get_connections("me", "friends") %>
+    51: 
+    52:       </div>
+  app/views/layouts/application.html.erb:49:in `_app_views_layouts_application_html_erb__3037864224813870964_2205402900'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (16.0ms)
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started GET "/folders" for 127.0.0.1 at 2014-06-30 20:09:14 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FoldersController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered folders/index.html.erb within layouts/application (2.0ms)
+  [1m[36mUserFolder Load (1.0ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+Completed 200 OK in 803ms (Views: 769.7ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-30 20:09:16 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:16 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:16 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:16 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:16 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-06-30 20:09:16 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:16 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:16 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:16 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:16 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:16 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:16 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:16 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:16 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:16 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:16 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:16 -0400
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:16 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:16 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:16 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:16 -0400
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-06-30 20:09:23 -0400
+Processing by FoldersController#new as HTML
+  Rendered folders/new.html.erb within layouts/application (33.7ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUserFolder Load (0.3ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+Completed 200 OK in 230ms (Views: 212.7ms | ActiveRecord: 3.7ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2014-06-30 20:09:28 -0400
+Processing by FoldersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2wVvqn4M6ysguTDd89ieseXSVO3MKnh2QD3Nx6Z4wvo=", "folder"=>{"name"=>"Video Games"}, "commit"=>"Create Folder"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "folders" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "Video Games"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Load (2.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mFolder Load (0.5ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 26]]
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "user_folders" ("folder_id", "user_id") VALUES ($1, $2) RETURNING "id"[0m  [["folder_id", 26], ["user_id", 1]]
+  [1m[35m (0.8ms)[0m  COMMIT
+  Rendered folders/create.html.erb within layouts/application (0.4ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.3ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 26]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 26]]
+Completed 200 OK in 216ms (Views: 170.1ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-30 20:09:28 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-06-30 20:09:28 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:28 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:28 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:28 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:28 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:28 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:28 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:28 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:28 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:28 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:28 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:28 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:28 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:28 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:28 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:28 -0400
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:28 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:28 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:28 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:28 -0400
+
+
+Started GET "/folders/26" for 127.0.0.1 at 2014-06-30 20:09:30 -0400
+Processing by FoldersController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[35mFolder Load (4.1ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 26]]
+  Rendered folders/show.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUserFolder Load (0.5ms)[0m  SELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1
+  [1m[36mFolder Load (0.5ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 26]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 26]]
+Completed 200 OK in 180ms (Views: 172.1ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-06-30 20:09:30 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:30 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-30 20:09:30 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-alert.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:30 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:30 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-transition.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:30 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-modal.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:30 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-dropdown.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:30 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-scrollspy.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:30 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tab.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:30 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-tooltip.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:30 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-popover.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:30 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-button.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:30 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-collapse.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:30 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-carousel.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:30 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-typeahead.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:30 -0400
+
+
+Started GET "/assets/twitter/bootstrap/bootstrap-affix.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:30 -0400
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:30 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:30 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:30 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-30 20:09:30 -0400

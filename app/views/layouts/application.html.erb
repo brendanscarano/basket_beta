@@ -45,6 +45,10 @@
       </div>
       <div class="span2">
         <h1>Friends</h1>
+
+        <% @graph = Koala::Facebook::API.new(current_user.oauth_token) %>
+        <% friends = @graph.get_connections("me", "friends") %>
+
       </div>
     </div>
   </div>  

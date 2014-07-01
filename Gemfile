@@ -33,6 +33,7 @@ gem 'figaro'
 gem "therubyracer"
 gem "less-rails"
 gem 'twitter-bootstrap-rails'
+gem "koala", "~> 1.10.0rc"
 
 group :development, :test do
   gem 'pry-rails'
