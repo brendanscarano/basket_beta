@@ -1,7 +1,7 @@
 class FoldersController < ApplicationController
-  def index
-    @folders = UserFolder.where(user_id: current_user.id)
-  end
+  # def index
+  #   @folders = UserFolder.where(user_id: current_user.id)
+  # end
 
   def show
     @folder = Folder.find(params[:id])

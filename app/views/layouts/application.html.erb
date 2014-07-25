@@ -10,48 +10,65 @@
 
 <body>
 
-  <div class="navbar">
-    <div class="navbar-inner">
-      <a class="brand" href="#">basket</a>
-      <ul class="nav">
+<div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="#">basket</a>
+
+    <ul class="nav">
+
+      <% if current_user %>
+
+        <li class="span1 offset8"><img alt="FB_Pic" src=<%= current_user.image %>></li>
+        <li><strong><%= current_user.name %></strong></li>
+        <li><%= link_to "Sign out", signout_path, id: "sign_out" %></li>
+        
+      <% else %>
+
+        <li class="span 1 offset9"><%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+        </li>
+
+      <% end %>
+
+    </ul>
+
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="span2">
+      <h1>Baskets</h1>
+      <br>
+          <%= link_to "+ New Basket", new_folder_path %>
+        <br><br>
+
+        
         <% if current_user %>
-          <li class="span1 offset8"><img alt="FB_Pic" src=<%= current_user.image %>></li>
-          <li><strong><%= current_user.name %></strong></li>
-          <li><%= link_to "Sign out", signout_path, id: "sign_out" %></li>
-        <% else %>
-          <%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
+            <% @folders = UserFolder.where(user_id: current_user.id) %>
+
+            <% @folders.sort.each do |folder| %>
+              <%= link_to "#{Folder.find(folder.folder_id).name}", folder_path(Folder.find(folder.folder_id)) %><br />
+            <% end %>
+
         <% end %>
-      </ul>
-    </div>
+
   </div>
 
-  <div class="container">
-    <div class="row">
-      <div class="span2">
-        <h1>Baskets</h1>
-        <br>
-          <%= link_to "New Basket", new_folder_path %>
-          <br><br>
-          
-          <% @folders = UserFolder.where(user_id: current_user.id) %>
+  <div class="span8">
+    <%= yield %>
+  </div>
 
-          <% @folders.each do |folder| %>
-            <%= link_to "#{Folder.find(folder.folder_id).name}", folder_path(Folder.find(folder.folder_id)) %><br />
-          <% end %>
+  <div class="span2">
+    <h1>Friends</h1>
 
-      </div>
-      <div class="span8">
-        <%= yield %>
-      </div>
-      <div class="span2">
-        <h1>Friends</h1>
+    <%# if current_user %>
+        <%# @graph = Koala::Facebook::API.new(current_user.oauth_token) %>
+        <%# friends = @graph.get_connections("me", "friends") %>
+    <%# end %>
 
-        <% @graph = Koala::Facebook::API.new(current_user.oauth_token) %>
-        <% friends = @graph.get_connections("me", "friends") %>
-
-      </div>
-    </div>
-  </div>  
+  </div>
+  </div>
+</div>  
 
 
 </body>
