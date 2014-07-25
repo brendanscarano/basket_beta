@@ -1,0 +1,11 @@
+$(document).ready(function(){
+
+  $('#new_folder').click(function(e){
+    e.preventDefault();
+
+    alert("This is working!")
+  })
+
+  
+  $('#new_folder').hide().after('<%= escape_javascript(render(:partial => "form") %>');
+})

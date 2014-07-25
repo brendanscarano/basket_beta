@@ -1,0 +1,8 @@
+$(document).ready(function() {
+
+  $('#new_folder').on('click', function(e) {
+    e.preventDefault();
+
+    $('#test').append('<%= j render "form" %>')
+  })
+})
