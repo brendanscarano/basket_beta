@@ -13,5 +13,10 @@ class User < ActiveRecord::Base
       user.save!
     end
   end
+
+  def folders
+    @folders = UserFolder.where(user_id: self.id)
+  end
+
   
 end

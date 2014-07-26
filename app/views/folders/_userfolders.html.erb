@@ -1,0 +1,5 @@
+<% if current_user.folders != nil %>
+  <% current_user.folders.each do |folder| %>
+    <%= link_to "#{Folder.find(folder.folder_id).name}", folder_path(Folder.find(folder.folder_id)) %><br />
+  <% end %>
+<% end %>

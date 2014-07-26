@@ -1,7 +1,5 @@
-<%= form_for @folder do |f| %>
-  <%= f.label :name %>:
-  <%= f.text_field :name %><br />
 
-  <%= f.submit %>
-<% end %>
-
+  <form name="new_folder" id="new_folder" action="/folders/new" method="post">
+    <input type='text' name="name" placeholder="name" id="folder_name" required> 
+    <input type="submit" id="signup_button" value="Sign Me Up!">
+  </form>
