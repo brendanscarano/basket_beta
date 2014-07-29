@@ -3,6 +3,32 @@ $(document).ready(function() {
   $('#new_folder').on('click', function(e) {
     e.preventDefault();
 
-    $('#new_basket_form').show();
+    $('#new_basket_form_container').removeClass('hidden');
+
+    $('#new_basket_form').on('submit', function(e) {
+      e.preventDefault();
+
+      user_input = $('form').serialize();
+      console.log(user_input)
+
+      $.ajax({
+           type: 'POST',
+           url: '/folders',
+           data: {folder_name: user_input},
+        }).done(function(response) {
+          alert("Folder saved " + response);
+        });
+    })
   })
+
+  // $('.show_basket').on('click', function(e) {
+  //   e.preventDefault();
+  //   console.log(this.href);
+  //   $.ajax({
+  //        url: this.href,
+  //        type: 'GET',
+  //        dataType: 'json',
+  //        data: {  links }
+  //    }).success();
+  // })
 })

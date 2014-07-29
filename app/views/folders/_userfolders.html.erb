@@ -1,5 +1,7 @@
 <% if current_user.folders != nil %>
   <% current_user.folders.each do |folder| %>
-    <%= link_to "#{Folder.find(folder.folder_id).name}", folder_path(Folder.find(folder.folder_id)) %><br />
+    <%= link_to "#{Folder.find(folder.folder_id).name}", 
+        folder_path(Folder.find(folder.folder_id)),
+        class: "show_basket" %><br />
   <% end %>
 <% end %>

@@ -14102,3 +14102,3125 @@ Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-26 11:16:05 -
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 11:16:05 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 11:20:06 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (1.7ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 87ms
+
+ActionView::Template::Error (Missing partial folders/_usernav, application/_usernav with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/brendanscarano/Documents/basket/app/views"
+  * "/Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/twitter-bootstrap-rails-2.2.8/app/views"
+):
+    18:     <ul class="nav">
+    19: 
+    20:       <% if current_user %>
+    21:         <%= render "usernav" %>
+    22:       <% else %>
+    23:         <%= render "guestnav" %>
+    24:       <% end %>
+  app/views/layouts/application.html.erb:21:in `_app_views_layouts_application_html_erb__1383551138585900338_2203976540'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 11:23:46 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/_usernav.html.erb (34.5ms)
+  Rendered folders/_form.html.erb (0.5ms)
+  [1m[35mUserFolder Load (0.8ms)[0m  SELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (35.3ms)
+Completed 200 OK in 84ms (Views: 76.3ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-26 11:23:46 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-26 11:23:46 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-26 11:23:46 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-26 11:23:46 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-26 11:23:46 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-26 11:23:46 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-26 11:23:46 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 11:23:46 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 11:23:54 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[35mUserFolder Load (0.5ms)[0m  SELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (3.6ms)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-26 11:23:54 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-26 11:23:54 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-26 11:23:54 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-26 11:23:54 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-26 11:23:54 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-26 11:23:54 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-26 11:23:54 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 11:23:54 -0400
+
+
+Started GET "/signout" for 127.0.0.1 at 2014-07-26 11:23:55 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 11:23:55 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.7ms)
+  Rendered users/_guestnav.html.erb (0.5ms)
+  Rendered folders/_form.html.erb (0.4ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-07-26 11:23:58 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-07-26 11:23:58 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQAKHDgdszJSyA6V-G5vDGMg1iawPxTyGyUIt5KKjA4SmkgrGf5nXfOjwz7UHOpg8x6WVLloiC12Qx_4t9Ep1_L87CIlSjYRJK8KiHVAmbIZ4Zku_x15ln7Mk54VQjhjcqaQq8bgmuQRXlXU8wmRQqUF2fPUv7gDZrYIfz456ufNzjjs84qFCHnkFmdF37bwTFp9dRDReuonhPDwHf0iqIvgg1eng0m5jYYXWhWpsmjSFi0BQxv5D1bXjkxudZx0zTIHTfz3hdQVav8H8ZdX4lVSV1sLEPdIjPOo_mLWezqgfaxYKqWv5vfV15zUhP9uM4k&state=3e70fe0eaccb78d9074d5c502c6d3bf419bdfbb0e5a935f3" for 127.0.0.1 at 2014-07-26 11:23:58 -0400
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAKHDgdszJSyA6V-G5vDGMg1iawPxTyGyUIt5KKjA4SmkgrGf5nXfOjwz7UHOpg8x6WVLloiC12Qx_4t9Ep1_L87CIlSjYRJK8KiHVAmbIZ4Zku_x15ln7Mk54VQjhjcqaQq8bgmuQRXlXU8wmRQqUF2fPUv7gDZrYIfz456ufNzjjs84qFCHnkFmdF37bwTFp9dRDReuonhPDwHf0iqIvgg1eng0m5jYYXWhWpsmjSFi0BQxv5D1bXjkxudZx0zTIHTfz3hdQVav8H8ZdX4lVSV1sLEPdIjPOo_mLWezqgfaxYKqWv5vfV15zUhP9uM4k", "state"=>"3e70fe0eaccb78d9074d5c502c6d3bf419bdfbb0e5a935f3", "provider"=>"facebook"}
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."provider" = 'facebook' AND "users"."uid" = '10154283904805293'  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "users" SET "oauth_token" = $1, "updated_at" = $2 WHERE "users"."id" = 1[0m  [["oauth_token", "CAAUhfcEtdIABAIyuJOr2UJsDYxkcTi2pnqJyZCFOZCVhJqAGEE60gVwzUFg2F71Nq7kcthVg5wvlWVBLUZCKZBibBWaIyHIj3duffmQkcEW0mqfE901VG0isRYBliSejnCZBgjDpNjOgMAFfn6nMZAX8dPi6ZBqBiX1jdhayBc2XvDWJXpiLcAYEQsE7Kab7FEMrYES6LzogtSHy5WS3o6j"], ["updated_at", "2014-07-26 15:23:59.394646"]]
+  [1m[35m (2.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 11:23:59 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[35mUserFolder Load (0.3ms)[0m  SELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.3ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-26 11:23:59 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-26 11:23:59 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-26 11:23:59 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-26 11:23:59 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-26 11:23:59 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-26 11:23:59 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-26 11:23:59 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 11:23:59 -0400
+
+
+Started GET "/folders/32" for 127.0.0.1 at 2014-07-26 11:24:11 -0400
+Processing by FoldersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mFolder Load (1.9ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/show.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (1.0ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mUserFolder Load (0.5ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.4ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (4.1ms)
+Completed 200 OK in 22ms (Views: 17.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/folders/32" for 127.0.0.1 at 2014-07-26 11:24:19 -0400
+Processing by FoldersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[35mFolder Load (0.6ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  Rendered folders/show.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[35mUserFolder Load (0.5ms)[0m  SELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (3.8ms)
+Completed 200 OK in 22ms (Views: 17.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/folders/32" for 127.0.0.1 at 2014-07-26 11:24:20 -0400
+Processing by FoldersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mFolder Load (0.2ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/show.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.2ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.1ms)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/folders/32" for 127.0.0.1 at 2014-07-26 11:24:21 -0400
+Processing by FoldersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[35mFolder Load (1.6ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  Rendered folders/show.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.4ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[35mUserFolder Load (0.3ms)[0m  SELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1
+  [1m[36mFolder Load (0.2ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.4ms)
+Completed 200 OK in 19ms (Views: 14.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/folders/32" for 127.0.0.1 at 2014-07-26 11:24:22 -0400
+Processing by FoldersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[36mFolder Load (0.2ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/show.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.3ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.3ms)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/folders/32" for 127.0.0.1 at 2014-07-26 11:30:01 -0400
+Processing by FoldersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[35mFolder Load (0.5ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  Rendered folders/show.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.5ms)
+  Rendered folders/_userfolders.html.erb (1.2ms)
+Completed 500 Internal Server Error in 15ms
+
+SyntaxError (/Users/brendanscarano/Documents/basket/app/views/folders/_userfolders.html.erb:4: syntax error, unexpected tLABEL, expecting ')'
+....find(folder.folder_id)) class: );@output_buffer.safe_append...
+...                               ^
+/Users/brendanscarano/Documents/basket/app/views/folders/_userfolders.html.erb:5: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/Users/brendanscarano/Documents/basket/app/views/folders/_userfolders.html.erb:8: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/brendanscarano/Documents/basket/app/views/folders/_userfolders.html.erb:10: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/layouts/application.html.erb:46:in `_app_views_layouts_application_html_erb__1383551138585900338_2183970840'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.8ms)
+
+
+Started GET "/folders/32" for 127.0.0.1 at 2014-07-26 11:30:11 -0400
+Processing by FoldersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[35mFolder Load (0.3ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  Rendered folders/show.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.5ms)
+  Rendered folders/_form.html.erb (0.4ms)
+  Rendered folders/_userfolders.html.erb (0.5ms)
+Completed 500 Internal Server Error in 13ms
+
+SyntaxError (/Users/brendanscarano/Documents/basket/app/views/folders/_userfolders.html.erb:4: syntax error, unexpected tLABEL, expecting ')'
+....find(folder.folder_id)) class: );@output_buffer.safe_append...
+...                               ^
+/Users/brendanscarano/Documents/basket/app/views/folders/_userfolders.html.erb:5: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/Users/brendanscarano/Documents/basket/app/views/folders/_userfolders.html.erb:8: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/brendanscarano/Documents/basket/app/views/folders/_userfolders.html.erb:10: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/layouts/application.html.erb:46:in `_app_views_layouts_application_html_erb__1383551138585900338_2183970840'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (39.2ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (54.6ms)
+
+
+Started GET "/folders/32" for 127.0.0.1 at 2014-07-26 11:30:14 -0400
+Processing by FoldersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[35mFolder Load (0.4ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  Rendered folders/show.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.4ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  Rendered folders/_userfolders.html.erb (1.0ms)
+Completed 500 Internal Server Error in 16ms
+
+SyntaxError (/Users/brendanscarano/Documents/basket/app/views/folders/_userfolders.html.erb:4: syntax error, unexpected tLABEL, expecting ')'
+....find(folder.folder_id)) class: );@output_buffer.safe_append...
+...                               ^
+/Users/brendanscarano/Documents/basket/app/views/folders/_userfolders.html.erb:5: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/Users/brendanscarano/Documents/basket/app/views/folders/_userfolders.html.erb:8: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/brendanscarano/Documents/basket/app/views/folders/_userfolders.html.erb:10: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/layouts/application.html.erb:46:in `_app_views_layouts_application_html_erb__1383551138585900338_2183970840'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (18.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 11:30:23 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.4ms)
+  Rendered folders/_form.html.erb (0.6ms)
+  Rendered folders/_userfolders.html.erb (0.6ms)
+Completed 500 Internal Server Error in 13ms
+
+SyntaxError (/Users/brendanscarano/Documents/basket/app/views/folders/_userfolders.html.erb:4: syntax error, unexpected tLABEL, expecting ')'
+....find(folder.folder_id)) class: );@output_buffer.safe_append...
+...                               ^
+/Users/brendanscarano/Documents/basket/app/views/folders/_userfolders.html.erb:5: syntax error, unexpected keyword_end, expecting ')'
+'.freeze;   end 
+               ^
+/Users/brendanscarano/Documents/basket/app/views/folders/_userfolders.html.erb:8: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/brendanscarano/Documents/basket/app/views/folders/_userfolders.html.erb:10: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/layouts/application.html.erb:46:in `_app_views_layouts_application_html_erb__1383551138585900338_2183970840'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 11:31:45 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.4ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  Rendered folders/_userfolders.html.erb (0.7ms)
+Completed 500 Internal Server Error in 19ms
+
+SyntaxError (/Users/brendanscarano/Documents/basket/app/views/folders/_userfolders.html.erb:4: syntax error, unexpected tLABEL, expecting ')'
+....find(folder.folder_id)) class: "show_basket" );@output_buff...
+...                               ^):
+  app/views/layouts/application.html.erb:46:in `_app_views_layouts_application_html_erb__1383551138585900338_2183970840'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (14.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 11:32:01 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mUserFolder Load (0.5ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (3.7ms)
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-26 11:32:01 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-26 11:32:01 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-26 11:32:01 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-26 11:32:01 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-26 11:32:01 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-26 11:32:01 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-26 11:32:01 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 11:32:01 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 11:32:59 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.3ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.5ms)
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-26 11:33:00 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-26 11:33:00 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-26 11:33:00 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-26 11:33:00 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-26 11:33:00 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-26 11:33:00 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-26 11:33:00 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 11:33:00 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 11:33:18 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.4ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (3.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.3ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (10.4ms)
+Completed 200 OK in 41ms (Views: 36.4ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-26 11:33:18 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-26 11:33:18 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-26 11:33:18 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-26 11:33:18 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-26 11:33:18 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-26 11:33:18 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 11:33:18 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-26 11:33:18 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 11:36:19 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.4ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (4.4ms)
+Completed 200 OK in 46ms (Views: 43.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-26 11:36:19 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-26 11:36:19 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-26 11:36:19 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-26 11:36:19 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-26 11:36:19 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-26 11:36:19 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-26 11:36:19 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 11:36:19 -0400
+
+
+Started GET "/folders/32" for 127.0.0.1 at 2014-07-26 11:36:21 -0400
+Processing by FoldersController#show as JSON
+  Parameters: {"id"=>"32"}
+  [1m[35mFolder Load (0.3ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  Rendered folders/show.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/_usernav.html.erb (1.0ms)
+  Rendered folders/_form.html.erb (0.5ms)
+  [1m[35mUserFolder Load (0.3ms)[0m  SELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1
+  [1m[36mFolder Load (0.2ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.9ms)
+Completed 200 OK in 30ms (Views: 27.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 11:38:02 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/_usernav.html.erb (1.1ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[35mUserFolder Load (0.4ms)[0m  SELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1
+  [1m[36mFolder Load (0.2ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.7ms)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-26 11:38:03 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:03 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:03 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:03 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:03 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-26 11:38:03 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:03 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:03 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 11:38:07 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.9ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[35mUserFolder Load (0.4ms)[0m  SELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1
+  [1m[36mFolder Load (0.2ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (3.0ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-26 11:38:07 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:07 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:07 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-26 11:38:07 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:07 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:07 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:07 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:07 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 11:38:20 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/_usernav.html.erb (1.0ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[35mUserFolder Load (0.3ms)[0m  SELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1
+  [1m[36mFolder Load (0.2ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.4ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-26 11:38:20 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:20 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:20 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:20 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:20 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-26 11:38:20 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:20 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:20 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 11:38:29 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.7ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[35mUserFolder Load (0.5ms)[0m  SELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (3.2ms)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-26 11:38:29 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-26 11:38:29 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:29 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:29 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:29 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:29 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:29 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:29 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 11:38:42 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.7ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[35mUserFolder Load (0.7ms)[0m  SELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (3.7ms)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-26 11:38:42 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:42 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-26 11:38:42 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:42 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:42 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:42 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:42 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:42 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 11:38:47 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.7ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[35mUserFolder Load (0.4ms)[0m  SELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1
+  [1m[36mFolder Load (0.2ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.3ms)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-26 11:38:48 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-26 11:38:48 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:48 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:48 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:48 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:48 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:48 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:48 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 11:38:53 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/_usernav.html.erb (1.1ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[35mUserFolder Load (0.4ms)[0m  SELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1
+  [1m[36mFolder Load (0.2ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.7ms)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-26 11:38:53 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:53 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:53 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:53 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:53 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-26 11:38:53 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:53 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 11:38:53 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 11:39:01 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.7ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[35mUserFolder Load (0.3ms)[0m  SELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1
+  [1m[36mFolder Load (0.2ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.2ms)
+Completed 200 OK in 15ms (Views: 12.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-26 11:39:01 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-26 11:39:01 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-26 11:39:01 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-26 11:39:01 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-26 11:39:01 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 11:39:01 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-26 11:39:01 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-26 11:39:01 -0400
+
+
+Started GET "/folders/32" for 127.0.0.1 at 2014-07-26 11:39:04 -0400
+Processing by FoldersController#show as JSON
+  Parameters: {"id"=>"32"}
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/show.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.8ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.3ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.9ms)
+Completed 200 OK in 24ms (Views: 20.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/folders/32" for 127.0.0.1 at 2014-07-26 11:39:13 -0400
+Processing by FoldersController#show as HTML
+  Parameters: {"id"=>"32"}
+  [1m[35mFolder Load (0.4ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  Rendered folders/show.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.5ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[35mUserFolder Load (0.4ms)[0m  SELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1
+  [1m[36mFolder Load (0.2ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (3.2ms)
+Completed 200 OK in 18ms (Views: 14.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-26 11:39:13 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-26 11:39:13 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-26 11:39:13 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-26 11:39:13 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-26 11:39:13 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 11:39:13 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-26 11:39:13 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-26 11:39:13 -0400
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-07-26 11:43:03 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.4ms)
+  Rendered folders/new.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.8ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[35mUserFolder Load (0.4ms)[0m  SELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1
+  [1m[36mFolder Load (0.2ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.9ms)
+Completed 200 OK in 51ms (Views: 49.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-07-26 11:43:04 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.0ms)
+  Rendered folders/new.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.2ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[35mUserFolder Load (0.3ms)[0m  SELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1
+  [1m[36mFolder Load (0.2ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.7ms)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/folders/32" for 127.0.0.1 at 2014-07-26 11:43:06 -0400
+Processing by FoldersController#show as JSON
+  Parameters: {"id"=>"32"}
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/show.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.4ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.3ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (3.5ms)
+Completed 200 OK in 31ms (Views: 27.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/folders/32" for 127.0.0.1 at 2014-07-26 11:43:06 -0400
+Processing by FoldersController#show as JSON
+  Parameters: {"id"=>"32"}
+  [1m[35mFolder Load (0.4ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  Rendered folders/show.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[35mUserFolder Load (0.4ms)[0m  SELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (3.4ms)
+Completed 200 OK in 31ms (Views: 27.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/folders/32" for 127.0.0.1 at 2014-07-26 11:43:07 -0400
+Processing by FoldersController#show as JSON
+  Parameters: {"id"=>"32"}
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/show.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.4ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (3.4ms)
+Completed 200 OK in 24ms (Views: 21.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/folders/32" for 127.0.0.1 at 2014-07-26 11:43:08 -0400
+Processing by FoldersController#show as JSON
+  Parameters: {"id"=>"32"}
+  [1m[35mFolder Load (0.4ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  Rendered folders/show.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.4ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[35mUserFolder Load (0.4ms)[0m  SELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1
+  [1m[36mFolder Load (0.2ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.8ms)
+Completed 200 OK in 24ms (Views: 20.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/folders/32" for 127.0.0.1 at 2014-07-26 11:43:08 -0400
+Processing by FoldersController#show as JSON
+  Parameters: {"id"=>"32"}
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/show.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.5ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.9ms)
+Completed 200 OK in 25ms (Views: 21.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 11:44:21 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.4ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (3.0ms)
+Completed 200 OK in 39ms (Views: 37.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-26 11:44:21 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-26 11:44:21 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-26 11:44:21 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-26 11:44:21 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-26 11:44:21 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-26 11:44:21 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-26 11:44:21 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 11:44:21 -0400
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-07-26 11:44:22 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.0ms)
+  Rendered folders/new.html.erb within layouts/application (2.9ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.4ms)
+Completed 200 OK in 24ms (Views: 22.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 11:44:39 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.4ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (3.1ms)
+Completed 200 OK in 41ms (Views: 39.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-26 11:44:39 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-26 11:44:39 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-26 11:44:39 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-26 11:44:39 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-26 11:44:39 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-26 11:44:39 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-26 11:44:39 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 11:44:39 -0400
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-07-26 11:44:42 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.1ms)
+  Rendered folders/new.html.erb within layouts/application (4.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.5ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.3ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (3.7ms)
+Completed 200 OK in 29ms (Views: 27.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-07-26 11:44:46 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.0ms)
+  Rendered folders/new.html.erb within layouts/application (3.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.5ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.3ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.7ms)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-07-26 11:44:46 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.0ms)
+  Rendered folders/new.html.erb within layouts/application (2.9ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.3ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (3.3ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 11:45:07 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.4ms)
+  Rendered folders/_form.html.erb (0.6ms)
+  [1m[36mUserFolder Load (0.5ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.3ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (4.7ms)
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-26 11:45:07 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-26 11:45:07 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-26 11:45:07 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-26 11:45:07 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-26 11:45:07 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-26 11:45:07 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 11:45:07 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-26 11:45:07 -0400
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-07-26 11:45:09 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.5ms)
+  Rendered folders/new.html.erb within layouts/application (4.3ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.4ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.2ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 11:45:30 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.4ms)
+  Rendered folders/_form.html.erb (0.7ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.8ms)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-26 11:45:30 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-26 11:45:30 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-26 11:45:30 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-26 11:45:30 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-26 11:45:30 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-26 11:45:30 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-26 11:45:30 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 11:45:30 -0400
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-07-26 11:45:31 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.6ms)
+  Rendered folders/new.html.erb within layouts/application (4.5ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.3ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.8ms)
+Completed 200 OK in 27ms (Views: 24.4ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/folders/new" for 127.0.0.1 at 2014-07-26 11:46:24 -0400
+
+ActionController::RoutingError (No route matches [POST] "/folders/new"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/brendanscarano/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/brendanscarano/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/brendanscarano/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.1ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (13.1ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (40.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 11:46:58 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.7ms)
+  [1m[36mUserFolder Load (0.3ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.4ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-26 11:46:58 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-26 11:46:58 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-26 11:46:58 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-26 11:46:58 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-26 11:46:58 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-26 11:46:58 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-26 11:46:58 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 11:46:58 -0400
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-07-26 11:47:00 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.5ms)
+  Rendered folders/new.html.erb within layouts/application (4.9ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.1ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.2ms)
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/folders/create" for 127.0.0.1 at 2014-07-26 11:47:28 -0400
+
+ActionController::RoutingError (No route matches [POST] "/folders/create"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/brendanscarano/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/brendanscarano/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/brendanscarano/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.6ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (25.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 11:47:51 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.4ms)
+  Rendered folders/_form.html.erb (0.7ms)
+  [1m[36mUserFolder Load (0.5ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.9ms)
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-26 11:47:51 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-26 11:47:51 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-26 11:47:51 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-26 11:47:51 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-26 11:47:51 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-26 11:47:51 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 11:47:51 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-26 11:47:51 -0400
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-07-26 11:47:52 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.5ms)
+  Rendered folders/new.html.erb within layouts/application (3.6ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.7ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.4ms)
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2014-07-26 11:47:57 -0400
+Processing by FoldersController#create as HTML
+  Parameters: {"name"=>"Test Basket"}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 1ms
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.1.1) lib/action_controller/metal/request_forgery_protection.rb:176:in `handle_unverified_request'
+  actionpack (4.1.1) lib/action_controller/metal/request_forgery_protection.rb:202:in `handle_unverified_request'
+  actionpack (4.1.1) lib/action_controller/metal/request_forgery_protection.rb:197:in `verify_authenticity_token'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:424:in `block in make_lambda'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:160:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:160:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.1) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.1) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.1.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.1) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  omniauth (1.2.1) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.1) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.1) lib/omniauth/builder.rb:59:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.1) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/brendanscarano/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/brendanscarano/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/brendanscarano/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 11:49:01 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (4.9ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.1ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (18.5ms)
+Completed 200 OK in 38ms (Views: 30.0ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-26 11:49:01 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-26 11:49:01 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-26 11:49:01 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-26 11:49:01 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-26 11:49:01 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-26 11:49:01 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 11:49:01 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-26 11:49:01 -0400
+  [1m[36mFolder Load (0.6ms)[0m  [1mSELECT "folders".* FROM "folders"[0m
+  [1m[35mUserFolder Load (0.6ms)[0m  SELECT "user_folders".* FROM "user_folders"
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 11:49:22 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.4ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.5ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-26 11:49:22 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-26 11:49:22 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-26 11:49:22 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-26 11:49:22 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-26 11:49:22 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-26 11:49:22 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-26 11:49:22 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 11:49:22 -0400
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-07-26 11:49:23 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.1ms)
+  Rendered folders/new.html.erb within layouts/application (3.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.4ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.4ms)
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2014-07-26 11:49:27 -0400
+Processing by FoldersController#create as HTML
+  Parameters: {"name"=>"Test Basket"}
+Completed 400 Bad Request in 1ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: folder):
+  app/controllers/folders_controller.rb:27:in `folder_params'
+  app/controllers/folders_controller.rb:16:in `create'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 11:52:08 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (4.5ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.3ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (19.8ms)
+Completed 200 OK in 42ms (Views: 33.5ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-26 11:52:09 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-26 11:52:09 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-26 11:52:09 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-26 11:52:09 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 11:52:09 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-26 11:52:09 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-26 11:52:09 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-26 11:52:09 -0400
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-07-26 11:52:09 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.1ms)
+  Rendered folders/new.html.erb within layouts/application (3.8ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.6ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (1.4ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (4.8ms)
+Completed 200 OK in 44ms (Views: 40.8ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2014-07-26 11:52:15 -0400
+Processing by FoldersController#create as HTML
+  Parameters: {"name"=>"Test Basket"}
+  [1m[35m (2.1ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered folders/create.html.erb within layouts/application (0.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.5ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.3ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (3.4ms)
+Completed 200 OK in 30ms (Views: 12.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-26 11:52:15 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-26 11:52:15 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-26 11:52:15 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-26 11:52:15 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-26 11:52:15 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-26 11:52:15 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-26 11:52:15 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 11:52:15 -0400
+  [1m[36mFolder Load (0.7ms)[0m  [1mSELECT "folders".* FROM "folders"[0m
+  [1m[35mUserFolder Load (0.6ms)[0m  SELECT "user_folders".* FROM "user_folders"
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-07-26 11:52:50 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.1ms)
+  Rendered folders/new.html.erb within layouts/application (3.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.2ms)
+Completed 200 OK in 33ms (Views: 31.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 12:02:43 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.4ms)
+  Rendered folders/_form.html.erb (0.7ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (3.0ms)
+Completed 200 OK in 52ms (Views: 50.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-26 12:02:43 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-26 12:02:43 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-26 12:02:43 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-26 12:02:43 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-26 12:02:43 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-26 12:02:43 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-26 12:02:43 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 12:02:43 -0400
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-07-26 12:02:45 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.6ms)
+  Rendered folders/new.html.erb within layouts/application (3.6ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.4ms)
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 12:02:49 -0400
+Processing by FoldersController#index as */*
+  Rendered folders/index.html.erb within layouts/application (1.1ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (1.5ms)
+  Rendered folders/_form.html.erb (0.7ms)
+  [1m[36mUserFolder Load (0.6ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.4ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (7.4ms)
+Completed 200 OK in 41ms (Views: 38.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 12:04:47 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.5ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mUserFolder Load (0.3ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.3ms)
+Completed 200 OK in 49ms (Views: 47.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-26 12:04:47 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-26 12:04:47 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-26 12:04:47 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-26 12:04:47 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-26 12:04:47 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-26 12:04:47 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-26 12:04:47 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 12:04:47 -0400
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-07-26 12:04:49 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.1ms)
+  Rendered folders/new.html.erb within layouts/application (3.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.4ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.8ms)
+Completed 200 OK in 32ms (Views: 29.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 12:06:17 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.4ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.6ms)
+Completed 200 OK in 40ms (Views: 38.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-26 12:06:18 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-26 12:06:18 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-26 12:06:18 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-26 12:06:18 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-26 12:06:18 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-26 12:06:18 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-26 12:06:18 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 12:06:18 -0400
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-07-26 12:06:19 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.1ms)
+  Rendered folders/new.html.erb within layouts/application (4.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.8ms)
+Completed 200 OK in 31ms (Views: 28.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 12:06:41 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.3ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.8ms)
+Completed 200 OK in 47ms (Views: 45.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-26 12:06:42 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-26 12:06:42 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-26 12:06:42 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-26 12:06:42 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-26 12:06:42 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-26 12:06:42 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-26 12:06:42 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 12:06:42 -0400
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-07-26 12:06:43 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.1ms)
+  Rendered folders/new.html.erb within layouts/application (3.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.5ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (3.0ms)
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2014-07-26 12:06:44 -0400
+Processing by FoldersController#create as JSON
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  Rendered folders/create.html.erb within layouts/application (0.5ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.4ms)
+  Rendered folders/_form.html.erb (0.9ms)
+  [1m[36mUserFolder Load (0.6ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.4ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (4.5ms)
+Completed 200 OK in 37ms (Views: 30.3ms | ActiveRecord: 2.2ms)
+  [1m[36mFolder Load (0.6ms)[0m  [1mSELECT "folders".* FROM "folders"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-26 12:12:27 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.4ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.4ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (3.8ms)
+Completed 200 OK in 61ms (Views: 59.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-26 12:12:27 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-26 12:12:27 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-26 12:12:27 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-26 12:12:27 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-26 12:12:27 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-26 12:12:27 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-26 12:12:27 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-26 12:12:27 -0400
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-07-26 12:12:28 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.1ms)
+  Rendered folders/new.html.erb within layouts/application (3.6ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.4ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.5ms)
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2014-07-26 12:12:31 -0400
+Processing by FoldersController#create as JSON
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  Rendered folders/create.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.4ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.3ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (3.6ms)
+Completed 200 OK in 31ms (Views: 26.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-28 22:33:19 -0400
+
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:881:in `initialize'
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:881:in `new'
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:881:in `connect'
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:568:in `initialize'
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /Users/brendanscarano/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /Users/brendanscarano/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.1) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.1) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.1) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.1) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/brendanscarano/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/brendanscarano/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/brendanscarano/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.2ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (39.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-28 22:33:58 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (6.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (4.0ms)
+  [1m[35mUser Load (2.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (10.1ms)
+  Rendered folders/_form.html.erb (0.8ms)
+  [1m[36mUserFolder Load (6.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (3.4ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (81.2ms)
+Completed 200 OK in 303ms (Views: 254.4ms | ActiveRecord: 30.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-28 22:33:59 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-28 22:33:59 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-28 22:33:59 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-28 22:33:59 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-28 22:33:59 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-28 22:33:59 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-28 22:33:59 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-28 22:33:59 -0400
+
+
+Started GET "/signout" for 127.0.0.1 at 2014-07-28 22:34:02 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-28 22:34:02 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.3ms)
+  Rendered users/_guestnav.html.erb (0.8ms)
+  Rendered folders/_form.html.erb (0.4ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-07-28 22:34:05 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-07-28 22:34:06 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQBJ48ZHWmE9akgvKUWVCapBehj7pLRe8vLVcFjZEBiL3wq5cOhfg4oe7PNeXAS0eKAkv5JIW5NUfi9FzB1aHnrp9AQJIxk1hJf6PnmDKaObJgtvNjhlXJLg1Zsy9wXNyCSBlKwg4Zwh21SeE8G2rzmAcME_7e53lDyBu-49YPrVfNiJOVlWCibApqmBuEjsqOcwBvGSqTYBbADt75wlwvUw9uO1PrlXs1uwgVwqSwqYiGI7BcpDOUnD9ErYfC8dgpBPbdFskcZ8jTcYaPqzMqKz-PCbA3d1k-D-m8dg8R3WIakvW6ySLq2EKPPAmv6gZuM&state=1954c74e83e9997a3b8f2cdb328e2c9f93d9af337a563954" for 127.0.0.1 at 2014-07-28 22:34:06 -0400
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBJ48ZHWmE9akgvKUWVCapBehj7pLRe8vLVcFjZEBiL3wq5cOhfg4oe7PNeXAS0eKAkv5JIW5NUfi9FzB1aHnrp9AQJIxk1hJf6PnmDKaObJgtvNjhlXJLg1Zsy9wXNyCSBlKwg4Zwh21SeE8G2rzmAcME_7e53lDyBu-49YPrVfNiJOVlWCibApqmBuEjsqOcwBvGSqTYBbADt75wlwvUw9uO1PrlXs1uwgVwqSwqYiGI7BcpDOUnD9ErYfC8dgpBPbdFskcZ8jTcYaPqzMqKz-PCbA3d1k-D-m8dg8R3WIakvW6ySLq2EKPPAmv6gZuM", "state"=>"1954c74e83e9997a3b8f2cdb328e2c9f93d9af337a563954", "provider"=>"facebook"}
+  [1m[35mUser Load (4.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."provider" = 'facebook' AND "users"."uid" = '10154283904805293'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  UPDATE "users" SET "oauth_expires_at" = $1, "oauth_token" = $2, "updated_at" = $3 WHERE "users"."id" = 1  [["oauth_expires_at", "2014-09-27 02:34:06.000000"], ["oauth_token", "CAAUhfcEtdIABAK2LtG5RgdQTn1IZAjPYZASEWeKwMuCXj1NXKcrP42ZCaRN75r4a3x1eHUYy7MOVbZAcZA9tvUoZAp8Lt9IJsDZB7uOrCPnwXaaPgBrnxLSJ5B7V4H0xmDI86dtK1sLOpvQLDqyOkUtiuVXMpNeUVstyPlhtJ2qfv1b8utEMb6HXOWmFJJtQ9mGk3mbetDdRPaRGZCPCwa41"], ["updated_at", "2014-07-29 02:34:07.164180"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 16ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-28 22:34:07 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mUserFolder Load (0.6ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.3ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (3.7ms)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-28 22:34:07 -0400
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-07-28 22:34:08 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.6ms)
+  Rendered folders/new.html.erb within layouts/application (6.5ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.7ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mUserFolder Load (0.5ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.6ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (6.0ms)
+Completed 200 OK in 44ms (Views: 41.6ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2014-07-28 22:34:21 -0400
+Processing by FoldersController#create as JSON
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+Completed 406 Not Acceptable in 18ms
+
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  app/controllers/folders_controller.rb:18:in `create'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.9ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.2ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (25.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-28 22:38:28 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (4.1ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (17.5ms)
+Completed 200 OK in 39ms (Views: 29.6ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-28 22:38:28 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-28 22:38:28 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-28 22:38:28 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-28 22:38:28 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-28 22:38:28 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-28 22:38:28 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-28 22:38:28 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-28 22:38:28 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-28 22:38:28 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.5ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mUserFolder Load (1.2ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.9ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (5.1ms)
+Completed 200 OK in 18ms (Views: 15.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-28 22:38:28 -0400
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-07-28 22:38:30 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.1ms)
+  Rendered folders/new.html.erb within layouts/application (4.1ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.3ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.3ms)
+Completed 200 OK in 26ms (Views: 23.8ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2014-07-28 22:38:33 -0400
+Processing by FoldersController#create as JSON
+Completed 500 Internal Server Error in 3ms
+
+ActionView::MissingTemplate (Missing template folders/create, application/create with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/brendanscarano/Documents/basket/app/views"
+  * "/Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/twitter-bootstrap-rails-2.2.8/app/views"
+):
+  actionview (4.1.1) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.1.1) lib/action_view/lookup_context.rb:124:in `find'
+  actionview (4.1.1) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:41:in `determine_template'
+  actionview (4.1.1) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.1.1) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.1.1) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.1.1) lib/action_view/rendering.rb:99:in `_render_template'
+  actionpack (4.1.1) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.1.1) lib/action_view/rendering.rb:82:in `render_to_body'
+  actionpack (4.1.1) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.1.1) lib/action_controller/metal/renderers.rb:32:in `render_to_body'
+  actionpack (4.1.1) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.1.1) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+  activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/brendanscarano/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.1.1) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+  activerecord (4.1.1) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:40:in `render'
+  actionpack (4.1.1) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.1.1) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.1.1) lib/abstract_controller/base.rb:189:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.1.1) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:113:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:229:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:166:in `block in halting'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:86:in `run_callbacks'
+  actionpack (4.1.1) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.1.1) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.1.1) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.1.1) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.1.1) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.1.1) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.1.1) lib/abstract_controller/base.rb:136:in `process'
+  actionview (4.1.1) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.1.1) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.1.1) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.1.1) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.1.1) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.1.1) lib/action_dispatch/routing/route_set.rb:676:in `call'
+  omniauth (1.2.1) lib/omniauth/strategy.rb:186:in `call!'
+  omniauth (1.2.1) lib/omniauth/strategy.rb:164:in `call'
+  omniauth (1.2.1) lib/omniauth/builder.rb:59:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:35:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/flash.rb:254:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.1.1) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:621:in `call'
+  activerecord (4.1.1) lib/active_record/migration.rb:380:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/brendanscarano/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/brendanscarano/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/brendanscarano/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/missing_template.text.erb (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-28 22:41:08 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (4.3ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.3ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (17.4ms)
+Completed 200 OK in 38ms (Views: 29.0ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-28 22:41:09 -0400
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-07-28 22:41:10 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.0ms)
+  Rendered folders/new.html.erb within layouts/application (2.9ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.7ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mUserFolder Load (0.3ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.1ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.5ms)
+Completed 200 OK in 29ms (Views: 27.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2014-07-28 22:41:13 -0400
+Processing by FoldersController#create as JSON
+Completed 500 Internal Server Error in 4ms
+
+ActionView::MissingTemplate (Missing template folders/show, application/show with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/brendanscarano/Documents/basket/app/views"
+  * "/Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/twitter-bootstrap-rails-2.2.8/app/views"
+):
+  app/controllers/folders_controller.rb:23:in `block (2 levels) in create'
+  app/controllers/folders_controller.rb:18:in `create'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/missing_template.text.erb (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-28 22:42:54 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.3ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.5ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mUserFolder Load (0.6ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.3ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (4.5ms)
+Completed 200 OK in 63ms (Views: 61.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-28 22:42:54 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-28 22:42:54 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-28 22:42:54 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-28 22:42:54 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-28 22:42:54 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-28 22:42:54 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-28 22:42:54 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-28 22:42:54 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-28 22:42:57 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.6ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.9ms)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-28 22:42:57 -0400
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-07-28 22:42:58 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.0ms)
+  Rendered folders/new.html.erb within layouts/application (2.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.2ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-07-28 22:42:59 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.0ms)
+  Rendered folders/new.html.erb within layouts/application (2.9ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.3ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.8ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-28 22:43:07 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.4ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mUserFolder Load (0.5ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.3ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (3.6ms)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-28 22:43:07 -0400
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-07-28 22:43:09 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.0ms)
+  Rendered folders/new.html.erb within layouts/application (2.9ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.3ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.1ms)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-28 22:43:37 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.3ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.3ms)
+Completed 200 OK in 42ms (Views: 39.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-28 22:43:37 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-28 22:43:37 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-28 22:43:37 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-28 22:43:37 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-28 22:43:37 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-28 22:43:37 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-28 22:43:37 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-28 22:43:37 -0400
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-07-28 22:43:38 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.0ms)
+  Rendered folders/new.html.erb within layouts/application (2.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.3ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.6ms)
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-28 22:43:48 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.8ms)
+  Rendered folders/_form.html.erb (0.3ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (3.6ms)
+Completed 200 OK in 44ms (Views: 41.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-28 22:43:48 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-28 22:43:48 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-28 22:43:48 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-28 22:43:48 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-28 22:43:48 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-28 22:43:48 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-28 22:43:48 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-28 22:43:48 -0400
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-07-28 22:43:49 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.1ms)
+  Rendered folders/new.html.erb within layouts/application (3.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.7ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.4ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (3.9ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2014-07-28 22:43:53 -0400
+Processing by FoldersController#create as JSON
+  Parameters: {"folder_name"=>"name=Test+Basket"}
+Completed 500 Internal Server Error in 3ms
+
+ActionView::MissingTemplate (Missing template folders/show, application/show with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/brendanscarano/Documents/basket/app/views"
+  * "/Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/twitter-bootstrap-rails-2.2.8/app/views"
+):
+  app/controllers/folders_controller.rb:23:in `block (2 levels) in create'
+  app/controllers/folders_controller.rb:18:in `create'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/missing_template.text.erb (0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-28 22:44:59 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (4.9ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.3ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (20.7ms)
+Completed 200 OK in 42ms (Views: 32.2ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-28 22:45:00 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-28 22:45:00 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-28 22:45:00 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-28 22:45:00 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-28 22:45:00 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-28 22:45:00 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-28 22:45:00 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-28 22:45:00 -0400
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-07-28 22:45:00 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.1ms)
+  Rendered folders/new.html.erb within layouts/application (3.6ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.4ms)
+Completed 200 OK in 27ms (Views: 24.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2014-07-28 22:45:03 -0400
+Processing by FoldersController#create as JSON
+  Parameters: {"folder_name"=>"name=Test+Basket"}
+Completed 500 Internal Server Error in 1ms
+
+ArgumentError (When assigning attributes, you must pass a hash as an argument.):
+  app/controllers/folders_controller.rb:19:in `block (2 levels) in create'
+  app/controllers/folders_controller.rb:17:in `create'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.9ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (2.0ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (21.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-28 22:45:36 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (6.9ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (16.2ms)
+Completed 200 OK in 40ms (Views: 31.7ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-28 22:45:36 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-28 22:45:36 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-28 22:45:36 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-28 22:45:36 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-28 22:45:36 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-28 22:45:36 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-28 22:45:36 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-28 22:45:36 -0400
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-07-28 22:45:37 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.1ms)
+  Rendered folders/new.html.erb within layouts/application (3.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.5ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.4ms)
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2014-07-28 22:45:39 -0400
+Processing by FoldersController#create as JSON
+  Parameters: {"folder_name"=>"name=Test+Basket"}
+Completed 500 Internal Server Error in 3ms
+
+ArgumentError (When assigning attributes, you must pass a hash as an argument.):
+  app/controllers/folders_controller.rb:19:in `block (2 levels) in create'
+  app/controllers/folders_controller.rb:17:in `create'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.5ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.0ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (2.0ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (23.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-28 22:45:58 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.6ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mUserFolder Load (0.5ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.3ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (3.3ms)
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-28 22:45:58 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-28 22:45:58 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-28 22:45:58 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-28 22:45:58 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-28 22:45:58 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-28 22:45:58 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-28 22:45:58 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-28 22:45:58 -0400
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-07-28 22:45:59 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.1ms)
+  Rendered folders/new.html.erb within layouts/application (3.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.4ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.4ms)
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2014-07-28 22:46:03 -0400
+Processing by FoldersController#create as JSON
+  Parameters: {"folder_name"=>"name=New+Basket"}
+Completed 500 Internal Server Error in 3ms
+
+ArgumentError (When assigning attributes, you must pass a hash as an argument.):
+  app/controllers/folders_controller.rb:19:in `block (2 levels) in create'
+  app/controllers/folders_controller.rb:17:in `create'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.1ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.1ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (18.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-28 22:47:22 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (4.2ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.3ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (23.9ms)
+Completed 200 OK in 43ms (Views: 34.3ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-28 22:47:23 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-28 22:47:23 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-28 22:47:23 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-28 22:47:23 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-28 22:47:23 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-28 22:47:23 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-28 22:47:23 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-28 22:47:23 -0400
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-07-28 22:47:30 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.1ms)
+  Rendered folders/new.html.erb within layouts/application (3.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.4ms)
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2014-07-28 22:47:35 -0400
+Processing by FoldersController#create as JSON
+  Parameters: {"folder_name"=>"name=new+basket+idea"}
+Completed 500 Internal Server Error in 3ms
+
+ArgumentError (When assigning attributes, you must pass a hash as an argument.):
+  app/controllers/folders_controller.rb:19:in `block (2 levels) in create'
+  app/controllers/folders_controller.rb:17:in `create'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (1.3ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.3ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (19.6ms)
+  [1m[36mFolder Load (0.6ms)[0m  [1mSELECT "folders".* FROM "folders"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-29 08:53:56 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (2.2ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (5.8ms)
+  Rendered folders/_form.html.erb (0.4ms)
+  [1m[36mUserFolder Load (0.6ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.5ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (29.2ms)
+Completed 200 OK in 151ms (Views: 130.0ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-29 08:53:56 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 08:53:56 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 08:53:56 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 08:53:56 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-29 08:53:56 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-29 08:53:56 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-29 08:53:56 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 08:53:56 -0400
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-07-29 08:54:00 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.4ms)
+  Rendered folders/new.html.erb within layouts/application (4.6ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (1.0ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.5ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.3ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (3.7ms)
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2014-07-29 08:54:06 -0400
+Processing by FoldersController#create as JSON
+  Parameters: {"folder_name"=>"name=Test+Basket"}
+Completed 500 Internal Server Error in 1ms
+
+ArgumentError (When assigning attributes, you must pass a hash as an argument.):
+  app/controllers/folders_controller.rb:19:in `block (2 levels) in create'
+  app/controllers/folders_controller.rb:17:in `create'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.9ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (1.3ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (24.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-29 08:55:03 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (4.2ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.4ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (16.8ms)
+Completed 200 OK in 35ms (Views: 26.6ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-29 08:55:03 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 08:55:03 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 08:55:03 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 08:55:03 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-29 08:55:03 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-29 08:55:03 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-29 08:55:03 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 08:55:03 -0400
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-07-29 08:55:04 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.1ms)
+  Rendered folders/new.html.erb within layouts/application (3.3ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mUserFolder Load (0.4ms)[0m  [1mSELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1[0m
+  [1m[35mFolder Load (0.3ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  Rendered folders/_userfolders.html.erb (2.5ms)
+Completed 200 OK in 26ms (Views: 23.6ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2014-07-29 08:55:08 -0400
+Processing by FoldersController#create as JSON
+  Parameters: {"folder_name"=>"name=Test+Basket"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "folders" ("name") VALUES ($1) RETURNING "id"[0m  [["name", "name=Test+Basket"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mFolder Load (0.4ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 33]]
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO "user_folders" ("folder_id", "user_id") VALUES ($1, $2) RETURNING "id"[0m  [["folder_id", 33], ["user_id", 1]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Completed 500 Internal Server Error in 42ms
+
+ActionView::MissingTemplate (Missing template folders/show, application/show with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/brendanscarano/Documents/basket/app/views"
+  * "/Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/twitter-bootstrap-rails-2.2.8/app/views"
+):
+  app/controllers/folders_controller.rb:25:in `block (2 levels) in create'
+  app/controllers/folders_controller.rb:17:in `create'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/missing_template.text.erb (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-07-29 08:57:15 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.6ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[35mUserFolder Load (0.7ms)[0m  SELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 33]]
+  Rendered folders/_userfolders.html.erb (5.9ms)
+Completed 200 OK in 39ms (Views: 36.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-07-29 08:57:15 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-07-29 08:57:15 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-07-29 08:57:15 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-07-29 08:57:15 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-07-29 08:57:15 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-07-29 08:57:15 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-07-29 08:57:15 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-07-29 08:57:15 -0400
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-07-29 08:57:20 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.1ms)
+  Rendered folders/new.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.4ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[35mUserFolder Load (0.4ms)[0m  SELECT "user_folders".* FROM "user_folders"  WHERE "user_folders"."user_id" = 1
+  [1m[36mFolder Load (0.2ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 32]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 32]]
+  [1m[36mFolder Load (0.2ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 33]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 33]]
+  Rendered folders/_userfolders.html.erb (3.6ms)
+Completed 200 OK in 31ms (Views: 27.8ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2014-07-29 08:57:25 -0400
+Processing by FoldersController#create as */*
+  Parameters: {"folder_name"=>"name=This+is+a+test"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "folders" ("name") VALUES ($1) RETURNING "id"  [["name", "name=This+is+a+test"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 34]]
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "user_folders" ("folder_id", "user_id") VALUES ($1, $2) RETURNING "id"  [["folder_id", 34], ["user_id", 1]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 20ms
+
+ActionView::MissingTemplate (Missing template folders/show, application/show with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder, :coffee]}. Searched in:
+  * "/Users/brendanscarano/Documents/basket/app/views"
+  * "/Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/twitter-bootstrap-rails-2.2.8/app/views"
+):
+  app/controllers/folders_controller.rb:25:in `block (2 levels) in create'
+  app/controllers/folders_controller.rb:17:in `create'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/missing_template.text.erb (0.6ms)
+  [1m[36mFolder Load (0.6ms)[0m  [1mSELECT "folders".* FROM "folders"[0m

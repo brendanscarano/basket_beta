@@ -1,5 +1,11 @@
+<%#= form_for @folder do |f| %>
+  <%#= f.label :name %>
+  <%#= f.text_field :name %>
 
-  <form name="new_folder" id="new_folder" action="/folders/new" method="post">
+  <%#= f.submit %>
+<%# end %>
+
+  <form name="new_folder" id="new_basket_form" action="/folders" method="post">
     <input type='text' name="name" placeholder="name" id="folder_name" required> 
-    <input type="submit" id="signup_button" value="Sign Me Up!">
+    <input type="submit" id="signup_button" value="Create Basket">
   </form>

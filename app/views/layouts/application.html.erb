@@ -18,16 +18,9 @@
     <ul class="nav">
 
       <% if current_user %>
-
-        <li class="span1 offset8"><img alt="FB_Pic" src=<%= current_user.image %>></li>
-        <li><%= current_user.name %></li>
-        <li><%= link_to "Sign out", signout_path, id: "sign_out" %></li>
-        
+        <%= render "users/usernav" %>
       <% else %>
-
-        <li class="span 1 offset9"><%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
-        </li>
-
+        <%= render "users/guestnav" %>
       <% end %>
 
     </ul>
@@ -44,7 +37,7 @@
         <%= link_to "+ New Basket", new_folder_path, id: "new_folder", remote: true %>
         <br><br>
 
-        <div class="hidden" id="new_basket_form">
+        <div class="hidden" id="new_basket_form_container">
           <%= render "form" %>
         </div>
 
