@@ -37,14 +37,15 @@
         <%= link_to "+ New Basket", new_folder_path, id: "new_folder", remote: true %>
         <br><br>
 
-        <div class="hidden" id="new_basket_form_container">
+        <div id="new_basket_form_container">
           <%= render "form" %>
         </div>
 
-        
-        <% if current_user %>
-          <%= render "userfolders" %>
-        <% end %>
+        <div id="user_folders">
+          <% if current_user %>
+            <%= render "userfolders" %>
+          <% end %>
+        </div>
     </div>
 
     <div class="span8">
