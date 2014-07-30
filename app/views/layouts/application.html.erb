@@ -6,6 +6,7 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
   <link href="//fonts.googleapis.com/css?family=Lato:100italic,100,300italic,300,400italic,400,700italic,700,900italic,900" rel="stylesheet" type="text/css">
+
 </head>
 
 <body>
@@ -17,16 +18,9 @@
     <ul class="nav">
 
       <% if current_user %>
-
-        <li class="span1 offset8"><img alt="FB_Pic" src=<%= current_user.image %>></li>
-        <li><strong><%= current_user.name %></strong></li>
-        <li><%= link_to "Sign out", signout_path, id: "sign_out" %></li>
-        
+        <%= render "users/usernav" %>
       <% else %>
-
-        <li class="span 1 offset9"><%= link_to "Sign in with Facebook", "/auth/facebook", id: "sign_in" %>
-        </li>
-
+        <%= render "users/guestnav" %>
       <% end %>
 
     </ul>
@@ -39,37 +33,36 @@
     <div class="span2">
       <h1>Baskets</h1>
       <br>
-          <%= link_to "+ New Basket", new_folder_path %>
+        
+        <%= link_to "+ New Basket", new_folder_path, id: "new_folder", remote: true %>
         <br><br>
 
-        
-        <% if current_user %>
-            <% @folders = UserFolder.where(user_id: current_user.id) %>
+        <div id="new_basket_form_container">
+          <%= render "form" %>
+        </div>
 
-            <% @folders.sort.each do |folder| %>
-              <%= link_to "#{Folder.find(folder.folder_id).name}", folder_path(Folder.find(folder.folder_id)) %><br />
-            <% end %>
+        <div id="user_folders">
+          <% if current_user %>
+            <%= render "userfolders" %>
+          <% end %>
+        </div>
+    </div>
 
-        <% end %>
+    <div class="span8">
+      <%= yield %>
+    </div>
 
-  </div>
+    <div class="span2">
+      <h1>Friends</h1>
 
-  <div class="span8">
-    <%= yield %>
-  </div>
+      <%# if current_user %>
+          <%# @graph = Koala::Facebook::API.new(current_user.oauth_token) %>
+          <%# friends = @graph.get_connections("me", "friends") %>
+      <%# end %>
 
-  <div class="span2">
-    <h1>Friends</h1>
-
-    <%# if current_user %>
-        <%# @graph = Koala::Facebook::API.new(current_user.oauth_token) %>
-        <%# friends = @graph.get_connections("me", "friends") %>
-    <%# end %>
-
-  </div>
+    </div>
   </div>
 </div>  
-
 
 </body>
 </html>

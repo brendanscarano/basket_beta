@@ -1,0 +1,24 @@
+$(document).ready(function() {
+
+  $('#new_folder').on('click', function(e) {
+    e.preventDefault();
+    $('#new_basket_form_container').show();
+  });
+
+  $('#new_basket_form').on('submit', function(e) {
+    e.preventDefault();
+
+    var user_input = $('#folder_name').val()
+    _this = this
+
+    $.ajax({
+      type: 'POST',
+      url: '/folders',
+      data: {folder_name: user_input},
+    }).done(function(response) {
+      $('#folder_name').val('');
+      $(_this).hide();
+      $('#user_folders').html(response);
+    });
+  })
+});
