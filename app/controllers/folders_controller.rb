@@ -13,14 +13,15 @@ class FoldersController < ApplicationController
   end
 
   def create
-
+    p params
     @folder = Folder.new(name: params["folder_name"])
 
     if @folder.save
       UserFolder.create(user_id: current_user.id, folder_id: @folder.id)
       flash[:notice] = "Folder has been created."
 
-    render partial: 'userfolders'
+      render partial: 'userfolders'
+    end
 
     # respond_to do |format|
     #   format.json {
@@ -31,7 +32,6 @@ class FoldersController < ApplicationController
     #       flash[:notice] = "Folder has been created."
           
     #       {folder_name: @folder.name}.to_json
-    #       redirect_to @folder
     #     end
 
     #   }
@@ -42,7 +42,6 @@ class FoldersController < ApplicationController
     #       flash[:notice] = "Folder has been created."
     #     end
     #   }
-    end
   end
 
   private

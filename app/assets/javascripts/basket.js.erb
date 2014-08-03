@@ -18,6 +18,7 @@ $(document).ready(function() {
     }).done(function(response) {
       $('#folder_name').val('');
       $(_this).hide();
+      console.log(response);
       $('#user_folders').html(response);
     });
   })
