@@ -21,6 +21,12 @@ class FoldersController < ApplicationController
     end
   end
 
+  def destroy
+    @folder.destroy
+
+    render partial: 'userfolders'
+  end
+
   private
 
   def folder_params
