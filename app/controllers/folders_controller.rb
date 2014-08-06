@@ -1,11 +1,8 @@
 class FoldersController < ApplicationController
-  # def index
-  #   @folders = UserFolder.where(user_id: current_user.id)
-  # end
   skip_before_action :verify_authenticity_token
+  before_action :set_folder, only: [:show, :destroy]
 
   def show
-    @folder = Folder.find(params[:id])
   end
 
   def new
@@ -22,31 +19,21 @@ class FoldersController < ApplicationController
 
       render partial: 'userfolders'
     end
+  end
 
-    # respond_to do |format|
-    #   format.json {
-    #     @folder = Folder.new(name: params["folder_name"])
+  def destroy
+    @folder.destroy
 
-    #     if @folder.save
-    #       UserFolder.create(user_id: current_user.id, folder_id: @folder.id)
-    #       flash[:notice] = "Folder has been created."
-          
-    #       {folder_name: @folder.name}.to_json
-    #     end
-
-    #   }
-
-    #   format.html {
-    #     if @folder.save
-    #       UserFolder.create(user_id: current_user.id, folder_id: @folder.id)
-    #       flash[:notice] = "Folder has been created."
-    #     end
-    #   }
+    render partial: 'userfolders'
   end
 
   private
 
   def folder_params
     params.require(:folder).permit(:name)
+  end
+
+  def set_folder
+    @folder = Folder.find(params[:id])
   end
 end

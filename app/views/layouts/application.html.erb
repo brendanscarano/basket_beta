@@ -2,11 +2,12 @@
 <html>
 <head>
   <title>Basket</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= csrf_meta_tags %>
   <link href="//fonts.googleapis.com/css?family=Lato:100italic,100,300italic,300,400italic,400,700italic,700,900italic,900" rel="stylesheet" type="text/css">
   <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 
 </head>
 
@@ -14,9 +15,9 @@
 
 <div class="navbar">
   <div class="navbar-inner">
-    <a class="brand" href="#">basket</a>
+    <h1>basket</h1>
 
-    <ul class="nav">
+    <ul id="users-nav">
 
       <% if current_user %>
         <%= render "users/usernav" %>
@@ -29,25 +30,23 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="row">
-    <div class="span2">
-      <h1>Baskets</h1>
-      <br>
-        
-        <%= link_to "+ New Basket", new_folder_path, id: "new_folder", remote: true %>
-        <br><br>
+<section id="baskets">
+  <div class="baskets-wrapper">
+    <br>
+      <img src="/app/assets/images/icon16.jpg">
+      <%= link_to "+ New Basket", new_folder_path, id: "new_folder", remote: true %>
+      <br><br>
 
-        <div id="new_basket_form_container">
-          <%= render "form" %>
-        </div>
+      <div id="new_basket_form_container">
+        <%= render "form" %>
+      </div>
 
-        <div id="user_folders">
-          <% if current_user %>
-            <%= render "userfolders" %>
-          <% end %>
-        </div>
-    </div>
+      <div id="user_folders">
+        <% if current_user %>
+          <%= render "userfolders" %>
+        <% end %>
+  </div>
+</section>
 
     <div class="span8">
       <%= yield %>
