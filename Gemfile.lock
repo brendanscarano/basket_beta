@@ -109,6 +109,8 @@ GEM
     less-rails (2.5.0)
       actionpack (>= 3.1)
       less (~> 2.5.0)
+    less-rails-bootstrap (3.2.0)
+      less-rails (~> 2.5.0)
     libv8 (3.16.14.3)
     listen (2.7.5)
       celluloid (>= 0.15.2)
@@ -280,6 +282,7 @@ DEPENDENCIES
   koala (~> 1.10.0rc)
   launchy
   less-rails
+  less-rails-bootstrap
   omniauth
   omniauth-facebook (~> 1.4.1)
   pg
