@@ -33,7 +33,7 @@
     <div class="baskets-wrapper">
       <br>
         <div class="new-basket-btn">
-          <%= image_tag '/images/icon16.jpg' %>
+          <%= image_tag '/images/icon.png' %>
           <%= link_to "+ New Basket", new_folder_path, id: "new_folder", remote: true %>
         </div>
         <br>
@@ -50,20 +50,24 @@
   </section>
 
   <section id="links">
-    <div class="span6">
-      <%= yield %>
+    <div class="links-wrapper">
+      <div class="span6">
+        <%= yield %>
+      </div>
     </div>
   </section>
 
   <section id="friends">
-    <div class="span2">
-      <h1>Friends</h1>
+    <div class="friends-wrapper">
+      <div class="span2">
+        <h1>Friends</h1>
 
-      <%# if current_user %>
-          <%# @graph = Koala::Facebook::API.new(current_user.oauth_token) %>
-          <%# friends = @graph.get_connections("me", "friends") %>
-      <%# end %>
+        <%# if current_user %>
+            <%# @graph = Koala::Facebook::API.new(current_user.oauth_token) %>
+            <%# friends = @graph.get_connections("me", "friends") %>
+        <%# end %>
 
+      </div>
     </div>
   </section>
 </body>
