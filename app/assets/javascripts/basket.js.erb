@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   $('#new_folder').on('click', function(e) {
     e.preventDefault();
-    $('#new_basket_form_container').show();
+    $('#new-basket-form-container').show();
   });
 
   $('#new_basket_form').on('submit', function(e) {
@@ -18,14 +18,19 @@ $(document).ready(function() {
     }).done(function(response) {
       $('#folder_name').val('');
       $(_this).hide();
-      $('#user_folders').html(response);
+      // $('#user_folders').html(response);
     });
   });
+
+  $('#hide_button').on('click', function(){
+    $('#new-basket-form-container').hide();     
+  })
 
   $('.delete_basket').on('click', function(e) {
     e.preventDefault();
 
-    var link = document.getElementsByTagName('a')
+    // var link = document.getElementsByTagName('a') 
+    var link = $('this')
     console.log(link);
 
     alert("You are about to delete this!")
