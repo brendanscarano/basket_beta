@@ -17,7 +17,7 @@ class FoldersController < ApplicationController
       UserFolder.create(user_id: current_user.id, folder_id: @folder.id)
       flash[:notice] = "Folder has been created."
 
-      render partial: 'userfolders'
+      redirect_to root_url
     end
   end
 
