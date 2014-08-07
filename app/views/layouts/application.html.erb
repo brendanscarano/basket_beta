@@ -12,46 +12,50 @@
 </head>
 
 <body>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <h1>basket</h1>
 
-<div class="navbar">
-  <div class="navbar-inner">
-    <h1>basket</h1>
+      <ul id="users-nav">
 
-    <ul id="users-nav">
-
-      <% if current_user %>
-        <%= render "users/usernav" %>
-      <% else %>
-        <%= render "users/guestnav" %>
-      <% end %>
-
-    </ul>
-
-  </div>
-</div>
-
-<section id="baskets">
-  <div class="baskets-wrapper">
-    <br>
-      <img src="/app/assets/images/icon16.jpg">
-      <%= link_to "+ New Basket", new_folder_path, id: "new_folder", remote: true %>
-      <br><br>
-
-      <div id="new_basket_form_container">
-        <%= render "form" %>
-      </div>
-
-      <div id="user_folders">
         <% if current_user %>
-          <%= render "userfolders" %>
+          <%= render "users/usernav" %>
+        <% else %>
+          <%= render "users/guestnav" %>
         <% end %>
-  </div>
-</section>
 
-    <div class="span8">
+      </ul>
+
+    </div>
+  </div>
+
+  <section id="baskets">
+    <div class="baskets-wrapper">
+      <br>
+        <div class="new-basket-btn">
+          <%= image_tag '/images/icon16.jpg' %>
+          <%= link_to "+ New Basket", new_folder_path, id: "new_folder", remote: true %>
+        </div>
+        <br>
+
+        <div id="new-basket-form-container">
+          <%= render "form" %>
+        </div>
+
+        <div id="user_folders">
+          <% if current_user %>
+            <%= render "userfolders" %>
+          <% end %>
+    </div>
+  </section>
+
+  <section id="links">
+    <div class="span6">
       <%= yield %>
     </div>
+  </section>
 
+  <section id="friends">
     <div class="span2">
       <h1>Friends</h1>
 
@@ -61,8 +65,6 @@
       <%# end %>
 
     </div>
-  </div>
-</div>  
-
+  </section>
 </body>
 </html>
