@@ -1,3 +1,4 @@
 /config/application.yml
-Gemfile.lock
+/config/secrets.yml
 /log/development.log
+Gemfile.lock
