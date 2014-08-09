@@ -2,6 +2,10 @@ class FoldersController < ApplicationController
   skip_before_action :verify_authenticity_token
   before_action :set_folder, only: [:show, :destroy]
 
+  def index
+    @folders = Folder.all
+  end
+
   def show
   end
 

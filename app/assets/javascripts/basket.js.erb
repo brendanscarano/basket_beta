@@ -34,13 +34,12 @@ $(document).ready(function() {
     e.preventDefault();
 
     // var link = document.getElementsByTagName('a') 
-    var link = $('this')
-    console.log(link);
+    var folderId = $(this).attr("value");
 
     alert("You are about to delete this!")
     // $.ajax({
     //   type: 'DELETE'
-    //   url: '/folders' + 
+    //   url: '/folders' + folderId
     // })
   })
 });
