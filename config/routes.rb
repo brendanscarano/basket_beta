@@ -9,5 +9,6 @@ Rails.application.routes.draw do
   root "folders#index"
 
   resources :folders
+  get 'users_folders', to: 'folders#users_folders', as: 'users_folders'
   
 end

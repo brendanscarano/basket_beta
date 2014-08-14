@@ -2,10 +2,6 @@ class FoldersController < ApplicationController
   skip_before_action :verify_authenticity_token
   before_action :set_folder, only: [:show, :destroy]
 
-  def index
-    @folders = Folder.all
-  end
-
   def show
   end
 
@@ -29,6 +25,14 @@ class FoldersController < ApplicationController
     @folder.destroy
 
     render partial: 'userfolders'
+  end
+
+  def users_folders
+    user = User.find(current_user.id)
+
+    @folders = user.folders
+    render partial: "folders"
+    # render :json => { @folders }
   end
 
   private
