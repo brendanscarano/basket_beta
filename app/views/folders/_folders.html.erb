@@ -1,6 +1,5 @@
 <% @folders.each do |folder| %>
-  <div class="basket-click">
-    <% folder.id %>
-    <%= folder.name %><br>
-  </div>
+    <div class="basket-click" value="<%= folder.id %>">
+      <%= folder.name %>
+    </div><br>
 <% end %>

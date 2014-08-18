@@ -34255,3 +34255,754 @@ Processing by FoldersController#users_folders as */*
   [1m[36mFolder Load (0.7ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
   Rendered folders/_folders.html.erb (2.6ms)
 Completed 200 OK in 12ms (Views: 7.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 10:34:32 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.4ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.1ms)
+Completed 200 OK in 9ms (Views: 4.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 10:34:55 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.2ms)
+Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 10:36:36 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.7ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (4.3ms)
+Completed 200 OK in 13ms (Views: 8.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 10:36:55 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.4ms)
+Completed 200 OK in 11ms (Views: 7.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 11:09:16 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.6ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (7.3ms)
+Completed 200 OK in 30ms (Views: 16.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 11:09:27 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.5ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (3.4ms)
+Completed 200 OK in 14ms (Views: 8.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 11:10:39 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (2.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.5ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.8ms)
+Completed 200 OK in 13ms (Views: 6.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 11:12:06 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (4.8ms)
+Completed 200 OK in 13ms (Views: 8.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 11:12:11 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.5ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.7ms)
+Completed 200 OK in 12ms (Views: 7.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 11:14:24 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (3.3ms)
+Completed 200 OK in 15ms (Views: 8.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 11:15:23 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.8ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (5.5ms)
+Completed 200 OK in 14ms (Views: 9.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 11:18:06 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (3.0ms)
+Completed 200 OK in 13ms (Views: 8.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 11:18:21 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.4ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.6ms)
+Completed 200 OK in 11ms (Views: 6.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 11:25:24 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.6ms)
+Completed 200 OK in 15ms (Views: 8.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/folders/96" for 127.0.0.1 at 2014-08-14 11:25:37 -0400
+Processing by FoldersController#show as HTML
+  Parameters: {"id"=>"96"}
+  [1m[35mFolder Load (8.7ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 96]]
+  Rendered folders/show.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered users/_usernav.html.erb (2.7ms)
+  Rendered folders/_form.html.erb (0.2ms)
+  [1m[35mFolder Load (0.4ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_userfolders.html.erb (47.0ms)
+Completed 200 OK in 91ms (Views: 78.6ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 11:25:42 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.7ms)
+Completed 200 OK in 12ms (Views: 7.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 11:40:53 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.3ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.1ms)
+Completed 200 OK in 12ms (Views: 7.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 11:42:48 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.6ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (3.3ms)
+Completed 200 OK in 12ms (Views: 6.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 11:57:33 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.9ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (5.7ms)
+Completed 200 OK in 15ms (Views: 10.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 14:31:33 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.1ms)
+Completed 200 OK in 11ms (Views: 6.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 14:31:35 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (1.3ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (4.5ms)
+Completed 200 OK in 15ms (Views: 9.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 15:15:56 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.4ms)
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 15:16:08 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (1.0ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (4.9ms)
+Completed 200 OK in 16ms (Views: 10.2ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 15:16:15 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (3.6ms)
+Completed 200 OK in 14ms (Views: 8.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 15:16:17 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.4ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.5ms)
+Completed 200 OK in 12ms (Views: 6.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 15:16:32 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.5ms)
+Completed 200 OK in 25ms (Views: 6.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 15:17:06 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.3ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.0ms)
+Completed 200 OK in 11ms (Views: 6.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 15:18:41 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.5ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (3.2ms)
+Completed 200 OK in 13ms (Views: 7.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 15:19:13 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.3ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (1.9ms)
+Completed 200 OK in 10ms (Views: 4.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 15:19:32 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (1.8ms)
+Completed 200 OK in 10ms (Views: 4.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 15:19:37 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.4ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (3.0ms)
+Completed 200 OK in 12ms (Views: 7.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 15:22:20 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.6ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (4.3ms)
+Completed 200 OK in 13ms (Views: 8.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 15:22:44 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.3ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.0ms)
+Completed 200 OK in 63ms (Views: 5.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 15:35:35 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (3.1ms)
+Completed 200 OK in 11ms (Views: 6.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 15:39:38 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.4ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.6ms)
+Completed 200 OK in 12ms (Views: 7.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 15:40:45 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.6ms)
+Completed 200 OK in 11ms (Views: 6.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 15:41:15 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.4ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (3.4ms)
+Completed 200 OK in 11ms (Views: 7.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 15:41:53 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.5ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.8ms)
+Completed 200 OK in 12ms (Views: 7.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 15:41:53 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.4ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.1ms)
+Completed 200 OK in 11ms (Views: 6.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 15:42:20 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (1.0ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (3.0ms)
+Completed 200 OK in 12ms (Views: 6.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 15:42:28 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.4ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.5ms)
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 15:45:47 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.7ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (3.7ms)
+Completed 200 OK in 13ms (Views: 8.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 15:49:45 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.4ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.5ms)
+Completed 200 OK in 12ms (Views: 7.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 15:51:17 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.5ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.7ms)
+Completed 200 OK in 11ms (Views: 6.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-14 15:52:41 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.5ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (3.0ms)
+Completed 200 OK in 11ms (Views: 7.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-15 10:35:22 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (7.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (1.3ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (5.7ms)
+Completed 200 OK in 53ms (Views: 18.3ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-15 10:35:57 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.5ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (3.6ms)
+Completed 200 OK in 14ms (Views: 8.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-15 10:36:22 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (3.4ms)
+Completed 200 OK in 12ms (Views: 6.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-15 10:37:03 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.4ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (5.4ms)
+Completed 200 OK in 16ms (Views: 11.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-15 10:37:12 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.5ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (5.3ms)
+Completed 200 OK in 17ms (Views: 10.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-15 10:42:34 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.7ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (4.5ms)
+Completed 200 OK in 14ms (Views: 8.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-15 10:43:21 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.6ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (3.8ms)
+Completed 200 OK in 13ms (Views: 7.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-15 10:43:58 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.5ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (4.0ms)
+Completed 200 OK in 15ms (Views: 8.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-15 10:43:58 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.6ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (3.8ms)
+Completed 200 OK in 16ms (Views: 8.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-15 10:44:26 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.6ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (4.2ms)
+Completed 200 OK in 15ms (Views: 9.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-15 10:44:43 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (74.3ms)
+Completed 200 OK in 86ms (Views: 79.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-15 10:45:11 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.4ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.7ms)
+Completed 200 OK in 12ms (Views: 7.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-15 10:45:32 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.5ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (3.1ms)
+Completed 200 OK in 11ms (Views: 7.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-15 10:45:33 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.5ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.6ms)
+Completed 200 OK in 16ms (Views: 9.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-15 10:45:54 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (3.2ms)
+Completed 200 OK in 14ms (Views: 8.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-15 10:46:17 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.6ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (3.4ms)
+Completed 200 OK in 13ms (Views: 8.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-15 10:47:19 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.5ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (3.1ms)
+Completed 200 OK in 11ms (Views: 6.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-18 15:57:24 -0400
+
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:881:in `initialize'
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:881:in `new'
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:881:in `connect'
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:568:in `initialize'
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /Users/brendanscarano/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /Users/brendanscarano/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.1) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.1) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.1) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.1) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/brendanscarano/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/brendanscarano/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/brendanscarano/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (41.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-18 15:57:41 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (3.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.5ms)
+  Rendered users/_guestnav.html.erb (0.6ms)
+  Rendered folders/_form.html.erb (0.5ms)
+Completed 200 OK in 113ms (Views: 103.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-18 15:57:42 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-18 15:57:42 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-18 15:57:42 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-18 15:57:42 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-18 15:57:42 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-08-18 15:57:42 -0400
+
+
+Started GET "/assets/baskets.css?body=1" for 127.0.0.1 at 2014-08-18 15:57:42 -0400
+
+
+Started GET "/assets/friends.css?body=1" for 127.0.0.1 at 2014-08-18 15:57:42 -0400
+
+
+Started GET "/assets/links.css?body=1" for 127.0.0.1 at 2014-08-18 15:57:42 -0400
+
+
+Started GET "/assets/nav_bar.css?body=1" for 127.0.0.1 at 2014-08-18 15:57:42 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-08-18 15:57:42 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-18 15:57:42 -0400
+
+
+Started GET "/assets/nav_bar" for 127.0.0.1 at 2014-08-18 15:57:42 -0400
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-08-18 15:57:44 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-08-18 15:57:44 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQDiDN_WFg-hA9x4wtMUQhcnjeBTlyiONLxJEzZUP8AkVkboCQYCZTOH7rTJZ4JZUBMimlfPsxnLeyWuUAd576Bo0wVMKFRj2JLWaimLbE-GzUPLkVHWlnPQoarP6tV-euThuW75Jw3TkOTYePx5MwbApos6j0h2EDEWYR9jNFrPidxjSDQhyRsE_Eoci9SYdhruJN60U7hs3aJ99ptmFcvyZCgnzv1YKZlm4MYjATebvaZShVBvJZvcaBBVpySQlwmcUSXbE8CjgtWGLSifsxGiy6xfE6HmcC9w8aHWCXLytl9U2QkPiAB8kqrKH7wOhRg&state=6c893523c7b02fd2a26e91ed2327f0ad043e984414a973c2" for 127.0.0.1 at 2014-08-18 15:57:44 -0400
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQDiDN_WFg-hA9x4wtMUQhcnjeBTlyiONLxJEzZUP8AkVkboCQYCZTOH7rTJZ4JZUBMimlfPsxnLeyWuUAd576Bo0wVMKFRj2JLWaimLbE-GzUPLkVHWlnPQoarP6tV-euThuW75Jw3TkOTYePx5MwbApos6j0h2EDEWYR9jNFrPidxjSDQhyRsE_Eoci9SYdhruJN60U7hs3aJ99ptmFcvyZCgnzv1YKZlm4MYjATebvaZShVBvJZvcaBBVpySQlwmcUSXbE8CjgtWGLSifsxGiy6xfE6HmcC9w8aHWCXLytl9U2QkPiAB8kqrKH7wOhRg", "state"=>"6c893523c7b02fd2a26e91ed2327f0ad043e984414a973c2", "provider"=>"facebook"}
+  [1m[35mUser Load (5.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."provider" = 'facebook' AND "users"."uid" = '10154283904805293'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  UPDATE "users" SET "oauth_expires_at" = $1, "oauth_token" = $2, "updated_at" = $3 WHERE "users"."id" = 2  [["oauth_expires_at", "2014-10-17 19:57:44.000000"], ["oauth_token", "CAAUhfcEtdIABAHl3lcZCIHvJai0uVpqXFlNTDkpQ3JI2SX8fczgix0P8rh5PtGsZCZBqeaZCWuMz8158cohCwi9csRZB1IN3ogBSsK24D3hzP4d40i5dSdhLFYzZB2ZBA7tujtujQyLGwSfeqZAx5Jw40zTGvwZAATYBde0sBhtZCrMZCSC7sT8ie0agfEZBlSLA8z1OEbhetHDtUKh0pZAoQ9Sz3"], ["updated_at", "2014-08-18 19:57:45.162685"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 47ms (ActiveRecord: 12.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-18 15:57:45 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered users/_usernav.html.erb (0.8ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mFolder Load (2.7ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_userfolders.html.erb (51.8ms)
+Completed 200 OK in 65ms (Views: 58.2ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-18 15:57:45 -0400
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-18 15:57:47 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.5ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.8ms)
+Completed 200 OK in 15ms (Views: 9.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-18 16:31:58 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.9ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (3.3ms)
+Completed 200 OK in 16ms (Views: 8.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-18 16:32:53 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (1.4ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (4.7ms)
+Completed 200 OK in 14ms (Views: 8.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-18 16:33:23 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (1.4ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (3.9ms)
+Completed 200 OK in 16ms (Views: 8.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-18 16:33:35 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.7ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.5ms)
+Completed 200 OK in 11ms (Views: 6.2ms | ActiveRecord: 1.3ms)
