@@ -35507,3 +35507,690 @@ Processing by FoldersController#index as */*
   [1m[36mFolder Load (0.3ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
   Rendered folders/_userfolders.html.erb (3.3ms)
 Completed 200 OK in 35ms (Views: 34.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-18 17:11:14 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.6ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (3.5ms)
+Completed 200 OK in 18ms (Views: 8.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-18 17:15:18 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.5ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.3ms)
+Completed 200 OK in 10ms (Views: 6.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-18 17:15:36 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.6ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.6ms)
+Completed 200 OK in 13ms (Views: 7.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-18 17:15:42 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.3ms)
+Completed 200 OK in 13ms (Views: 7.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-18 17:19:10 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.8ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.9ms)
+Completed 200 OK in 14ms (Views: 7.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-18 17:19:57 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.4ms)
+Completed 200 OK in 11ms (Views: 7.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-18 17:20:37 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.4ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (1.9ms)
+Completed 200 OK in 10ms (Views: 5.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/folders/90" for 127.0.0.1 at 2014-08-18 18:15:22 -0400
+Processing by FoldersController#show as HTML
+  Parameters: {"id"=>"90"}
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 90]]
+  Rendered folders/show.html.erb within layouts/application (0.7ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered users/_usernav.html.erb (0.9ms)
+  Rendered folders/_form.html.erb (0.6ms)
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_userfolders.html.erb (4.2ms)
+Completed 200 OK in 24ms (Views: 21.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-18 18:15:26 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.4ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (1.7ms)
+Completed 200 OK in 12ms (Views: 5.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-18 20:29:11 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (1.8ms)
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-18 20:29:12 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.6ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (3.4ms)
+Completed 200 OK in 12ms (Views: 8.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-18 20:29:36 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.0ms)
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-18 20:29:41 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.3ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (1.6ms)
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/new_link" for 127.0.0.1 at 2014-08-18 20:29:48 -0400
+Processing by LinksController#new_link as */*
+  Parameters: {"url"=>"https://discussions.apple.com/thread/5156480", "link"=>{"url"=>"https://discussions.apple.com/thread/5156480"}}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-18 20:29:48 -0400
+Processing by FoldersController#index as */*
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered users/_usernav.html.erb (0.4ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[35mFolder Load (0.4ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_userfolders.html.erb (3.9ms)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-18 20:30:17 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.4ms)
+Completed 200 OK in 12ms (Views: 7.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-18 20:30:37 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (2.1ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (3.9ms)
+Completed 200 OK in 24ms (Views: 5.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-18 20:30:38 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.1ms)
+Completed 200 OK in 13ms (Views: 7.1ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/new_link" for 127.0.0.1 at 2014-08-18 20:31:06 -0400
+Processing by LinksController#new_link as */*
+  Parameters: {"url"=>"https://discussions.apple.com/thread/5156480", "link"=>{"url"=>"https://discussions.apple.com/thread/5156480"}}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-18 20:31:06 -0400
+Processing by FoldersController#index as */*
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_userfolders.html.erb (3.6ms)
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-18 20:32:51 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.6ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (7.7ms)
+Completed 200 OK in 19ms (Views: 12.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-18 20:32:54 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.6ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.9ms)
+Completed 200 OK in 12ms (Views: 7.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-18 20:33:20 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.5ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.5ms)
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-18 20:33:45 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.4ms)
+Completed 200 OK in 12ms (Views: 7.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-18 21:52:20 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.4ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (5.0ms)
+Completed 200 OK in 36ms (Views: 7.8ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-19 08:48:50 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (3.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (3.3ms)
+  [1m[35mUser Load (2.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered users/_usernav.html.erb (5.2ms)
+  Rendered folders/_form.html.erb (0.4ms)
+  [1m[36mFolder Load (2.7ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_userfolders.html.erb (52.3ms)
+Completed 200 OK in 274ms (Views: 249.4ms | ActiveRecord: 11.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-19 08:48:51 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-19 08:48:51 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-19 08:48:51 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-19 08:48:51 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-19 08:48:51 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-08-19 08:48:51 -0400
+
+
+Started GET "/assets/baskets.css?body=1" for 127.0.0.1 at 2014-08-19 08:48:51 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-08-19 08:48:51 -0400
+
+
+Started GET "/assets/friends.css?body=1" for 127.0.0.1 at 2014-08-19 08:48:51 -0400
+
+
+Started GET "/assets/links.css?body=1" for 127.0.0.1 at 2014-08-19 08:48:51 -0400
+
+
+Started GET "/assets/nav_bar.css?body=1" for 127.0.0.1 at 2014-08-19 08:48:51 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-19 08:48:51 -0400
+
+
+Started GET "/assets/nav_bar" for 127.0.0.1 at 2014-08-19 08:48:51 -0400
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-19 08:48:53 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.8ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.9ms)
+Completed 200 OK in 15ms (Views: 9.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-19 08:49:39 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.8ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.4ms)
+Completed 200 OK in 11ms (Views: 6.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-19 08:50:47 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.6ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.1ms)
+Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-19 08:51:04 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (1.0ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (3.6ms)
+Completed 200 OK in 12ms (Views: 7.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-19 08:51:05 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (1.0ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (3.5ms)
+Completed 200 OK in 11ms (Views: 6.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-19 08:53:23 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (3.5ms)
+Completed 200 OK in 33ms (Views: 5.7ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-19 08:53:28 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.3ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (1.7ms)
+Completed 200 OK in 9ms (Views: 5.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/new_link" for 127.0.0.1 at 2014-08-19 08:53:31 -0400
+Processing by LinksController#new_link as */*
+  Parameters: {"url"=>"http://stackoverflow.com/questions/551538/how-to-get-element-value-in-jquery", "basketId"=>"90", "link"=>{"url"=>"http://stackoverflow.com/questions/551538/how-to-get-element-value-in-jquery"}}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-19 08:53:31 -0400
+Processing by FoldersController#index as */*
+  Rendered folders/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered users/_usernav.html.erb (5.8ms)
+  Rendered folders/_form.html.erb (0.4ms)
+  [1m[35mFolder Load (0.4ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_userfolders.html.erb (4.1ms)
+Completed 200 OK in 36ms (Views: 34.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-19 08:54:26 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (3.7ms)
+Completed 200 OK in 32ms (Views: 6.5ms | ActiveRecord: 8.1ms)
+
+
+Started POST "/new_link" for 127.0.0.1 at 2014-08-19 08:54:28 -0400
+Processing by LinksController#new_link as */*
+  Parameters: {"url"=>"http://stackoverflow.com/questions/11248855/how-do-i-use-jquery-get-the-id-of-the-div-which-has-been-clicked-on", "basketId"=>"90", "link"=>{"url"=>"http://stackoverflow.com/questions/11248855/how-do-i-use-jquery-get-the-id-of-the-div-which-has-been-clicked-on"}}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-19 08:54:28 -0400
+Processing by FoldersController#index as */*
+  Rendered folders/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered users/_usernav.html.erb (5.8ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_userfolders.html.erb (2.6ms)
+Completed 200 OK in 30ms (Views: 28.4ms | ActiveRecord: 0.6ms)
+  [1m[36mFolder Load (0.6ms)[0m  [1mSELECT "folders".* FROM "folders"[0m
+  [1m[35mLink Load (2.9ms)[0m  SELECT "links".* FROM "links"
+  [1m[36mFolder_Link Load (3.2ms)[0m  [1mSELECT "folder_links".* FROM "folder_links"[0m
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-19 08:59:34 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.5ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (7.1ms)
+Completed 200 OK in 44ms (Views: 11.7ms | ActiveRecord: 8.8ms)
+
+
+Started POST "/new_link" for 127.0.0.1 at 2014-08-19 08:59:42 -0400
+Processing by LinksController#new_link as */*
+  Parameters: {"url"=>"http://stackoverflow.com/questions/11248855/how-do-i-use-jquery-get-the-id-of-the-div-which-has-been-clicked-on", "basketId"=>"90", "link"=>{"url"=>"http://stackoverflow.com/questions/11248855/how-do-i-use-jquery-get-the-id-of-the-div-which-has-been-clicked-on"}}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Redirected to http://localhost:3000/
+Completed 302 Found in 86ms (ActiveRecord: 5.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-19 08:59:42 -0400
+Processing by FoldersController#index as */*
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered users/_usernav.html.erb (4.7ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[35mFolder Load (0.4ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_userfolders.html.erb (4.9ms)
+Completed 200 OK in 32ms (Views: 31.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/new_link" for 127.0.0.1 at 2014-08-19 08:59:45 -0400
+Processing by LinksController#new_link as */*
+  Parameters: {"url"=>"http://stackoverflow.com/questions/11248855/how-do-i-use-jquery-get-the-id-of-the-div-which-has-been-clicked-on", "basketId"=>"90", "link"=>{"url"=>"http://stackoverflow.com/questions/11248855/how-do-i-use-jquery-get-the-id-of-the-div-which-has-been-clicked-on"}}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-19 08:59:45 -0400
+Processing by FoldersController#index as */*
+  Rendered folders/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered users/_usernav.html.erb (0.2ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[35mFolder Load (0.3ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_userfolders.html.erb (2.4ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.6ms)
+  [1m[36mFolder_Link Load (0.8ms)[0m  [1mSELECT "folder_links".* FROM "folder_links"[0m
+  [1m[35mLink Load (0.6ms)[0m  SELECT "links".* FROM "links"
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-19 09:02:03 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.5ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (5.3ms)
+Completed 200 OK in 35ms (Views: 9.6ms | ActiveRecord: 7.1ms)
+
+
+Started POST "/new_link" for 127.0.0.1 at 2014-08-19 09:02:07 -0400
+Processing by LinksController#new_link as */*
+  Parameters: {"url"=>"http://stackoverflow.com/questions/11248855/how-do-i-use-jquery-get-the-id-of-the-div-which-has-been-clicked-on", "basketId"=>"90", "link"=>{"url"=>"http://stackoverflow.com/questions/11248855/how-do-i-use-jquery-get-the-id-of-the-div-which-has-been-clicked-on"}}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 18ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-19 09:02:07 -0400
+Processing by FoldersController#index as */*
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered users/_usernav.html.erb (4.5ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_userfolders.html.erb (4.7ms)
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-19 09:03:05 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.3ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (4.5ms)
+Completed 200 OK in 34ms (Views: 6.7ms | ActiveRecord: 6.7ms)
+
+
+Started POST "/new_link" for 127.0.0.1 at 2014-08-19 09:03:07 -0400
+Processing by LinksController#new_link as */*
+  Parameters: {"url"=>"http://stackoverflow.com/questions/11248855/how-do-i-use-jquery-get-the-id-of-the-div-which-has-been-clicked-on", "basketId"=>"90", "link"=>{"url"=>"http://stackoverflow.com/questions/11248855/how-do-i-use-jquery-get-the-id-of-the-div-which-has-been-clicked-on"}}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (4.3ms)[0m  INSERT INTO "links" ("url") VALUES ($1) RETURNING "id"  [["url", "http://stackoverflow.com/questions/11248855/how-do-i-use-jquery-get-the-id-of-the-div-which-has-been-clicked-on"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 14ms
+
+SyntaxError (/Users/brendanscarano/Documents/basket/app/models/folder_link.rb:2: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  validates :folder, :link presence: true
+                                   ^):
+  app/controllers/links_controller.rb:7:in `new_link'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.4ms)
+  [1m[36mLink Load (0.7ms)[0m  [1mSELECT "links".* FROM "links"[0m
+  [1m[35mFolder_Link Load (0.7ms)[0m  SELECT "folder_links".* FROM "folder_links"
+  [1m[36mSQL (0.9ms)[0m  [1mDELETE FROM "links" WHERE "links"."id" = 1[0m
+  [1m[35mLink Load (0.4ms)[0m  SELECT "links".* FROM "links"
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-19 09:05:13 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.4ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (4.1ms)
+Completed 200 OK in 30ms (Views: 8.0ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/new_link" for 127.0.0.1 at 2014-08-19 09:05:15 -0400
+Processing by LinksController#new_link as */*
+  Parameters: {"url"=>"http://stackoverflow.com/questions/11248855/how-do-i-use-jquery-get-the-id-of-the-div-which-has-been-clicked-on", "basketId"=>"90", "link"=>{"url"=>"http://stackoverflow.com/questions/11248855/how-do-i-use-jquery-get-the-id-of-the-div-which-has-been-clicked-on"}}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "links" ("url") VALUES ($1) RETURNING "id"  [["url", "http://stackoverflow.com/questions/11248855/how-do-i-use-jquery-get-the-id-of-the-div-which-has-been-clicked-on"]]
+  [1m[36m (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mLink Load (0.4ms)[0m  [1mSELECT  "links".* FROM "links"  WHERE "links"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  ROLLBACK
+Redirected to http://localhost:3000/
+Completed 302 Found in 19ms (ActiveRecord: 7.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-19 09:05:15 -0400
+Processing by FoldersController#index as */*
+  Rendered folders/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered users/_usernav.html.erb (5.4ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[35mFolder Load (0.3ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_userfolders.html.erb (2.8ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.8ms)
+  [1m[36mLink Load (0.6ms)[0m  [1mSELECT "links".* FROM "links"[0m
+  [1m[35mFolder_Link Load (0.6ms)[0m  SELECT "folder_links".* FROM "folder_links"
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-19 09:08:27 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (14.3ms)
+Completed 200 OK in 45ms (Views: 18.4ms | ActiveRecord: 7.8ms)
+
+
+Started POST "/new_link" for 127.0.0.1 at 2014-08-19 09:08:29 -0400
+Processing by LinksController#new_link as */*
+  Parameters: {"url"=>"http://stackoverflow.com/questions/11248855/how-do-i-use-jquery-get-the-id-of-the-div-which-has-been-clicked-on", "basketId"=>"92", "link"=>{"url"=>"http://stackoverflow.com/questions/11248855/how-do-i-use-jquery-get-the-id-of-the-div-which-has-been-clicked-on"}}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "links" ("url") VALUES ($1) RETURNING "id"[0m  [["url", "http://stackoverflow.com/questions/11248855/how-do-i-use-jquery-get-the-id-of-the-div-which-has-been-clicked-on"]]
+  [1m[35m (1.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mLink Load (0.3ms)[0m  SELECT  "links".* FROM "links"  WHERE "links"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 18ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-19 09:08:29 -0400
+Processing by FoldersController#index as */*
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered users/_usernav.html.erb (5.1ms)
+  Rendered folders/_form.html.erb (0.2ms)
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_userfolders.html.erb (2.6ms)
+Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-19 09:09:09 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.5ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (6.0ms)
+Completed 200 OK in 33ms (Views: 8.2ms | ActiveRecord: 6.4ms)
+
+
+Started POST "/new_link" for 127.0.0.1 at 2014-08-19 09:09:11 -0400
+Processing by LinksController#new_link as */*
+  Parameters: {"url"=>"http://stackoverflow.com/questions/11248855/how-do-i-use-jquery-get-the-id-of-the-div-which-has-been-clicked-on", "basketId"=>"91", "link"=>{"url"=>"http://stackoverflow.com/questions/11248855/how-do-i-use-jquery-get-the-id-of-the-div-which-has-been-clicked-on"}}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "links" ("url") VALUES ($1) RETURNING "id"  [["url", "http://stackoverflow.com/questions/11248855/how-do-i-use-jquery-get-the-id-of-the-div-which-has-been-clicked-on"]]
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mLink Load (0.3ms)[0m  [1mSELECT  "links".* FROM "links"  WHERE "links"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  ROLLBACK
+Redirected to http://localhost:3000/
+Completed 302 Found in 20ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-19 09:09:11 -0400
+Processing by FoldersController#index as */*
+  Rendered folders/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered users/_usernav.html.erb (5.3ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[35mFolder Load (0.3ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_userfolders.html.erb (2.7ms)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-19 09:09:43 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (5.2ms)
+Completed 200 OK in 41ms (Views: 7.7ms | ActiveRecord: 8.6ms)
+
+
+Started POST "/new_link" for 127.0.0.1 at 2014-08-19 09:09:45 -0400
+Processing by LinksController#new_link as */*
+  Parameters: {"url"=>"http://stackoverflow.com/questions/11248855/how-do-i-use-jquery-get-the-id-of-the-div-which-has-been-clicked-on", "basketId"=>"92", "link"=>{"url"=>"http://stackoverflow.com/questions/11248855/how-do-i-use-jquery-get-the-id-of-the-div-which-has-been-clicked-on"}}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "links" ("url") VALUES ($1) RETURNING "id"[0m  [["url", "http://stackoverflow.com/questions/11248855/how-do-i-use-jquery-get-the-id-of-the-div-which-has-been-clicked-on"]]
+  [1m[35m (1.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mFolder Load (0.3ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 92]]
+  [1m[36mLink Load (0.3ms)[0m  [1mSELECT  "links".* FROM "links"  WHERE "links"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "folder_links" ("folder_id", "link_id") VALUES ($1, $2) RETURNING "id"  [["folder_id", 92], ["link_id", 5]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 20ms (ActiveRecord: 8.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-19 09:09:45 -0400
+Processing by FoldersController#index as */*
+  Rendered folders/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered users/_usernav.html.erb (4.8ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_userfolders.html.erb (2.6ms)
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 0.7ms)
+  [1m[36mFolder_Link Load (0.6ms)[0m  [1mSELECT "folder_links".* FROM "folder_links"[0m
+  [1m[35mLink Load (0.7ms)[0m  SELECT "links".* FROM "links"
+
+
+Started GET "/folders/92" for 127.0.0.1 at 2014-08-19 09:12:37 -0400
+Processing by FoldersController#show as HTML
+  Parameters: {"id"=>"92"}
+  [1m[35mFolder Load (0.2ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 92]]
+  Rendered folders/show.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered users/_usernav.html.erb (4.5ms)
+  Rendered folders/_form.html.erb (0.4ms)
+  [1m[35mFolder Load (0.2ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_userfolders.html.erb (7.1ms)
+Completed 200 OK in 42ms (Views: 28.3ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/folders/90" for 127.0.0.1 at 2014-08-19 09:13:55 -0400
+Processing by FoldersController#show as HTML
+  Parameters: {"id"=>"90"}
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 90]]
+  Rendered folders/show.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered users/_usernav.html.erb (0.4ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_userfolders.html.erb (3.5ms)
+Completed 200 OK in 20ms (Views: 16.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/folders/92" for 127.0.0.1 at 2014-08-19 09:13:57 -0400
+Processing by FoldersController#show as HTML
+  Parameters: {"id"=>"92"}
+  [1m[35mFolder Load (0.5ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 92]]
+  Rendered folders/show.html.erb within layouts/application (0.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered users/_usernav.html.erb (0.5ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[35mFolder Load (0.3ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_userfolders.html.erb (2.7ms)
+Completed 200 OK in 21ms (Views: 18.1ms | ActiveRecord: 1.1ms)
