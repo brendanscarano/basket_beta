@@ -3,7 +3,7 @@ class LinksController < ApplicationController
 
   def new_link
     link = Link.create(url: params["url"])
-    Folder_Link.create(link_id: link.id,
+    FolderLink.create(link_id: link.id,
                         folder_id: params["basketId"])
     redirect_to root_url
   end
