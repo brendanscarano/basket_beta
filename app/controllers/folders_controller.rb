@@ -3,7 +3,7 @@ class FoldersController < ApplicationController
   before_action :set_folder, only: [:show, :destroy]
 
   def show
-    p params
+    @links = Folder_Link.where(folder_id: params[:id])
   end
 
   def new
