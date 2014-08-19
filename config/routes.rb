@@ -10,5 +10,7 @@ Rails.application.routes.draw do
 
   resources :folders
   get 'users_folders', to: 'folders#users_folders', as: 'users_folders'
+
+  post 'new_link', to: 'links#new_link', as: 'new_link'
   
 end

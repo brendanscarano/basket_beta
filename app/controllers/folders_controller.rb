@@ -3,6 +3,8 @@ class FoldersController < ApplicationController
   before_action :set_folder, only: [:show, :destroy]
 
   def show
+    folder = Folder.find(params[:id])
+    @links = folder.links
   end
 
   def new
@@ -10,7 +12,6 @@ class FoldersController < ApplicationController
   end
 
   def create
-    p params
     @folder = Folder.new(name: params["folder_name"])
 
     if @folder.save
