@@ -60,12 +60,12 @@
   <section id="friends">
     <div class="friends-wrapper">
       <div class="span2">
-        <h1>Friends</h1>
+        <h4>Friends using Basket</h4>
 
-        <%# if current_user %>
-            <%# @graph = Koala::Facebook::API.new(current_user.oauth_token) %>
-            <%# friends = @graph.get_connections("me", "friends") %>
-        <%# end %>
+
+        <% if current_user %>
+          <%= render "users/friends" %>
+        <% end %>
 
       </div>
     </div>

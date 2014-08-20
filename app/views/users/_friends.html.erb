@@ -1,0 +1,5 @@
+<% current_user.friends_using_app.each do |friend| %>
+  <div class="friend" value="<%= friend["id"] %>">
+    <%= p friend["name"] %>
+  </div>
+<% end %>
