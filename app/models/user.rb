@@ -15,9 +15,23 @@ class User < ActiveRecord::Base
     end
   end
 
-  # def folders
-  #   @folders = UserFolder.where(user_id: self.id)
-  # end
+  def friends_using_app
+    graph = Koala::Facebook::GraphAPI.new(self.oauth_token)
+    # return graph.get_connections("me", "friends", api_version: 'v2.0')
 
+=begin
+  Possible code to get friends
   
+=end
+    friends_list = []
+    friends = graph.get_connections("me", "friends", api_version: 'v2.0')
+    p "=" * 30
+    p friends
+    p "=" * 30
+    friends.each do |friend|
+      friends_list << User.find_by_uid(friend["id"])
+    end
+
+    return friends_list
+  end
 end

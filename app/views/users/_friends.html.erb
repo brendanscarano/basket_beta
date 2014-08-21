@@ -1,0 +1,10 @@
+<% current_user.friends_using_app.each do |friend| %>
+  <div class="friend-container" value="<%= friend.id %>">
+    <li>
+      <img alt="FB_Pic" src=<%= friend.image %>>
+    </li>
+    <li>
+      <%= p friend.name %>
+    </li>
+  </div>
+<% end %>
