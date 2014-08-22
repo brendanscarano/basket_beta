@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
     user = User.from_omniauth(env["omniauth.auth"])
     session[:user_id] = user.id
 
-    Folder.where(user_id: user.id, name: "Shared").first_or_create
+    SharedBasket.where(user_id: user.id, name: "Shared").first_or_create
     redirect_to root_path
   end
 
