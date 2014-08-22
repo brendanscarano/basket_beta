@@ -12,10 +12,10 @@ class FoldersController < ApplicationController
   end
 
   def create
-    @folder = Folder.new(name: params["folder_name"])
+    user = current_user
+    folder = Folder.new(name: params["folder_name"], user_id: user.id)
 
-    if @folder.save
-      UserFolder.create(user_id: current_user.id, folder_id: @folder.id)
+    if folder.save
       flash[:notice] = "Folder has been created."
 
       redirect_to root_url
