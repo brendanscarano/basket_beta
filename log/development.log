@@ -44611,3 +44611,134 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-22 09:22:44
 
 
 Started GET "/assets/nav_bar" for 127.0.0.1 at 2014-08-22 09:22:44 -0400
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-22 09:24:13 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mFolder Load (1.8ms)[0m  [1mSELECT "folders".* FROM "folders"  WHERE "folders"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered folders/_folders.html.erb (20.9ms)
+Completed 200 OK in 55ms (Views: 21.2ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/users_friends" for 127.0.0.1 at 2014-08-22 09:24:13 -0400
+Processing by UsersController#users_friends as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '10202570463767828' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '320667871446574' LIMIT 1
+  Rendered users/_friends.html.erb (210.6ms)
+Completed 200 OK in 217ms (Views: 215.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/signout" for 127.0.0.1 at 2014-08-22 09:24:42 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-22 09:24:42 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (2.4ms)
+  Rendered users/_guestnav.html.erb (0.5ms)
+  Rendered folders/_form.html.erb (0.6ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-08-22 09:25:19 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-08-22 09:25:19 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-08-22 09:25:19 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQD2sZHc3wMVRzJzzU_2R1yXeZgNIgDBPenGF-dZtXPhyI1AKkCL8l2o10JkyQHGl0O2G-euFBC3hbnwU5e1mnWFzzEMr1xzB7vzJTgHInEiyqHCypfF7TByFNyt2glcAAMNjgNeU19nXQ8B12zMzkVSLNoQ9CFDJg3yDRrgS_m9WdMWe9IW3M_ysuAOfhAR8Yx_kfXFFv4TRraayO3rJIMg4nDaa2PqnxHf_-dc_83mObxXJZf-bA6XV2JKNoMEWNHmgW1TdAP_QxTpe_a3YD-nz6rh-fXBoovU73WIPoPS10rtuQydUdUlC3Bisi7hPExgI9szvVf0jTLwRETDJEDU&state=9109fbc26a76abdd38c3b218bc3abedfb122c70b76bd7524" for 127.0.0.1 at 2014-08-22 09:25:19 -0400
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQD2sZHc3wMVRzJzzU_2R1yXeZgNIgDBPenGF-dZtXPhyI1AKkCL8l2o10JkyQHGl0O2G-euFBC3hbnwU5e1mnWFzzEMr1xzB7vzJTgHInEiyqHCypfF7TByFNyt2glcAAMNjgNeU19nXQ8B12zMzkVSLNoQ9CFDJg3yDRrgS_m9WdMWe9IW3M_ysuAOfhAR8Yx_kfXFFv4TRraayO3rJIMg4nDaa2PqnxHf_-dc_83mObxXJZf-bA6XV2JKNoMEWNHmgW1TdAP_QxTpe_a3YD-nz6rh-fXBoovU73WIPoPS10rtuQydUdUlC3Bisi7hPExgI9szvVf0jTLwRETDJEDU", "state"=>"9109fbc26a76abdd38c3b218bc3abedfb122c70b76bd7524", "provider"=>"facebook"}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."provider" = 'facebook' AND "users"."uid" = '320667871446574'  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "image", "name", "oauth_expires_at", "oauth_token", "provider", "uid", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", "2014-08-22 13:25:19.952325"], ["email", "bscarano@udel.edu"], ["image", "http://graph.facebook.com/320667871446574/picture?type=square"], ["name", "Ben Kazooie"], ["oauth_expires_at", "2014-10-21 13:25:19.000000"], ["oauth_token", "CAAUhfMmen8oBADUXrerC5tLiPuewGzX08qn5i3ZBl0YZC2USUpcHYZAAnQIrUjNm8lNFSD5ZCI7YiLtuI6nCFFJ8wKrZA0ENRZALQZCEN1RKBfBPSECl2EXtKv4b33krMnLjC8p5PXAxvd8Wqr8ZCEKxpEip0QIDSAklFmRSdVcShuMn8kiANXG7kZCjop77JkclgScNvloIBtfEZAxmAm9Wml"], ["provider", "facebook"], ["uid", "320667871446574"], ["updated_at", "2014-08-22 13:25:19.952325"]]
+  [1m[35m (1.7ms)[0m  COMMIT
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."user_id" = 2 AND "folders"."name" = 'Shared'  ORDER BY "folders"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "folders" ("created_at", "name", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2014-08-22 13:25:19.958630"], ["name", "Shared"], ["updated_at", "2014-08-22 13:25:19.958630"], ["user_id", 2]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-22 09:25:19 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[35mFolder Load (0.2ms)[0m  SELECT "folders".* FROM "folders"  WHERE "folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_userfolders.html.erb (1.5ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1
+  Rendered users/_friends.html.erb (264.9ms)
+Completed 200 OK in 277ms (Views: 275.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-22 09:25:20 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-22 09:25:20 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-22 09:25:20 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-08-22 09:25:20 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-22 09:25:20 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-22 09:25:20 -0400
+
+
+Started GET "/assets/baskets.css?body=1" for 127.0.0.1 at 2014-08-22 09:25:20 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-08-22 09:25:20 -0400
+
+
+Started GET "/assets/friends.css?body=1" for 127.0.0.1 at 2014-08-22 09:25:20 -0400
+
+
+Started GET "/assets/links.css?body=1" for 127.0.0.1 at 2014-08-22 09:25:20 -0400
+
+
+Started GET "/assets/nav_bar.css?body=1" for 127.0.0.1 at 2014-08-22 09:25:20 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-22 09:25:20 -0400
+
+
+Started GET "/assets/nav_bar" for 127.0.0.1 at 2014-08-22 09:25:20 -0400
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-22 09:25:28 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT "folders".* FROM "folders"  WHERE "folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (1.4ms)
+Completed 200 OK in 8ms (Views: 4.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users_friends" for 127.0.0.1 at 2014-08-22 09:25:28 -0400
+Processing by UsersController#users_friends as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1
+  Rendered users/_friends.html.erb (247.2ms)
+Completed 200 OK in 253ms (Views: 250.9ms | ActiveRecord: 0.8ms)
