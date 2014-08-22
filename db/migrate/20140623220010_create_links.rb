@@ -5,6 +5,8 @@ class CreateLinks < ActiveRecord::Migration
       t.string :title
       t.string :description
       t.string :image
+
+      t.timestamps
     end
   end
 end

@@ -3,6 +3,8 @@ class CreateUserFolders < ActiveRecord::Migration
     create_table :user_folders do |t|
       t.belongs_to :user
       t.belongs_to :folder
+
+      t.timestamps
     end
   end
 end

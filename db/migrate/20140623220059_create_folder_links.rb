@@ -4,6 +4,8 @@ class CreateFolderLinks < ActiveRecord::Migration
       t.belongs_to :folder
       t.belongs_to :link
       t.belongs_to :user
+
+      t.timestamps
     end
   end
 end
