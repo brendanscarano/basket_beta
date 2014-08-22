@@ -1,6 +1,5 @@
 class User < ActiveRecord::Base
-  has_many :user_folders
-  has_many :folders, through: :user_folders
+  has_many :folders
 
   def self.from_omniauth(auth)
     where(auth.slice(:provider, :uid)).first_or_initialize.tap do |user|
@@ -14,7 +13,7 @@ class User < ActiveRecord::Base
       user.save!
     end
 
-    
+
   end
 
   def friends_using_app
