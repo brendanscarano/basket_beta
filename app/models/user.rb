@@ -13,11 +13,13 @@ class User < ActiveRecord::Base
       user.oauth_expires_at = Time.at(auth.credentials.expires_at)
       user.save!
     end
+
+    
   end
 
   def friends_using_app
     friends_list = []
-    
+
     graph = Koala::Facebook::GraphAPI.new(self.oauth_token)
     friends = graph.get_connections("me", "friends", api_version: 'v2.0')
     
