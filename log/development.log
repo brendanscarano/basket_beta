@@ -45051,3 +45051,365 @@ Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-22 10:05:1
 
 
 Started GET "/assets/nav_bar" for 127.0.0.1 at 2014-08-22 10:05:18 -0400
+
+
+Started GET "/users_friends" for 127.0.0.1 at 2014-08-22 10:06:46 -0400
+Processing by UsersController#users_friends as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1[0m
+  Rendered users/_friends.html.erb (266.8ms)
+Completed 200 OK in 274ms (Views: 271.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-22 10:06:47 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.3ms)[0m  SELECT "folders".* FROM "folders"  WHERE "folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (1.6ms)
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-22 10:11:11 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT "folders".* FROM "folders"  WHERE "folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (1.4ms)
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users_friends" for 127.0.0.1 at 2014-08-22 10:11:11 -0400
+Processing by UsersController#users_friends as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1
+  Rendered users/_friends.html.erb (276.5ms)
+Completed 200 OK in 280ms (Views: 278.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-22 10:11:11 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT "folders".* FROM "folders"  WHERE "folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (1.4ms)
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users_friends" for 127.0.0.1 at 2014-08-22 10:11:11 -0400
+Processing by UsersController#users_friends as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1
+  Rendered users/_friends.html.erb (238.8ms)
+Completed 200 OK in 243ms (Views: 241.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-22 10:13:14 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.5ms)[0m  [1mSELECT "folders".* FROM "folders"  WHERE "folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (21.0ms)
+Completed 200 OK in 28ms (Views: 25.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users_friends" for 127.0.0.1 at 2014-08-22 10:13:14 -0400
+Processing by UsersController#users_friends as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1
+  Rendered users/_friends.html.erb (253.4ms)
+Completed 200 OK in 257ms (Views: 255.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-22 10:13:40 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT "folders".* FROM "folders"  WHERE "folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (1.6ms)
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users_friends" for 127.0.0.1 at 2014-08-22 10:13:40 -0400
+Processing by UsersController#users_friends as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1
+  Rendered users/_friends.html.erb (678.2ms)
+Completed 200 OK in 684ms (Views: 681.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-22 10:14:21 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT "folders".* FROM "folders"  WHERE "folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (1.6ms)
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users_friends" for 127.0.0.1 at 2014-08-22 10:14:21 -0400
+Processing by UsersController#users_friends as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1
+  Rendered users/_friends.html.erb (685.5ms)
+Completed 200 OK in 689ms (Views: 687.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-22 10:14:54 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT "folders".* FROM "folders"  WHERE "folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (1.6ms)
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users_friends" for 127.0.0.1 at 2014-08-22 10:14:54 -0400
+Processing by UsersController#users_friends as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1
+  Rendered users/_friends.html.erb (670.5ms)
+Completed 200 OK in 675ms (Views: 673.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users_friends" for 127.0.0.1 at 2014-08-22 10:15:56 -0400
+Processing by UsersController#users_friends as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1[0m
+  Rendered users/_friends.html.erb (280.0ms)
+Completed 200 OK in 286ms (Views: 283.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-22 10:15:57 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.2ms)[0m  SELECT "folders".* FROM "folders"  WHERE "folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (1.1ms)
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-22 10:15:59 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.7ms)[0m  [1mSELECT "folders".* FROM "folders"  WHERE "folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.2ms)
+Completed 200 OK in 11ms (Views: 6.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users_friends" for 127.0.0.1 at 2014-08-22 10:15:59 -0400
+Processing by UsersController#users_friends as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1
+  Rendered users/_friends.html.erb (252.7ms)
+Completed 200 OK in 258ms (Views: 255.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-22 10:16:33 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT "folders".* FROM "folders"  WHERE "folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (1.6ms)
+Completed 200 OK in 9ms (Views: 5.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users_friends" for 127.0.0.1 at 2014-08-22 10:16:33 -0400
+Processing by UsersController#users_friends as */*
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1
+  Rendered users/_friends.html.erb (655.3ms)
+Completed 200 OK in 660ms (Views: 657.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-22 10:17:03 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT "folders".* FROM "folders"  WHERE "folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (1.2ms)
+Completed 200 OK in 9ms (Views: 4.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users_friends" for 127.0.0.1 at 2014-08-22 10:17:03 -0400
+Processing by UsersController#users_friends as */*
+  [1m[35mUser Load (1.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1
+  Rendered users/_friends.html.erb (665.1ms)
+Completed 200 OK in 671ms (Views: 667.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-22 10:18:23 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT "folders".* FROM "folders"  WHERE "folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (1.9ms)
+Completed 200 OK in 16ms (Views: 11.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users_friends" for 127.0.0.1 at 2014-08-22 10:18:23 -0400
+Processing by UsersController#users_friends as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1
+  Rendered users/_friends.html.erb (288.2ms)
+Completed 200 OK in 292ms (Views: 290.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-22 10:18:39 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT "folders".* FROM "folders"  WHERE "folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (1.7ms)
+Completed 200 OK in 10ms (Views: 6.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users_friends" for 127.0.0.1 at 2014-08-22 10:18:39 -0400
+Processing by UsersController#users_friends as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1
+  Rendered users/_friends.html.erb (323.2ms)
+Completed 200 OK in 327ms (Views: 325.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-22 10:19:29 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.5ms)[0m  [1mSELECT "folders".* FROM "folders"  WHERE "folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.1ms)
+Completed 200 OK in 10ms (Views: 6.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users_friends" for 127.0.0.1 at 2014-08-22 10:19:29 -0400
+Processing by UsersController#users_friends as */*
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1
+  Rendered users/_friends.html.erb (300.3ms)
+Completed 200 OK in 306ms (Views: 303.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users_friends" for 127.0.0.1 at 2014-08-22 10:19:29 -0400
+Processing by UsersController#users_friends as */*
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1[0m
+  Rendered users/_friends.html.erb (239.5ms)
+Completed 200 OK in 245ms (Views: 242.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-22 10:19:30 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.4ms)[0m  SELECT "folders".* FROM "folders"  WHERE "folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (2.0ms)
+Completed 200 OK in 9ms (Views: 5.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-22 10:25:37 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (3.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT "folders".* FROM "folders"  WHERE "folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (1.2ms)
+Completed 200 OK in 12ms (Views: 4.3ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/users_friends" for 127.0.0.1 at 2014-08-22 10:25:37 -0400
+Processing by UsersController#users_friends as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1
+  Rendered users/_friends.html.erb (255.9ms)
+Completed 200 OK in 260ms (Views: 258.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users_friends" for 127.0.0.1 at 2014-08-22 11:52:59 -0400
+Processing by UsersController#users_friends as */*
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1[0m
+  Rendered users/_friends.html.erb (726.1ms)
+Completed 200 OK in 743ms (Views: 740.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-22 11:53:00 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mFolder Load (0.3ms)[0m  SELECT "folders".* FROM "folders"  WHERE "folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (1.3ms)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-22 11:53:00 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT "folders".* FROM "folders"  WHERE "folders"."user_id" = $1[0m  [["user_id", 2]]
+  Rendered folders/_folders.html.erb (1.9ms)
+Completed 200 OK in 16ms (Views: 12.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users_friends" for 127.0.0.1 at 2014-08-22 11:53:00 -0400
+Processing by UsersController#users_friends as */*
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1[0m
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1
+  Rendered users/_friends.html.erb (282.2ms)
+Completed 200 OK in 289ms (Views: 285.9ms | ActiveRecord: 1.8ms)
+  [1m[36m (3.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (3.3ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateLinks (20140623220010)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (5.1ms)[0m  [1mCREATE TABLE "links" ("id" serial primary key, "url" character varying(255), "title" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140623220010"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateFolders (20140623220040)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.1ms)[0m  [1mCREATE TABLE "folders" ("id" serial primary key, "name" character varying(255), "user_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140623220040"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateFolderLinks (20140623220059)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.1ms)[0m  [1mCREATE TABLE "folder_links" ("id" serial primary key, "folder_id" integer, "link_id" integer, "user_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140623220059"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Migrating to CreateUsers (20140626181319)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (4.8ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "provider" character varying(255), "uid" character varying(255), "name" character varying(255), "image" character varying(255), "email" character varying(255), "oauth_token" character varying(255), "oauth_expires_at" timestamp, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140626181319"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSharedBasket (20140822163627)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSharedBasket (20140822163627)
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSharedBaskets (20140822163627)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (6.1ms)[0m  [1mCREATE TABLE "shared_baskets" ("id" serial primary key, "name" character varying(255), "user_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140822163627"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSharedLinks (20140822165320)
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36m (4.1ms)[0m  [1mCREATE TABLE "shared_links" ("id" serial primary key, "shared_basket_id" integer, "sender_id" integer, "title" character varying(255), "url" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140822165320"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"

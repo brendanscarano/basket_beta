@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140626181319) do
+ActiveRecord::Schema.define(version: 20140822165320) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,8 +34,22 @@ ActiveRecord::Schema.define(version: 20140626181319) do
   create_table "links", force: true do |t|
     t.string   "url"
     t.string   "title"
-    t.string   "description"
-    t.string   "image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "shared_baskets", force: true do |t|
+    t.string   "name"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "shared_links", force: true do |t|
+    t.integer  "shared_basket_id"
+    t.integer  "sender_id"
+    t.string   "title"
+    t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
