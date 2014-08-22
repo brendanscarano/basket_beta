@@ -43341,3 +43341,723 @@ Processing by UsersController#users_friends as */*
   [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '320667871446574' LIMIT 1
   Rendered users/_friends.html.erb (636.1ms)
 Completed 200 OK in 642ms (Views: 640.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 18:41:00 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (2.3ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered users/_usernav.html.erb (5.6ms)
+  Rendered folders/_form.html.erb (0.5ms)
+  [1m[36mFolder Load (0.7ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 4]]
+  Rendered folders/_userfolders.html.erb (72.9ms)
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '320667871446574' LIMIT 1
+  Rendered users/_friends.html.erb (657.3ms)
+Completed 200 OK in 870ms (Views: 844.8ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-21 18:41:01 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-21 18:41:01 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-21 18:41:01 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-21 18:41:01 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-21 18:41:01 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-08-21 18:41:01 -0400
+
+
+Started GET "/assets/baskets.css?body=1" for 127.0.0.1 at 2014-08-21 18:41:01 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-21 18:41:01 -0400
+
+
+Started GET "/assets/nav_bar.css?body=1" for 127.0.0.1 at 2014-08-21 18:41:01 -0400
+
+
+Started GET "/assets/links.css?body=1" for 127.0.0.1 at 2014-08-21 18:41:01 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-08-21 18:41:01 -0400
+
+
+Started GET "/assets/friends.css?body=1" for 127.0.0.1 at 2014-08-21 18:41:01 -0400
+
+
+Started GET "/assets/nav_bar" for 127.0.0.1 at 2014-08-21 18:41:01 -0400
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-21 18:41:09 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mFolder Load (1.2ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 4]]
+  Rendered folders/_folders.html.erb (4.1ms)
+Completed 200 OK in 17ms (Views: 11.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users_friends" for 127.0.0.1 at 2014-08-21 18:41:09 -0400
+Processing by UsersController#users_friends as */*
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '320667871446574' LIMIT 1[0m
+  Rendered users/_friends.html.erb (178.1ms)
+Completed 200 OK in 185ms (Views: 182.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-21 18:41:41 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mFolder Load (0.6ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 4]]
+  Rendered folders/_folders.html.erb (2.2ms)
+Completed 200 OK in 11ms (Views: 6.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users_friends" for 127.0.0.1 at 2014-08-21 18:41:41 -0400
+Processing by UsersController#users_friends as */*
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '320667871446574' LIMIT 1
+  Rendered users/_friends.html.erb (613.4ms)
+Completed 200 OK in 618ms (Views: 615.8ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/new_link" for 127.0.0.1 at 2014-08-21 18:41:47 -0400
+Processing by LinksController#new_link as */*
+  Parameters: {"url"=>"http://stackoverflow.com/questions/23417356/facebook-graph-api-v2-0-me-friends-returns-empty-or-only-friends-who-also-use-m", "basketId"=>"7", "link"=>{"url"=>"http://stackoverflow.com/questions/23417356/facebook-graph-api-v2-0-me-friends-returns-empty-or-only-friends-who-also-use-m"}}
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (4.3ms)[0m  INSERT INTO "links" ("url") VALUES ($1) RETURNING "id"  [["url", "http://stackoverflow.com/questions/23417356/facebook-graph-api-v2-0-me-friends-returns-empty-or-only-friends-who-also-use-m"]]
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mLink Load (0.8ms)[0m  SELECT  "links".* FROM "links"  WHERE "links"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "folder_links" ("folder_id", "link_id") VALUES ($1, $2) RETURNING "id"[0m  [["folder_id", 7], ["link_id", 8]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 37ms (ActiveRecord: 13.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 18:41:47 -0400
+Processing by FoldersController#index as */*
+  Rendered folders/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered users/_usernav.html.erb (0.7ms)
+  Rendered folders/_form.html.erb (0.5ms)
+  [1m[35mFolder Load (0.7ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 4]]
+  Rendered folders/_userfolders.html.erb (3.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '320667871446574' LIMIT 1[0m
+  Rendered users/_friends.html.erb (180.5ms)
+Completed 200 OK in 211ms (Views: 208.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/folders/7" for 127.0.0.1 at 2014-08-21 18:41:51 -0400
+Processing by FoldersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mFolder Load (1.5ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", "7"]]
+  [1m[35mLink Load (0.8ms)[0m  SELECT "links".* FROM "links" INNER JOIN "folder_links" ON "links"."id" = "folder_links"."link_id" WHERE "folder_links"."folder_id" = $1  [["folder_id", 7]]
+  Rendered folders/show.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered users/_usernav.html.erb (1.0ms)
+  Rendered folders/_form.html.erb (0.6ms)
+  [1m[35mFolder Load (0.5ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 4]]
+  Rendered folders/_userfolders.html.erb (3.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '320667871446574' LIMIT 1[0m
+  Rendered users/_friends.html.erb (171.9ms)
+Completed 200 OK in 202ms (Views: 193.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-21 18:42:07 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mFolder Load (0.6ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 4]]
+  Rendered folders/_folders.html.erb (1.8ms)
+Completed 200 OK in 9ms (Views: 4.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users_friends" for 127.0.0.1 at 2014-08-21 18:42:07 -0400
+Processing by UsersController#users_friends as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '320667871446574' LIMIT 1
+  Rendered users/_friends.html.erb (632.1ms)
+Completed 200 OK in 638ms (Views: 636.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 20:07:07 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (2.4ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered users/_usernav.html.erb (5.1ms)
+  Rendered folders/_form.html.erb (0.5ms)
+  [1m[36mFolder Load (0.6ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 4]]
+  Rendered folders/_userfolders.html.erb (46.3ms)
+  [1m[35mUser Load (1.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '320667871446574' LIMIT 1
+  Rendered users/_friends.html.erb (624.2ms)
+Completed 200 OK in 786ms (Views: 767.3ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-21 20:07:08 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-21 20:07:08 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-08-21 20:07:08 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-21 20:07:08 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-21 20:07:08 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-21 20:07:08 -0400
+
+
+Started GET "/assets/baskets.css?body=1" for 127.0.0.1 at 2014-08-21 20:07:08 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-08-21 20:07:08 -0400
+
+
+Started GET "/assets/friends.css?body=1" for 127.0.0.1 at 2014-08-21 20:07:08 -0400
+
+
+Started GET "/assets/links.css?body=1" for 127.0.0.1 at 2014-08-21 20:07:08 -0400
+
+
+Started GET "/assets/nav_bar.css?body=1" for 127.0.0.1 at 2014-08-21 20:07:08 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-21 20:07:08 -0400
+
+
+Started GET "/assets/nav_bar" for 127.0.0.1 at 2014-08-21 20:07:08 -0400
+
+
+Started GET "/signout" for 127.0.0.1 at 2014-08-21 20:07:09 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 20:07:10 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.5ms)
+  Rendered users/_guestnav.html.erb (1.0ms)
+  Rendered folders/_form.html.erb (0.7ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-08-21 20:08:33 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-08-21 20:08:34 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQC9Dk-Tfio7WCpjL8IwTjuxijdGz9XCuupJBF7x2I_dz6uNFU5VY6cfYU_WQGmFd_ubhpDVGNWTndXDyJC7ZjdddSvuUcCcKGN7ysrJHJthmvNh75uzsA-_w68SFrAP6FHS9JnCxSLhCxau0sO6MHKluBuM0EEozz64ERoDQzfUjY9Hh9pEMSiJ8zOrkO_MhnHXpEYOWZy7DVmN90z3LYToXmABs0WvnznH7Y6HPhlfcXVXf3rtUDMrjgPHCZn2crwhECuiVDdgXEt31b3J1QHxeFqQHH39kBkfq7IZl8DF9eHFMPdKuFlvyraZiohDf320HE2Vcwrawr88ePC5u7Ko&state=3bd72d3e6dac11e6cebd4e453c4bc0db8fb2b8290789509a" for 127.0.0.1 at 2014-08-21 20:08:45 -0400
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQC9Dk-Tfio7WCpjL8IwTjuxijdGz9XCuupJBF7x2I_dz6uNFU5VY6cfYU_WQGmFd_ubhpDVGNWTndXDyJC7ZjdddSvuUcCcKGN7ysrJHJthmvNh75uzsA-_w68SFrAP6FHS9JnCxSLhCxau0sO6MHKluBuM0EEozz64ERoDQzfUjY9Hh9pEMSiJ8zOrkO_MhnHXpEYOWZy7DVmN90z3LYToXmABs0WvnznH7Y6HPhlfcXVXf3rtUDMrjgPHCZn2crwhECuiVDdgXEt31b3J1QHxeFqQHH39kBkfq7IZl8DF9eHFMPdKuFlvyraZiohDf320HE2Vcwrawr88ePC5u7Ko", "state"=>"3bd72d3e6dac11e6cebd4e453c4bc0db8fb2b8290789509a", "provider"=>"facebook"}
+  [1m[36mUser Load (3.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."provider" = 'facebook' AND "users"."uid" = '10202570463767828'  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "image", "name", "oauth_expires_at", "oauth_token", "provider", "uid", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", "2014-08-22 00:08:46.359483"], ["email", "aprxgre@gmail.com"], ["image", "http://graph.facebook.com/10202570463767828/picture?type=square"], ["name", "April Marie"], ["oauth_expires_at", "2014-10-21 00:08:46.000000"], ["oauth_token", "CAAUhfMmen8oBAJ55EdF74xaoJZAPWhBWcg6ybm7kMlXtroZBnPVb3TA1SGAearUeFyZABFRHeRPD0c1ikChyZCUKKKMqhlHaHmdgQh0ZBLUbIQJIbZCGOgvjpxwBjROFBgRqckBZBEBCaDA2ibdvP3481KVISB5webZBf2aM5qs0XziMI8ZBiVnuQzStiSMxQZCuQWLwU4zqizNdGZAPRHEsbdw"], ["provider", "facebook"], ["uid", "10202570463767828"], ["updated_at", "2014-08-22 00:08:46.359483"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 20:08:46 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[35mFolder Load (0.5ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 6]]
+  Rendered folders/_userfolders.html.erb (1.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1[0m
+  Rendered users/_friends.html.erb (205.4ms)
+Completed 200 OK in 218ms (Views: 216.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-21 20:08:46 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-21 20:08:46 -0400
+
+
+Started GET "/assets/baskets.css?body=1" for 127.0.0.1 at 2014-08-21 20:08:46 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-08-21 20:08:46 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-21 20:08:46 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-08-21 20:08:46 -0400
+
+
+Started GET "/assets/links.css?body=1" for 127.0.0.1 at 2014-08-21 20:08:46 -0400
+
+
+Started GET "/assets/friends.css?body=1" for 127.0.0.1 at 2014-08-21 20:08:46 -0400
+
+
+Started GET "/assets/nav_bar.css?body=1" for 127.0.0.1 at 2014-08-21 20:08:46 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-21 20:08:46 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-21 20:08:46 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-21 20:08:46 -0400
+
+
+Started GET "/assets/nav_bar" for 127.0.0.1 at 2014-08-21 20:08:46 -0400
+
+
+Started GET "/folders/new" for 127.0.0.1 at 2014-08-21 20:08:58 -0400
+Processing by FoldersController#new as JS
+  Rendered folders/_form.html.erb (0.6ms)
+  Rendered folders/new.html.erb within layouts/application (7.6ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 6]]
+  Rendered users/_usernav.html.erb (0.8ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mFolder Load (0.6ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 6]]
+  Rendered folders/_userfolders.html.erb (3.6ms)
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1
+  Rendered users/_friends.html.erb (241.5ms)
+Completed 200 OK in 289ms (Views: 285.7ms | ActiveRecord: 2.1ms)
+
+
+Started POST "/folders" for 127.0.0.1 at 2014-08-21 20:09:03 -0400
+Processing by FoldersController#create as */*
+  Parameters: {"folder_name"=>"cats"}
+  [1m[36m (1.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "folders" ("name") VALUES ($1) RETURNING "id"  [["name", "cats"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "user_folders" ("folder_id", "user_id") VALUES ($1, $2) RETURNING "id"  [["folder_id", 9], ["user_id", 6]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 44ms (ActiveRecord: 10.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 20:09:03 -0400
+Processing by FoldersController#index as */*
+  Rendered folders/index.html.erb within layouts/application (0.9ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 6]]
+  Rendered users/_usernav.html.erb (2.4ms)
+  Rendered folders/_form.html.erb (0.7ms)
+  [1m[36mFolder Load (0.5ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 6]]
+  Rendered folders/_userfolders.html.erb (2.3ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1
+  Rendered users/_friends.html.erb (220.9ms)
+Completed 200 OK in 259ms (Views: 256.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 20:09:06 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[35mFolder Load (0.7ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 6]]
+  Rendered folders/_userfolders.html.erb (2.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1[0m
+  Rendered users/_friends.html.erb (193.1ms)
+Completed 200 OK in 206ms (Views: 204.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-21 20:09:06 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-21 20:09:06 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-21 20:09:06 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-08-21 20:09:06 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-21 20:09:06 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-21 20:09:06 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-08-21 20:09:06 -0400
+
+
+Started GET "/assets/baskets.css?body=1" for 127.0.0.1 at 2014-08-21 20:09:06 -0400
+
+
+Started GET "/assets/friends.css?body=1" for 127.0.0.1 at 2014-08-21 20:09:06 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-21 20:09:06 -0400
+
+
+Started GET "/assets/nav_bar.css?body=1" for 127.0.0.1 at 2014-08-21 20:09:07 -0400
+
+
+Started GET "/assets/links.css?body=1" for 127.0.0.1 at 2014-08-21 20:09:07 -0400
+
+
+Started GET "/assets/nav_bar" for 127.0.0.1 at 2014-08-21 20:09:07 -0400
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-21 20:11:20 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mFolder Load (0.7ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 6]]
+  Rendered folders/_folders.html.erb (2.9ms)
+Completed 200 OK in 14ms (Views: 10.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users_friends" for 127.0.0.1 at 2014-08-21 20:11:20 -0400
+Processing by UsersController#users_friends as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1
+  Rendered users/_friends.html.erb (233.7ms)
+Completed 200 OK in 240ms (Views: 238.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/new_link" for 127.0.0.1 at 2014-08-21 20:11:23 -0400
+Processing by LinksController#new_link as */*
+  Parameters: {"url"=>"http://www.buzzfeed.com/rachelzarrell/shark-cat-riding-a-roomba-and-chill-shark-baby-is-the-zen-yo#15epczd", "basketId"=>"9", "link"=>{"url"=>"http://www.buzzfeed.com/rachelzarrell/shark-cat-riding-a-roomba-and-chill-shark-baby-is-the-zen-yo#15epczd"}}
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "links" ("url") VALUES ($1) RETURNING "id"  [["url", "http://www.buzzfeed.com/rachelzarrell/shark-cat-riding-a-roomba-and-chill-shark-baby-is-the-zen-yo#15epczd"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mLink Load (0.4ms)[0m  SELECT  "links".* FROM "links"  WHERE "links"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "folder_links" ("folder_id", "link_id") VALUES ($1, $2) RETURNING "id"[0m  [["folder_id", 9], ["link_id", 9]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/
+Completed 302 Found in 32ms (ActiveRecord: 12.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 20:11:23 -0400
+Processing by FoldersController#index as */*
+  Rendered folders/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  Rendered users/_usernav.html.erb (0.5ms)
+  Rendered folders/_form.html.erb (0.3ms)
+  [1m[35mFolder Load (0.3ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 6]]
+  Rendered folders/_userfolders.html.erb (1.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1[0m
+  Rendered users/_friends.html.erb (353.1ms)
+Completed 200 OK in 391ms (Views: 388.5ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/new_link" for 127.0.0.1 at 2014-08-21 20:11:26 -0400
+Processing by LinksController#new_link as */*
+  Parameters: {"url"=>"http://www.buzzfeed.com/rachelzarrell/shark-cat-riding-a-roomba-and-chill-shark-baby-is-the-zen-yo#15epczd", "basketId"=>"9", "link"=>{"url"=>"http://www.buzzfeed.com/rachelzarrell/shark-cat-riding-a-roomba-and-chill-shark-baby-is-the-zen-yo#15epczd"}}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "links" ("url") VALUES ($1) RETURNING "id"[0m  [["url", "http://www.buzzfeed.com/rachelzarrell/shark-cat-riding-a-roomba-and-chill-shark-baby-is-the-zen-yo#15epczd"]]
+  [1m[35m (2.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mFolder Load (0.4ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mLink Load (0.3ms)[0m  [1mSELECT  "links".* FROM "links"  WHERE "links"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "folder_links" ("folder_id", "link_id") VALUES ($1, $2) RETURNING "id"  [["folder_id", 9], ["link_id", 10]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 88ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 20:11:26 -0400
+Processing by FoldersController#index as */*
+  Rendered folders/index.html.erb within layouts/application (0.2ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 6]]
+  Rendered users/_usernav.html.erb (1.0ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mFolder Load (1.6ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 6]]
+  Rendered folders/_userfolders.html.erb (3.4ms)
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1
+  Rendered users/_friends.html.erb (920.5ms)
+Completed 200 OK in 975ms (Views: 970.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/folders/9" for 127.0.0.1 at 2014-08-21 20:11:30 -0400
+Processing by FoldersController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mFolder Load (0.8ms)[0m  [1mSELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "folders".* FROM "folders"  WHERE "folders"."id" = $1 LIMIT 1  [["id", "9"]]
+  [1m[36mLink Load (0.7ms)[0m  [1mSELECT "links".* FROM "links" INNER JOIN "folder_links" ON "links"."id" = "folder_links"."link_id" WHERE "folder_links"."folder_id" = $1[0m  [["folder_id", 9]]
+  Rendered folders/show.html.erb within layouts/application (6.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 6]]
+  Rendered users/_usernav.html.erb (0.9ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mFolder Load (0.4ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 6]]
+  Rendered folders/_userfolders.html.erb (2.6ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1
+  Rendered users/_friends.html.erb (638.5ms)
+Completed 200 OK in 672ms (Views: 663.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-21 20:11:42 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 6]]
+  Rendered folders/_folders.html.erb (1.6ms)
+Completed 200 OK in 15ms (Views: 7.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users_friends" for 127.0.0.1 at 2014-08-21 20:11:42 -0400
+Processing by UsersController#users_friends as */*
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1[0m
+  Rendered users/_friends.html.erb (226.4ms)
+Completed 200 OK in 231ms (Views: 228.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/signout" for 127.0.0.1 at 2014-08-21 20:13:08 -0400
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 20:13:08 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  Rendered users/_guestnav.html.erb (0.2ms)
+  Rendered folders/_form.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-08-21 20:13:09 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-08-21 20:13:10 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQA9ITBRaI61v3wxpFG45i5e3-rlYl8y_I1btL2WwupERgXHUCdn67yd8VmOXjqKw1tDv4edFMJ4a4iEk8CyNz___qA1vL-SI84tPCpeBas4zgpFPQ5ZJvhZSYK5olPkj5K8bP1QAHGJRzJUCFz-hrmV93gN6ivSuhmwSN7USJO5cd44K3prvoqJTUsPn-j9CJ3kjYvzlN-IjI2K3LfM09yooKuoIaM2nT-9E1C8vuotwSqGmL5WCsLIjxDiCGrOZzP-p6A_WYADoFup8suHPDt3Gj2m40FeZzPYT2_XKZnNnaQNKPLOEnCNyKndsyLPxRI&state=e8c8f89e5ed6cf2dde4df7d8f14c8dda8706e562fa45eb93" for 127.0.0.1 at 2014-08-21 20:13:10 -0400
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQA9ITBRaI61v3wxpFG45i5e3-rlYl8y_I1btL2WwupERgXHUCdn67yd8VmOXjqKw1tDv4edFMJ4a4iEk8CyNz___qA1vL-SI84tPCpeBas4zgpFPQ5ZJvhZSYK5olPkj5K8bP1QAHGJRzJUCFz-hrmV93gN6ivSuhmwSN7USJO5cd44K3prvoqJTUsPn-j9CJ3kjYvzlN-IjI2K3LfM09yooKuoIaM2nT-9E1C8vuotwSqGmL5WCsLIjxDiCGrOZzP-p6A_WYADoFup8suHPDt3Gj2m40FeZzPYT2_XKZnNnaQNKPLOEnCNyKndsyLPxRI", "state"=>"e8c8f89e5ed6cf2dde4df7d8f14c8dda8706e562fa45eb93", "provider"=>"facebook"}
+  [1m[35mUser Load (2.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."provider" = 'facebook' AND "users"."uid" = '10154283904805293'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  UPDATE "users" SET "oauth_expires_at" = $1, "oauth_token" = $2, "updated_at" = $3 WHERE "users"."id" = 4  [["oauth_expires_at", "2014-10-21 00:13:11.000000"], ["oauth_token", "CAAUhfMmen8oBANg7Mhin6mly7PsmypskwCZCkGSfE8Gvpy4495ZAxsOMj8zbetZAGXLEE6Szi82AQzHoBLfTLjaVZAxYOCZCtCZAawiGhXpoJXdd5VHFFdon1wjqNpnI6KJNi0iBnKx2cV77fXBLZAIgoqz9FyUzJ2QZCkz1ZAUGy0v85ZANOn62BdUAY764iJkbB7kZBwTnp3h6D0LsouwzZAtI"], ["updated_at", "2014-08-22 00:13:16.840137"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-21 20:13:16 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 4]]
+  Rendered folders/_userfolders.html.erb (1.9ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10202570463767828' LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '320667871446574' LIMIT 1[0m
+  Rendered users/_friends.html.erb (528.1ms)
+Completed 200 OK in 542ms (Views: 539.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-21 20:13:17 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-21 20:13:17 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-21 20:13:17 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-21 20:13:17 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-08-21 20:13:17 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-21 20:13:17 -0400
+
+
+Started GET "/assets/links.css?body=1" for 127.0.0.1 at 2014-08-21 20:13:17 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-08-21 20:13:17 -0400
+
+
+Started GET "/assets/baskets.css?body=1" for 127.0.0.1 at 2014-08-21 20:13:17 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-21 20:13:17 -0400
+
+
+Started GET "/assets/nav_bar.css?body=1" for 127.0.0.1 at 2014-08-21 20:13:17 -0400
+
+
+Started GET "/assets/friends.css?body=1" for 127.0.0.1 at 2014-08-21 20:13:17 -0400
+
+
+Started GET "/assets/nav_bar" for 127.0.0.1 at 2014-08-21 20:13:17 -0400
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-21 20:13:39 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mFolder Load (0.3ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 4]]
+  Rendered folders/_folders.html.erb (1.4ms)
+Completed 200 OK in 10ms (Views: 6.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users_friends" for 127.0.0.1 at 2014-08-21 20:13:39 -0400
+Processing by UsersController#users_friends as */*
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10202570463767828' LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '320667871446574' LIMIT 1[0m
+  Rendered users/_friends.html.erb (214.9ms)
+Completed 200 OK in 219ms (Views: 217.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-22 08:49:40 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (6.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  Rendered users/_usernav.html.erb (0.6ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mFolder Load (0.9ms)[0m  [1mSELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1[0m  [["user_id", 4]]
+  Rendered folders/_userfolders.html.erb (3.2ms)
+  [1m[35mUser Load (11.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10202570463767828' LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '320667871446574' LIMIT 1[0m
+  Rendered users/_friends.html.erb (683.4ms)
+Completed 200 OK in 718ms (Views: 694.9ms | ActiveRecord: 18.9ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-22 08:49:41 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-22 08:49:41 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-22 08:49:41 -0400
+
+
+Started GET "/assets/baskets.css?body=1" for 127.0.0.1 at 2014-08-22 08:49:41 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-22 08:49:41 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-08-22 08:49:41 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-08-22 08:49:41 -0400
+
+
+Started GET "/assets/links.css?body=1" for 127.0.0.1 at 2014-08-22 08:49:41 -0400
+
+
+Started GET "/assets/friends.css?body=1" for 127.0.0.1 at 2014-08-22 08:49:41 -0400
+
+
+Started GET "/assets/nav_bar.css?body=1" for 127.0.0.1 at 2014-08-22 08:49:41 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-22 08:49:41 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-22 08:49:41 -0400
+
+
+Started GET "/assets/nav_bar" for 127.0.0.1 at 2014-08-22 08:49:41 -0400
+
+
+Started GET "/users_folders" for 127.0.0.1 at 2014-08-22 08:50:33 -0400
+Processing by FoldersController#users_folders as */*
+  [1m[35mUser Load (2.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mFolder Load (0.6ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 4]]
+  Rendered folders/_folders.html.erb (2.4ms)
+Completed 200 OK in 15ms (Views: 7.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/users_friends" for 127.0.0.1 at 2014-08-22 08:50:34 -0400
+Processing by UsersController#users_friends as */*
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10202570463767828' LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '320667871446574' LIMIT 1[0m
+  Rendered users/_friends.html.erb (230.3ms)
+Completed 200 OK in 236ms (Views: 233.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-22 09:01:59 -0400
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered users/_usernav.html.erb (5.4ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[35mFolder Load (0.2ms)[0m  SELECT "folders".* FROM "folders" INNER JOIN "user_folders" ON "folders"."id" = "user_folders"."folder_id" WHERE "user_folders"."user_id" = $1  [["user_id", 4]]
+  Rendered folders/_userfolders.html.erb (17.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '10202570463767828' LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '320667871446574' LIMIT 1
+  Rendered users/_friends.html.erb (637.3ms)
+Completed 200 OK in 763ms (Views: 755.6ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-22 09:02:00 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-22 09:02:00 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-08-22 09:02:00 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-22 09:02:00 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-22 09:02:00 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-22 09:02:00 -0400
+
+
+Started GET "/assets/baskets.css?body=1" for 127.0.0.1 at 2014-08-22 09:02:00 -0400
+
+
+Started GET "/assets/links.css?body=1" for 127.0.0.1 at 2014-08-22 09:02:00 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-08-22 09:02:00 -0400
+
+
+Started GET "/assets/nav_bar.css?body=1" for 127.0.0.1 at 2014-08-22 09:02:00 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-22 09:02:00 -0400
+
+
+Started GET "/assets/friends.css?body=1" for 127.0.0.1 at 2014-08-22 09:02:00 -0400
+
+
+Started GET "/assets/nav_bar" for 127.0.0.1 at 2014-08-22 09:02:00 -0400
