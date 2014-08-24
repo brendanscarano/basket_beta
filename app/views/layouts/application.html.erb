@@ -39,18 +39,21 @@
         <br>
 
         <div id="new-basket-form-container">
-          <%= render "form" %>
+          <%= render "folders/form" %>
         </div>
 
 
         <% if current_user %>
-          <div id="shared_basket">
-              <%= link_to "Shared", shared_basket_path(current_user.shared_basket) %>
-          </div>
+          <ul>
+            <div id="shared_basket">
+                <li><%= link_to "Shared", shared_basket_path(current_user.shared_basket) %></li>
+            </div>
 
-          <div id="user_folders">
-              <%= render "userfolders" %>
-          </div>
+
+            <div id="user_folders">
+                <%= render "folders/userfolders" %>
+            </div>
+          </ul>
         <% end %>
     </div>
   </section>
