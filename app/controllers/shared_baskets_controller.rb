@@ -3,7 +3,7 @@ class SharedBasketsController < ApplicationController
 
   def show
     shared_basket = SharedBasket.find(params[:id])
-    @links = shared_basket.shared_links
+    @links = shared_basket.shared_link_array
   end
 
 end

@@ -39,7 +39,6 @@ ActiveRecord::Schema.define(version: 20140822165320) do
   end
 
   create_table "shared_baskets", force: true do |t|
-    t.string   "name"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
