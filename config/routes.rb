@@ -18,5 +18,5 @@ Rails.application.routes.draw do
   get 'users_friends', to: 'users#users_friends', as: 'users_friends'
 
   post 'new_link', to: 'links#new_link', as: 'new_link'
-  post 'new_shared_link' to: 'shared_links#new_shared_link' as: 'new_shared_link'
+  post 'sent_link', to: 'shared_links#sent_link', as: 'sent_link'
 end

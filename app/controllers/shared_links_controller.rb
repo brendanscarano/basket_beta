@@ -1,6 +1,6 @@
 class SharedLinksController < ApplciationController
 
-  def new_shared_link
+  def sent_link
     p "=" * 30
     p params
     p current_user.id
