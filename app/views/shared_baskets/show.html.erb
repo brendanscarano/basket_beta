@@ -2,8 +2,11 @@
 
 <% @links.each do |link| %>
 <div class="folder-link">
-  <a href="<%= link.url %>">
-    <%= link.url %>
+  <h4>
+    Sent from: <%= link[0] %>
+  </h4>
+  <a href="<%= link[1] %>">
+    <%= link[1] %>
   </a>
 </div>
 <br />
