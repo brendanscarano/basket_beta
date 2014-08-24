@@ -45447,3 +45447,535 @@ Migrating to CreateSharedLinks (20140822165320)
   [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140822165320"]]
   [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
   [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-24 16:46:59 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (4.7ms)
+  Rendered users/_guestnav.html.erb (1.1ms)
+  Rendered folders/_form.html.erb (0.5ms)
+Completed 200 OK in 160ms (Views: 146.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-24 16:46:59 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  Rendered users/_guestnav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.1ms)
+Completed 200 OK in 64ms (Views: 63.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-24 16:47:00 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-24 16:47:00 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-24 16:47:00 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-08-24 16:47:00 -0400
+
+
+Started GET "/assets/baskets.css?body=1" for 127.0.0.1 at 2014-08-24 16:47:00 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-24 16:47:00 -0400
+
+
+Started GET "/assets/nav_bar.css?body=1" for 127.0.0.1 at 2014-08-24 16:47:00 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-08-24 16:47:00 -0400
+
+
+Started GET "/assets/friends.css?body=1" for 127.0.0.1 at 2014-08-24 16:47:00 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-24 16:47:00 -0400
+
+
+Started GET "/assets/links.css?body=1" for 127.0.0.1 at 2014-08-24 16:47:00 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-24 16:47:00 -0400
+
+
+Started GET "/assets/nav_bar" for 127.0.0.1 at 2014-08-24 16:47:00 -0400
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-08-24 16:47:04 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-08-24 16:47:04 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQB2knXzZ8bhA3U1CPihLzE3qpD2-8Q2hZmEug41AT6vbkY8NSIGY4-8AJQm31vpahpRtfcVubKhuDKhrtWBZ04lpuWZ77aWYU3CcwFi7_CQgDfCYgamnefHn_F3yxdmSPm0w7wrya2O6TZQ9x5dhaIKX3M565ieaLmDz-4t0q2FCI1ztP_AkVqbEnZqtZs_9FvFCR-IjOj9Wq6GwzLPbYBER0DNK9O5F8lGecl1wajgRy6y2e5abd1tlIm-ZJuHpzFyOUdUcOUUwhPkupzdeDoJC8Km4k4C84VcS3bJuIvIbOifpwXkQrS7HAkmX49z48Jo002tcvh83-zOg8PTVElC&state=7d80a90fbe562995db3512d74b1fbbffee6a13c813ec114e" for 127.0.0.1 at 2014-08-24 16:47:05 -0400
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQB2knXzZ8bhA3U1CPihLzE3qpD2-8Q2hZmEug41AT6vbkY8NSIGY4-8AJQm31vpahpRtfcVubKhuDKhrtWBZ04lpuWZ77aWYU3CcwFi7_CQgDfCYgamnefHn_F3yxdmSPm0w7wrya2O6TZQ9x5dhaIKX3M565ieaLmDz-4t0q2FCI1ztP_AkVqbEnZqtZs_9FvFCR-IjOj9Wq6GwzLPbYBER0DNK9O5F8lGecl1wajgRy6y2e5abd1tlIm-ZJuHpzFyOUdUcOUUwhPkupzdeDoJC8Km4k4C84VcS3bJuIvIbOifpwXkQrS7HAkmX49z48Jo002tcvh83-zOg8PTVElC", "state"=>"7d80a90fbe562995db3512d74b1fbbffee6a13c813ec114e", "provider"=>"facebook"}
+  [1m[35mUser Load (4.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."provider" = 'facebook' AND "users"."uid" = '320667871446574'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  INSERT INTO "users" ("created_at", "email", "image", "name", "oauth_expires_at", "oauth_token", "provider", "uid", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["created_at", "2014-08-24 20:47:05.991617"], ["email", "bscarano@udel.edu"], ["image", "http://graph.facebook.com/320667871446574/picture?type=square"], ["name", "Ben Kazooie"], ["oauth_expires_at", "2014-10-23 20:47:05.000000"], ["oauth_token", "CAAUhfMmen8oBAGnll1wCl1cMoBHCdnPtLf4y5eyVdfs5mwKXs9c8ZBFojrSg10nurRML4E0g4erJHwrXxnQbdK3Q1tUM2BCYTa8u9bkKHdKOxb9dQna4aTmOSQsZCOjyc2qsrQW49k63FbuZAJzYL86rV0SOyDjxsy8RyrAZBHCHAQhfwPeXS2VMY9wKwwGivnsJmH92GsgMpm2jhZC1M"], ["provider", "facebook"], ["uid", "320667871446574"], ["updated_at", "2014-08-24 20:47:05.991617"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mSharedBasket Load (1.3ms)[0m  SELECT  "shared_baskets".* FROM "shared_baskets"  WHERE "shared_baskets"."user_id" = 1  ORDER BY "shared_baskets"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "shared_baskets" ("created_at", "updated_at", "user_id") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-08-24 20:47:06.015560"], ["updated_at", "2014-08-24 20:47:06.015560"], ["user_id", 1]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 58ms (ActiveRecord: 14.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-24 16:47:06 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.9ms)
+  Rendered folders/_form.html.erb (0.0ms)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (undefined method `sharedbasket' for #<User:0x000001083c7950>):
+    45: 
+    46:         <% if current_user %>
+    47:           <div id="shared_basket">
+    48:               <%= link_to "Shared", shared_basket_path(current_user.sharedbasket) %>
+    49:           </div>
+    50: 
+    51:           <div id="user_folders">
+  app/views/layouts/application.html.erb:48:in `_app_views_layouts_application_html_erb__1995822897970241596_2216343500'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (14.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-24 16:47:28 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.1ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (undefined method `shared_basket' for #<User:0x00000108628230>):
+    45: 
+    46:         <% if current_user %>
+    47:           <div id="shared_basket">
+    48:               <%= link_to "Shared", shared_basket_path(current_user.shared_basket) %>
+    49:           </div>
+    50: 
+    51:           <div id="user_folders">
+  app/views/layouts/application.html.erb:48:in `_app_views_layouts_application_html_erb__1995822897970241596_2217626440'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-24 16:48:09 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (4.5ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mSharedBasket Load (0.3ms)[0m  [1mSELECT  "shared_baskets".* FROM "shared_baskets"  WHERE "shared_baskets"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mFolder Load (1.0ms)[0m  SELECT "folders".* FROM "folders"  WHERE "folders"."user_id" = $1  [["user_id", 1]]
+  Rendered folders/_userfolders.html.erb (15.1ms)
+  [1m[36mUser Load (2.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1
+  Rendered users/_friends.html.erb (787.5ms)
+Completed 500 Internal Server Error in 851ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <% if current_user.friends_using_app != [nil, nil] %>
+    2:   <% current_user.friends_using_app.each do |friend| %>
+    3:     <div class="friend-container" value="<%= friend.id %>">
+    4:       <li>
+    5:         <img alt="FB_Pic" src=<%= friend.image %>>
+    6:       </li>
+  app/views/users/_friends.html.erb:3:in `block in _app_views_users__friends_html_erb__1627504623904434296_2177878380'
+  app/views/users/_friends.html.erb:2:in `each'
+  app/views/users/_friends.html.erb:2:in `_app_views_users__friends_html_erb__1627504623904434296_2177878380'
+  app/views/layouts/application.html.erb:73:in `_app_views_layouts_application_html_erb__1995822897970241596_2217626440'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-24 16:49:02 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.3ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[35mSharedBasket Load (0.3ms)[0m  SELECT  "shared_baskets".* FROM "shared_baskets"  WHERE "shared_baskets"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT "folders".* FROM "folders"  WHERE "folders"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered folders/_userfolders.html.erb (1.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1
+  Rendered users/_friends.html.erb (41454.9ms)
+Completed 500 Internal Server Error in 41469ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <% if current_user.friends_using_app != [nil, nil] %>
+    2:   <% current_user.friends_using_app.each do |friend| %>
+    3:     <div class="friend-container" value="<%= friend.id %>">
+    4:       <li>
+    5:         <img alt="FB_Pic" src=<%= friend.image %>>
+    6:       </li>
+    7:       <li>
+  app/views/users/_friends.html.erb:4:in `block in _app_views_users__friends_html_erb__1627504623904434296_2239949400'
+  app/views/users/_friends.html.erb:3:in `each'
+  app/views/users/_friends.html.erb:3:in `_app_views_users__friends_html_erb__1627504623904434296_2239949400'
+  app/views/layouts/application.html.erb:73:in `_app_views_layouts_application_html_erb__1995822897970241596_2217626440'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-24 16:49:45 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered users/_usernav.html.erb (5.6ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[35mSharedBasket Load (0.4ms)[0m  SELECT  "shared_baskets".* FROM "shared_baskets"  WHERE "shared_baskets"."user_id" = $1 LIMIT 1  [["user_id", 1]]
+  [1m[36mFolder Load (0.3ms)[0m  [1mSELECT "folders".* FROM "folders"  WHERE "folders"."user_id" = $1[0m  [["user_id", 1]]
+  Rendered folders/_userfolders.html.erb (11.3ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1[0m
+  Rendered users/_friends.html.erb (31587.8ms)
+Completed 500 Internal Server Error in 31634ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <% if current_user.friends_using_app != [nil, nil] %>
+    2:   <% current_user.friends_using_app.each do |friend| %>
+    3:     <div class="friend-container" value="<%= friend.id %>">
+    4:       <li>
+    5:         <img alt="FB_Pic" src=<%= friend.image %>>
+    6:       </li>
+  app/views/users/_friends.html.erb:3:in `block in _app_views_users__friends_html_erb__1627504623904434296_2217203260'
+  app/views/users/_friends.html.erb:2:in `each'
+  app/views/users/_friends.html.erb:2:in `_app_views_users__friends_html_erb__1627504623904434296_2217203260'
+  app/views/layouts/application.html.erb:73:in `_app_views_layouts_application_html_erb__1995822897970241596_2217626440'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-24 16:50:50 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  Rendered users/_guestnav.html.erb (0.1ms)
+  Rendered folders/_form.html.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-24 16:50:50 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-24 16:50:50 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-08-24 16:50:50 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-24 16:50:50 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-24 16:50:50 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-24 16:50:50 -0400
+
+
+Started GET "/assets/baskets.css?body=1" for 127.0.0.1 at 2014-08-24 16:50:50 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-08-24 16:50:50 -0400
+
+
+Started GET "/assets/friends.css?body=1" for 127.0.0.1 at 2014-08-24 16:50:50 -0400
+
+
+Started GET "/assets/links.css?body=1" for 127.0.0.1 at 2014-08-24 16:50:50 -0400
+
+
+Started GET "/assets/nav_bar.css?body=1" for 127.0.0.1 at 2014-08-24 16:50:50 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-24 16:50:50 -0400
+
+
+Started GET "/assets/nav_bar" for 127.0.0.1 at 2014-08-24 16:50:50 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-24 16:50:50 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  Rendered users/_guestnav.html.erb (0.1ms)
+  Rendered folders/_form.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-24 16:50:50 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-24 16:50:51 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-24 16:50:51 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-08-24 16:50:51 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-24 16:50:51 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-24 16:50:51 -0400
+
+
+Started GET "/assets/baskets.css?body=1" for 127.0.0.1 at 2014-08-24 16:50:51 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-08-24 16:50:51 -0400
+
+
+Started GET "/assets/friends.css?body=1" for 127.0.0.1 at 2014-08-24 16:50:51 -0400
+
+
+Started GET "/assets/links.css?body=1" for 127.0.0.1 at 2014-08-24 16:50:51 -0400
+
+
+Started GET "/assets/nav_bar.css?body=1" for 127.0.0.1 at 2014-08-24 16:50:51 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-24 16:50:51 -0400
+
+
+Started GET "/assets/nav_bar" for 127.0.0.1 at 2014-08-24 16:50:51 -0400
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-08-24 16:50:52 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-08-24 16:50:53 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQA3o05ZTIO1UmK_FjUlSuMMtdRtxtGc4HbSrkb3628ZeC_g-bS_xdem2Tkx-xUnCsnVYfbi6QP3QlAWOdL1H80n44b0y3xRizF-7ctbDCRR457nxlYeVzDnsOMBzCudzow-kJ3pzl1i_76T8CcjfN_xBJQBbdJ1De7OYpw-PbzS6S8WmTRGI3pwVL9NWsP8125FpQC6wtcNw96dlm3Jw3DH2Oiw-GsPKp2Yoaz1CLDhYpQnPZ0LnYEIKLrWXGuiOEStUtHCpDNFdQB21NE5gZUYyH_kgZGr046cmSgIhhdETo7676GU_r9srdbXwCdo76g&state=7551b2b78cca992a3d879ab9ff69a25eb0eaeba07ac57695" for 127.0.0.1 at 2014-08-24 16:50:53 -0400
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQA3o05ZTIO1UmK_FjUlSuMMtdRtxtGc4HbSrkb3628ZeC_g-bS_xdem2Tkx-xUnCsnVYfbi6QP3QlAWOdL1H80n44b0y3xRizF-7ctbDCRR457nxlYeVzDnsOMBzCudzow-kJ3pzl1i_76T8CcjfN_xBJQBbdJ1De7OYpw-PbzS6S8WmTRGI3pwVL9NWsP8125FpQC6wtcNw96dlm3Jw3DH2Oiw-GsPKp2Yoaz1CLDhYpQnPZ0LnYEIKLrWXGuiOEStUtHCpDNFdQB21NE5gZUYyH_kgZGr046cmSgIhhdETo7676GU_r9srdbXwCdo76g", "state"=>"7551b2b78cca992a3d879ab9ff69a25eb0eaeba07ac57695", "provider"=>"facebook"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."provider" = 'facebook' AND "users"."uid" = '10154283904805293'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "email", "image", "name", "oauth_expires_at", "oauth_token", "provider", "uid", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["created_at", "2014-08-24 20:50:54.264744"], ["email", "brockey34@aol.com"], ["image", "http://graph.facebook.com/10154283904805293/picture?type=square"], ["name", "Brendan Joe"], ["oauth_expires_at", "2014-10-23 20:50:53.000000"], ["oauth_token", "CAAUhfMmen8oBABr4RdO3RqIu3LvxTsVGp6ZCIQZCRT3bQtkuxqGysz4t9dfG27HJ6b38quvZC7dn5pw37CWqLGy4xUmzyqSSpguLAdPZCVhE6xol7u8oNdR7YupjNStMqIqVOZB4tFA9OSELlMabmjarTSv9nn9RIePwS8ZBZB5t96geEBFQEEGkAOa2zAfkt7uWo4Fm2qcgng2QmmwLZCwD"], ["provider", "facebook"], ["uid", "10154283904805293"], ["updated_at", "2014-08-24 20:50:54.264744"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mSharedBasket Load (0.3ms)[0m  SELECT  "shared_baskets".* FROM "shared_baskets"  WHERE "shared_baskets"."user_id" = 2  ORDER BY "shared_baskets"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "shared_baskets" ("created_at", "updated_at", "user_id") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-08-24 20:50:54.277256"], ["updated_at", "2014-08-24 20:50:54.277256"], ["user_id", 2]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 32ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-24 16:50:54 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 2]]
+  Rendered users/_usernav.html.erb (0.5ms)
+  Rendered folders/_form.html.erb (0.0ms)
+  [1m[36mSharedBasket Load (0.3ms)[0m  [1mSELECT  "shared_baskets".* FROM "shared_baskets"  WHERE "shared_baskets"."user_id" = $1 LIMIT 1[0m  [["user_id", 2]]
+  [1m[35mFolder Load (0.2ms)[0m  SELECT "folders".* FROM "folders"  WHERE "folders"."user_id" = $1  [["user_id", 2]]
+  Rendered folders/_userfolders.html.erb (6.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '10202570463767828' LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '320667871446574' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '10202570463767828' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '320667871446574' LIMIT 1
+  Rendered users/_friends.html.erb (504.7ms)
+Completed 500 Internal Server Error in 527ms
+
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    1: <% if current_user.friends_using_app != [nil, nil] %>
+    2:   <% current_user.friends_using_app.each do |friend| %>
+    3:     <div class="friend-container" value="<%= friend.id %>">
+    4:       <li>
+    5:         <img alt="FB_Pic" src=<%= friend.image %>>
+    6:       </li>
+  app/views/users/_friends.html.erb:3:in `block in _app_views_users__friends_html_erb__1627504623904434296_2217203260'
+  app/views/users/_friends.html.erb:2:in `each'
+  app/views/users/_friends.html.erb:2:in `_app_views_users__friends_html_erb__1627504623904434296_2217203260'
+  app/views/layouts/application.html.erb:73:in `_app_views_layouts_application_html_erb__1995822897970241596_2217626440'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-24 16:51:15 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.1ms)
+  Rendered users/_guestnav.html.erb (0.1ms)
+  Rendered folders/_form.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-24 16:51:15 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-24 16:51:15 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-24 16:51:15 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-08-24 16:51:15 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-24 16:51:15 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-24 16:51:15 -0400
+
+
+Started GET "/assets/baskets.css?body=1" for 127.0.0.1 at 2014-08-24 16:51:15 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-08-24 16:51:15 -0400
+
+
+Started GET "/assets/friends.css?body=1" for 127.0.0.1 at 2014-08-24 16:51:15 -0400
+
+
+Started GET "/assets/links.css?body=1" for 127.0.0.1 at 2014-08-24 16:51:15 -0400
+
+
+Started GET "/assets/nav_bar.css?body=1" for 127.0.0.1 at 2014-08-24 16:51:15 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-24 16:51:15 -0400
+
+
+Started GET "/assets/nav_bar" for 127.0.0.1 at 2014-08-24 16:51:16 -0400
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-08-24 16:51:17 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2014-08-24 16:51:17 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQAjv6HQH-0RboFUkyCFSbhmiTwkn34dXhhrCCHu6uIiG8289dMEh0Tnx0tZY2ycg1Lpl39Goa-X3MDhOyq3BFyH52TxubHCe4mFtUJsBIzKmy05uM11-TvwVDVIxGa-GBU3U1ZdHHXybWJqh9GkV9YJht_c6m-kwRpiNS2eoO4O_IzzS2VG9qpoX-q_-TMF-BfEaIA8Alm-tfjeAFktP1Gcfm6_sihrjn4LKE-_JOw5npaVMV-j8cdsK4bBXWm-Y4C0AmXeNpcbLGaswTK6T2wx54qtoeNxag0WeRUJEeLMtMSfNdYlHPEEsq1PeWPep8nDAgR3rJKWnZ-zRlq_m_Ro&state=fb02a31263f39b52dadf39d2a0eae040cd0a3510e5460acc" for 127.0.0.1 at 2014-08-24 16:51:17 -0400
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAjv6HQH-0RboFUkyCFSbhmiTwkn34dXhhrCCHu6uIiG8289dMEh0Tnx0tZY2ycg1Lpl39Goa-X3MDhOyq3BFyH52TxubHCe4mFtUJsBIzKmy05uM11-TvwVDVIxGa-GBU3U1ZdHHXybWJqh9GkV9YJht_c6m-kwRpiNS2eoO4O_IzzS2VG9qpoX-q_-TMF-BfEaIA8Alm-tfjeAFktP1Gcfm6_sihrjn4LKE-_JOw5npaVMV-j8cdsK4bBXWm-Y4C0AmXeNpcbLGaswTK6T2wx54qtoeNxag0WeRUJEeLMtMSfNdYlHPEEsq1PeWPep8nDAgR3rJKWnZ-zRlq_m_Ro", "state"=>"fb02a31263f39b52dadf39d2a0eae040cd0a3510e5460acc", "provider"=>"facebook"}
+  [1m[36mUser Load (2.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."provider" = 'facebook' AND "users"."uid" = '320667871446574'  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "users" SET "oauth_token" = $1, "updated_at" = $2 WHERE "users"."id" = 1[0m  [["oauth_token", "CAAUhfMmen8oBABM20ZC3Yl0QCkxtZAI1mGVAZC5VfZCfReb7cOwmIxDW1UBzgcUF3D4U6HbMIDZB3SSNl4s4slEdNNWWICUWCIlmCS8mLZBfQiPKQepARxYPJdfcqv38XwZAHd890XfqqK19khWv86ZA4px61lCqKKdeiPzTKdo9YUMpr4CNCUI20fqWh6stgitf61iZBLjocBR1yF1AF4AiO"], ["updated_at", "2014-08-24 20:51:18.314851"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36mSharedBasket Load (0.4ms)[0m  [1mSELECT  "shared_baskets".* FROM "shared_baskets"  WHERE "shared_baskets"."user_id" = 1  ORDER BY "shared_baskets"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 11ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-08-24 16:51:18 -0400
+Processing by FoldersController#index as HTML
+  Rendered folders/index.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered users/_usernav.html.erb (0.6ms)
+  Rendered folders/_form.html.erb (0.1ms)
+  [1m[36mSharedBasket Load (0.4ms)[0m  [1mSELECT  "shared_baskets".* FROM "shared_baskets"  WHERE "shared_baskets"."user_id" = $1 LIMIT 1[0m  [["user_id", 1]]
+  [1m[35mFolder Load (0.3ms)[0m  SELECT "folders".* FROM "folders"  WHERE "folders"."user_id" = $1  [["user_id", 1]]
+  Rendered folders/_userfolders.html.erb (1.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."uid" = '10154283904805293' LIMIT 1
+  Rendered users/_friends.html.erb (355.8ms)
+Completed 200 OK in 375ms (Views: 372.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-08-24 16:51:18 -0400
+
+
+Started GET "/assets/basket.js?body=1" for 127.0.0.1 at 2014-08-24 16:51:18 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-08-24 16:51:18 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-08-24 16:51:18 -0400
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2014-08-24 16:51:18 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-08-24 16:51:19 -0400
+
+
+Started GET "/assets/baskets.css?body=1" for 127.0.0.1 at 2014-08-24 16:51:19 -0400
+
+
+Started GET "/assets/bootstrap_and_overrides.css?body=1" for 127.0.0.1 at 2014-08-24 16:51:19 -0400
+
+
+Started GET "/assets/friends.css?body=1" for 127.0.0.1 at 2014-08-24 16:51:19 -0400
+
+
+Started GET "/assets/links.css?body=1" for 127.0.0.1 at 2014-08-24 16:51:19 -0400
+
+
+Started GET "/assets/nav_bar.css?body=1" for 127.0.0.1 at 2014-08-24 16:51:19 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-08-24 16:51:19 -0400
+
+
+Started GET "/assets/nav_bar" for 127.0.0.1 at 2014-08-24 16:51:19 -0400
+
+
+Started GET "/shared_baskets/1" for 127.0.0.1 at 2014-08-24 16:51:23 -0400
+Processing by SharedBasketsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSharedBasket Load (0.4ms)[0m  [1mSELECT  "shared_baskets".* FROM "shared_baskets"  WHERE "shared_baskets"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 500 Internal Server Error in 6ms
+
+NameError (uninitialized constant SharedBasket::SharedLink):
+  app/controllers/shared_baskets_controller.rb:6:in `show'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (17.7ms)
+
+
+Started GET "/shared_baskets/1" for 127.0.0.1 at 2014-08-24 16:51:23 -0400
+Processing by SharedBasketsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSharedBasket Load (1.6ms)[0m  SELECT  "shared_baskets".* FROM "shared_baskets"  WHERE "shared_baskets"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 6ms
+
+NameError (uninitialized constant SharedBasket::SharedLink):
+  app/controllers/shared_baskets_controller.rb:6:in `show'
+
+
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.6ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/brendanscarano/.rvm/gems/ruby-2.1.1/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.3ms)

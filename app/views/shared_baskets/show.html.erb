@@ -1,0 +1,10 @@
+<h1>Shared</h1>
+
+<% @links.each do |link| %>
+<div class="folder-link">
+  <a href="<%= link.url %>">
+    <%= link.url %>
+  </a>
+</div>
+<br />
+<% end %>
