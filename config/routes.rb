@@ -9,11 +9,14 @@ Rails.application.routes.draw do
   root "folders#index"
 
   resources :folders
+  resources :shared_baskets, only: [:show, :create]
+  resources :shared_links
+
+  #Extension Routes
+  #============================
   get 'users_folders', to: 'folders#users_folders', as: 'users_folders'
   get 'users_friends', to: 'users#users_friends', as: 'users_friends'
 
   post 'new_link', to: 'links#new_link', as: 'new_link'
-
-  resources :shared_baskets, only: [:show, :create]
-  resources :shared_links
+  post 'new_shared_link' to: 'shared_links#new_shared_link' as: 'new_shared_link'
 end
