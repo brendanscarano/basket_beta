@@ -1,10 +1,10 @@
 <% if current_user.friends_using_app != [nil, nil] %>
   <% current_user.friends_using_app.each do |friend| %>
     <div class="friend-container" value="<%= friend.id %>">
-      <li>
+      <li class='friend-img'>
         <img alt="FB_Pic" src=<%= friend.image %>>
       </li>
-      <li>
+      <li class='friend-name'>
         <%= p friend.name %>
       </li>
     </div>
