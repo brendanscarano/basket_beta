@@ -5,6 +5,9 @@
   <a href="<%= link.url %>">
     <%= link.url %>
   </a>
+  <div class="date">
+    <%= link.created_at.strftime("%b %d %Y") %>
+  </div>
 </div>
 <br />
 <% end %>
