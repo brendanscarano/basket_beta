@@ -7,7 +7,9 @@ class SharedBasket < ActiveRecord::Base
     
     self.shared_links.each do |link|
       user = User.find(link.sender_id)
-      links << [user.name, link.url] 
+      links << [user.name, 
+                link.url, 
+                link.created_at.strftime("%b %d %Y")] 
     end
 
     return links
