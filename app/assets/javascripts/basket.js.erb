@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  //Creating a new basket
+  //======================================
   $('#new_folder').on('click', function(e) {
     e.preventDefault();
     $('#new-basket-form-container').slideDown("medium", function() {
@@ -30,6 +32,8 @@ $(document).ready(function() {
     });     
   })
 
+  //Deleting a basket
+  //======================================
   $('.delete_basket').on('click', function(e) {
     e.preventDefault();
 
