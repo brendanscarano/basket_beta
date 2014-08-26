@@ -5,7 +5,11 @@
 <% @links.each do |link| %>
   <div class="folder-container">
     <div class="folder-link">
-      <h3>This is a test title that will be filled in later</h3>
+      <h3>
+        <a href="<%= link.url %>" class="title">  
+          This is a test title that will be filled in later
+        </a>
+      </h3>
       <a href="<%= link.url %>">
         <%= link.url %>
       </a>
