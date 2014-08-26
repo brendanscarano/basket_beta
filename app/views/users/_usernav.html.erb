@@ -1,16 +1,19 @@
-<li>
-    <img alt="FB_Pic" src=<%= current_user.image %>>
-  <%= current_user.name %>
-</li>
-<li>
-  &#124;
-</li>
-<li>
-  <a href="">About</a>
-</li>
-<li>
-  <a href="">Extension</a>
-</li>
-<li>
-  <%= link_to "Sign out", signout_path, id: "sign_out" %>
-</li>
+<ul class="users-nav">
+  <li>
+      <img alt="FB_Pic" src=<%= current_user.image %>>
+    <%= current_user.name %>
+  </li>
+  <li>
+    &#124;
+  </li>
+  <li>
+    <a href="">About</a>
+  </li>
+  <li>
+    <a href="">Extension</a>
+  </li>
+  <li>
+    <%= link_to "Sign out", signout_path, id: "sign_out" %>
+  </li>
+</ul>
+
