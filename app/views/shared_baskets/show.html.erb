@@ -1,16 +1,29 @@
-<h1>Shared</h1>
+<div class="folder-name">
+  <h1>Shared</h1>
+</div>
 
 <% @links.each do |link| %>
-<div class="folder-link">
-  <h4>
-    Sent from: <%= link[0] %>
-  </h4>
-  <a href="<%= link[1] %>">
-    <%= link[1] %>
-  </a>
-  <h5>
-    <%= link[2] %>
-  </h5>
+<div class="folder-container">
+  <div class="folder-link">
+    <h4>
+      <img src="<%= link[1] %>">
+      <%= link[0] %>
+      |
+      <%= link[4] %>
+      <%= link[3] %>
+    </h4>
+    <h5>
+      <%= link[2] %>
+    </h5>
+    <h3>
+      <a href="#" class="title">  
+        This is a test title that will be filled in later
+      </a>
+    </h3>
+    <a href="<%= link[1] %>">
+      <%= link[1] %>
+    </a>
+  </div>
+  <br />
 </div>
-<br />
 <% end %>
