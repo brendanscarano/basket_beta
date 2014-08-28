@@ -35,6 +35,7 @@ gem "less-rails"
 gem "twitter-bootstrap-rails"
 gem "less-rails-bootstrap"
 gem "koala", "~> 1.10.0rc"
+gem "font-awesome-rails"
 
 group :development, :test do
   gem 'pry-rails'
