@@ -21,13 +21,20 @@
   }
 
   .baskets {
+    margin-left: 0;
     cursor: pointer;
     
     li {
       list-style: none;
-      padding: 10px 0;
+      padding: 10px 0 10px 25px;
       border-top: 1px solid #212121;
       border-bottom: 1px solid #0a0c0e;
+
+      &:hover {
+        background: #111;
+        border-top: 1px solid #111;
+        border-bottom: 1px solid #0a0c0e;
+      }
     }
 
     a {
