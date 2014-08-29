@@ -11,7 +11,8 @@ class SharedBasket < ActiveRecord::Base
                 user.image,
                 link.url, 
                 link.created_at.strftime("%A, %b %d %Y"),
-                link.created_at.strftime("%l:%M%P")] 
+                link.created_at.strftime("%l:%M%P"),
+                link.id] 
     end
 
     return links

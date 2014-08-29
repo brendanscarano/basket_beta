@@ -32,7 +32,8 @@ $(document).ready(function() {
   //Deleting a basket
   //======================================
   $('.basket-trash').on('click', function(){
-    console.log("You clicked the basket trash button!");
+    linkId = $(this).attr("data");
+    console.log(linkId); 
   });
 
   //Deleting a link
