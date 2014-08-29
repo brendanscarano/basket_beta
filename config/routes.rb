@@ -4,13 +4,15 @@ Rails.application.routes.draw do
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy', as: 'signout'
 
+  get 'about', to: 'users#about', as: 'about'
+
   resources :sessions, only: [:create, :destroy]
   
-  root "folders#index"
-
   resources :folders
   resources :shared_baskets, only: [:show, :create]
   resources :shared_links
+
+  root "folders#index"
 
   #Extension Routes
   #============================
