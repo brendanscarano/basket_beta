@@ -31,23 +31,16 @@ $(document).ready(function() {
 
   //Deleting a basket
   //======================================
-  $('.delete_basket').on('click', function(e) {
-    e.preventDefault();
-
-    // var link = document.getElementsByTagName('a') 
-    var folderId = $(this).attr("value");
-
-    alert("You are about to delete this!")
-    // $.ajax({
-    //   type: 'DELETE'
-    //   url: '/folders' + folderId
-    // })
-  })
+  $('.basket-trash').on('click', function(){
+    console.log("You clicked the basket trash button!");
+  });
 
   //Deleting a link
   //======================================
-  $('.trash').on('click', 'fa fa-trash', function(){
-    console.log("You clicked the trash button!");
-  });
+  $('.link-trash').on('click', function(e){
+    e.preventDefault();
 
+    linkId = $(this).attr("data");
+    console.log(linkId);  
+  });
 });

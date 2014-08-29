@@ -4,7 +4,7 @@ class FoldersController < ApplicationController
 
   def show
     folder = Folder.find(params[:id])
-    @links = folder.links
+    @links = folder.links.order('created_at DESC')
   end
 
   def new
