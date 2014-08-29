@@ -1,5 +1,8 @@
 <div class="folder-name">
   <h1><%= @folder.name %></h1>
+  <div class="basket-trash">
+    <i class="fa fa-trash"></i>
+  </div>
 </div>
 
 <% @links.each do |link| %>
@@ -10,11 +13,14 @@
           This is a test title that will be filled in later
         </a>
       </h3>
+      <div class="link-trash" data="<%= link.id %>">
+        <i class="fa fa-trash"></i>
+      </div>
       <a href="<%= link.url %>">
         <%= link.url %>
       </a>
       <div class="date">
-        <%= link.created_at.strftime("%b %d %Y") %>
+        <%= link.created_at.strftime("%A, %b %d") %> at
         <%= link.created_at.strftime("%l:%M%P") %>
       </div>
     </div>

@@ -8,7 +8,7 @@
   padding-top: 75px;
 
   .new-basket-btn {
-    margin-left: 24px;
+    margin: -11px 0 -11px 24px;
     a {
       color: white;
     }
@@ -18,21 +18,39 @@
     margin-left: 24px;
     display: none;
 
+    #folder_name {
+      &:focus {
+        border: 1px solid #90EE90;
+      }
+    }
+
+    #signup_button,
+    #hide_button {
+      font-family: 'Lato';
+    }
   }
 
   .baskets {
+    margin-left: 0;
     cursor: pointer;
     
     li {
       list-style: none;
-      padding: 10px 0;
+      padding: 10px 0 10px 25px;
       border-top: 1px solid #212121;
       border-bottom: 1px solid #0a0c0e;
-    }
 
-    a {
-      color: white;
-      font-size: 16px;
+      a {
+        color: white;
+        font-size: 16px;
+        width: 100%;
+      }
+
+      &:hover {
+        background: #111;
+        border-top: 1px solid #111;
+        border-bottom: 1px solid #0a0c0e;
+      }
     }
   }
 }

@@ -32,17 +32,17 @@
     <div class="baskets-wrapper">
       <br>
         <div class="new-basket-btn">
-          <%= image_tag '/images/icon.png' %>
+          <%= image_tag 'icon.png' %>
           <%= link_to "+ New Basket", new_folder_path, id: "new_folder", remote: true %>
         </div>
         <br>
 
-        <div id="new-basket-form-container">
-          <%= render "folders/form" %>
-        </div>
-
-
         <% if current_user %>
+          <div id="new-basket-form-container">
+            <%= render "folders/form" %>
+          </div>
+
+
           <ul class="baskets">
             <div id="shared_basket">
                 <li><%= link_to "Shared", shared_basket_path(current_user.shared_basket) %></li>

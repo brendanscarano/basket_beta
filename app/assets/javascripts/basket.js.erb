@@ -22,28 +22,25 @@ $(document).ready(function() {
     }).done(function(response) {
       $('#folder_name').val('');
       $(_this).hide();
-      // $('#user_folders').html(response);
     });
   });
 
   $('#hide_button').on('click', function(){
-    $('#new-basket-form-container').slideUp("medium", function() {
-
-    });     
+    $('#new-basket-form-container').slideUp("medium", function() {});     
   })
 
   //Deleting a basket
   //======================================
-  $('.delete_basket').on('click', function(e) {
+  $('.basket-trash').on('click', function(){
+    console.log("You clicked the basket trash button!");
+  });
+
+  //Deleting a link
+  //======================================
+  $('.link-trash').on('click', function(e){
     e.preventDefault();
 
-    // var link = document.getElementsByTagName('a') 
-    var folderId = $(this).attr("value");
-
-    alert("You are about to delete this!")
-    // $.ajax({
-    //   type: 'DELETE'
-    //   url: '/folders' + folderId
-    // })
-  })
+    linkId = $(this).attr("data");
+    console.log(linkId);  
+  });
 });
