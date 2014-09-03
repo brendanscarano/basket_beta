@@ -71,9 +71,9 @@
         </div>
 
         <ul id="friends-list">
-          <%# if current_user %>
-            <%#= render "users/friends" %>
-          <%# end %>
+          <% if current_user %>
+            <%= render "users/friends" %>
+          <% end %>
         </ul>
 
     </div>
