@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Basket</title>
+  <title>b@sket</title>
   <%= javascript_include_tag 'application' %>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= csrf_meta_tags %>
@@ -19,7 +19,7 @@
 <body>
   <div class="navbar">
     <div class="navbar-inner">
-      <h1>basket</h1>
+      <h1>b@sket</h1>
         <% if current_user %>
           <%= render "users/usernav" %>
         <% else %>
@@ -28,12 +28,13 @@
     </div>
   </div>
 
+  <div class="container">
   <section id="baskets">
     <div class="baskets-wrapper">
       <br>
         <div class="new-basket-btn">
           <%= image_tag 'icon.png' %>
-          <%= link_to "+ New Basket", new_folder_path, id: "new_folder", remote: true %>
+          <%= link_to "+ New B@sket", new_folder_path, id: "new_folder", remote: true %>
         </div>
         <br>
 
@@ -66,16 +67,17 @@
   <section id="friends">
     <div class="friends-wrapper">
         <div class="friends-header">
-          <h5>Friends using basket</h5>
+          <h5>Friends using b@sket</h5>
         </div>
 
         <ul id="friends-list">
-          <% if current_user %>
-            <%= render "users/friends" %>
-          <% end %>
+          <%# if current_user %>
+            <%#= render "users/friends" %>
+          <%# end %>
         </ul>
 
     </div>
   </section>
+  </div>
 </body>
 </html>

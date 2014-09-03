@@ -4,6 +4,8 @@ class SharedLinksController < ApplicationController
   def sent_link
     friend_id = params["friendId"].to_i
     shared_basket = SharedBasket.find(friend_id)
+
+    #include the new info being sent in from the extension
     shared_basket.shared_links.create(sender_id: current_user.id,
                                       url: params["url"])
     redirect_to root_url
