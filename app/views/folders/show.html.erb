@@ -7,7 +7,9 @@
 
 <% @links.each do |link| %>
   <div class="folder-container">
-    <img src="<%= link.image %>">
+    <div class="img-holder">
+      <img src="<%= link.image %>">
+    </div>
     <div class="folder-link">
       <h3>
         <a href="<%= link.url %>" class="title">  

@@ -2,9 +2,6 @@ class LinksController < ApplicationController
   skip_before_filter  :verify_authenticity_token
 
   def new_link
-    #Should be find or create, to not duplicate urls in the database
-    #include the new info being sent in from the extension
-    binding.pry
     link = Link.find_by_url(params["url"])
 
     if link == nil 
