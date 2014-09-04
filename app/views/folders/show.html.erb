@@ -7,10 +7,11 @@
 
 <% @links.each do |link| %>
   <div class="folder-container">
+    <img src="<%= link.image %>">
     <div class="folder-link">
       <h3>
         <a href="<%= link.url %>" class="title">  
-          This is a test title that will be filled in later
+          <%= link.title %>
         </a>
       </h3>
       <div class="link-trash" data="<%= link.id %>">
