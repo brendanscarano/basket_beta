@@ -4,7 +4,6 @@
   float: left;
   width: 60%;
   min-height: 500px;
-  padding-top: 70px;
   background: #ECECEA; 
 
   .folder-name {
@@ -20,6 +19,7 @@
     }
 
     .basket-trash {
+      cursor: pointer;
       position: absolute;
       left: 78.5%;
       margin-top: -3%;
@@ -28,28 +28,46 @@
 
   .folder-container {
     height: 110px;
+    position: relative;
+
+    .img-holder {
+      position: absolute;
+      height: 100%;
+      width: 23%;
+      z-index: 1;
+
+      img {
+        position: absolute;
+        top: 10px;
+        left: 8px;
+      }
+    }
 
     .folder-link {
+      position: absolute;
       height: 100%;
+      width: 73%;
       background-color: #ffffff;
       border-top: 1px solid #ddd;
       border-bottom: 1px solid #ddd;
-      padding: 0px 24px 10px 24px;
+      padding: 0px 0 10px 27%;
 
         h3 {
           margin-bottom: 0;
 
           .title {
             font-family: 'Lato';
-            font-size: 24px;
+            font-size: 18px;
             color: black;
           }
         }
 
         .link-trash {
+          cursor: pointer;
           position: absolute;
-          left: 78.5%;
-          margin-top: -3%;
+          left: 97.5%;
+          margin-top: -6%;
+          color: #dddddd;
         }
 
         a {
@@ -95,6 +113,7 @@
         }
 
         .link-trash {
+          cursor: pointer;
           position: absolute;
           left: 78.5%;
           margin-top: -4%;

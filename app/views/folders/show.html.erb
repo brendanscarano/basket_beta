@@ -1,16 +1,19 @@
 <div class="folder-name">
   <h1><%= @folder.name %></h1>
-  <div class="basket-trash">
+  <div class="basket-trash" data="<%= @folder.id %>">
     <i class="fa fa-trash"></i>
   </div>
 </div>
 
 <% @links.each do |link| %>
   <div class="folder-container">
+    <div class="img-holder">
+      <img src="<%= link.image %>">
+    </div>
     <div class="folder-link">
       <h3>
         <a href="<%= link.url %>" class="title">  
-          This is a test title that will be filled in later
+          <%= link.title %>
         </a>
       </h3>
       <div class="link-trash" data="<%= link.id %>">
