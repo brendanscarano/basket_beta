@@ -17,8 +17,9 @@
         </a>
       </h3>
       <div class="link-trash" data="<%= link.id %>">
-        <i class="fa fa-trash"></i>
-        <%= link_to "Destroy", link_path(link, folder_id: @folder.id), method: :delete %>
+        <%= link_to link_path(link, folder_id: @folder.id), method: :delete do %>
+          <i class="fa fa-trash"></i>
+        <% end %>
       </div>
       <a href="<%= link.url %>">
         <%= link.url %>
