@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :sessions, only: [:create, :destroy]
   
   resources :folders
+  resources :links, only: [:destroy]
   resources :shared_baskets, only: [:show, :create]
   resources :shared_links
 
