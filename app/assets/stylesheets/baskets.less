@@ -31,7 +31,6 @@
 
   .baskets {
     margin-left: 0;
-    cursor: pointer;
     
     li {
       list-style: none;
@@ -49,6 +48,18 @@
         background: #111;
         border-top: 1px solid #111;
         border-bottom: 1px solid #0a0c0e;
+      }
+
+      .basket-trash {
+        cursor: pointer;
+        color: #44494C;
+        left: 18%;
+        margin-top: 2px;
+        position: absolute;
+
+        &:hover{
+          color: #f5f5f5;
+        }
       }
     }
   }

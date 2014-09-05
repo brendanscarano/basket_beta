@@ -1,8 +1,5 @@
 <div class="folder-name">
   <h1><%= @folder.name %></h1>
-  <div class="basket-trash" data="<%= @folder.id %>">
-    <i class="fa fa-trash"></i>
-  </div>
 </div>
 
 <% @links.each do |link| %>
@@ -17,7 +14,9 @@
         </a>
       </h3>
       <div class="link-trash" data="<%= link.id %>">
-        <i class="fa fa-trash"></i>
+        <%= link_to link_path(link, folder_id: @folder.id), method: :delete do %>
+          <i class="fa fa-trash"></i>
+        <% end %>
       </div>
       <a href="<%= link.url %>">
         <%= link.url %>
