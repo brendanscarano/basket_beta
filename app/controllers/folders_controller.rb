@@ -17,9 +17,9 @@ class FoldersController < ApplicationController
 
     if folder.save
       flash[:notice] = "Folder has been created."
-
-      redirect_to root_url
     end
+
+    redirect_to folder_path(folder)
   end
 
   def destroy
