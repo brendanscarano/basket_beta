@@ -5,9 +5,12 @@ class LinksController < ApplicationController
     folder = Folder.find(params[:folder_id])
 
     link_dependencies = FolderLink.where(link_id: params[:id])
+    
     if link_dependencies == 1
       Link.find(params[:id]).destroy
-      redirect_to folder_path(folder)
+      folder_link = FolderLink.where(link_id: params[:id],
+                                      folder_id: params[:folder_id])
+      folder_link[0].destroy
     else
       folder_link = FolderLink.where(link_id: params[:id],
                                       folder_id: params[:folder_id])
