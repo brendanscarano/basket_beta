@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   resources :shared_baskets, only: [:show, :create]
   resources :shared_links
 
-  root "folders#index"
+  root "users#about"
 
   #Extension Routes
   #============================

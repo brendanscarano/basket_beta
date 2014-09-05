@@ -23,9 +23,10 @@ class FoldersController < ApplicationController
   end
 
   def destroy
-    @folder.destroy
+    folder = Folder.find(params[:id])
+    folder.destroy
 
-    render partial: 'userfolders'
+    redirect_to root_url
   end
 
   def users_folders
