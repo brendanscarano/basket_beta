@@ -34,7 +34,9 @@ $(document).ready(function() {
 
   //Deleting a basket
   //======================================
-  $('.basket-trash').on('click', function(){
+  $('.basket-trash').on('click', function(event){
+    event.preventDefault();
+
     linkId = $(this).attr("data");
     console.log(linkId); 
   });
