@@ -16,11 +16,24 @@ class FoldersController < ApplicationController
     user = current_user
     folder = Folder.new(name: params["folder_name"], user_id: user.id)
 
-    if folder.save
-      flash[:notice] = "Folder has been created."
+    respond_to do |format|
+      format.html {
+        if folder.save
+          flash[:notice] = "Folder has been created."
+        end
+
+        redirect_to folder_path(folder)
+      }
+
+      format.json {
+        if folder.save
+          flash[:notice] = "Folder has been created."
+        end        
+
+        render json: folder
+      }
     end
 
-    redirect_to folder_path(folder)
   end
 
   def destroy
