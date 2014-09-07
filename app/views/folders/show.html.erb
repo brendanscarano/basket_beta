@@ -19,7 +19,7 @@
         <% end %>
       </div>
       <a href="<%= link.url %>">
-        <%= link.url %>
+        <%= truncate(link.url, length: 80) %>
       </a>
       <div class="date">
         <%= link.created_at.strftime("%A, %b %d") %> at

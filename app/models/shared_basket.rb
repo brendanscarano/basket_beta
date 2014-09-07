@@ -7,12 +7,9 @@ class SharedBasket < ActiveRecord::Base
     
     self.shared_links.order('created_at DESC').each do |link|
       user = User.find(link.sender_id)
-      links << [user.name, 
-                user.image,
-                link.url, 
-                link.created_at.strftime("%A, %b %d %Y"),
-                link.created_at.strftime("%l:%M%P"),
-                link.id] 
+      links << [link,
+                user.name, 
+                user.image] 
     end
 
     return links
