@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
   //Creating a new basket
   //======================================
   $('#new_folder').on('click', function(e) {
@@ -19,8 +18,12 @@ $(document).ready(function() {
       type: 'POST',
       url: '/folders',
       data: {folder_name: user_input},
+      dataType: "JSON",
     }).done(function(response) {
-      $('#folder_name').val('');
+      console.log(response);
+      $('#user_folders').append('<li class="basket-list-item">' + 
+                                  response.name + 
+                                  '</li>');
       $(_this).hide();
     });
   });
@@ -31,15 +34,17 @@ $(document).ready(function() {
 
   //Deleting a basket
   //======================================
-  $('.basket-trash').on('click', function(){
+  $('.basket-trash').on('click', function(event){
+    event.preventDefault();
+
     linkId = $(this).attr("data");
     console.log(linkId); 
   });
 
   //Deleting a link
   //======================================
-  $('.link-trash').on('click', function(e){
-    e.preventDefault();
+  $('.link-delete').on('click', '.fa-trash', function(event){
+    event.preventDefault();
 
     linkId = $(this).attr("data");
     console.log(linkId);  

@@ -1,6 +1,7 @@
 class FoldersController < ApplicationController
   skip_before_action :verify_authenticity_token
   before_action :set_folder, only: [:show, :destroy]
+  respond_to :html, :js
 
   def show
     folder = Folder.find(params[:id])
@@ -15,11 +16,24 @@ class FoldersController < ApplicationController
     user = current_user
     folder = Folder.new(name: params["folder_name"], user_id: user.id)
 
-    if folder.save
-      flash[:notice] = "Folder has been created."
+    respond_to do |format|
+      format.html {
+        if folder.save
+          flash[:notice] = "Folder has been created."
+        end
 
-      redirect_to root_url
+        redirect_to folder_path(folder)
+      }
+
+      format.json {
+        if folder.save
+          flash[:notice] = "Folder has been created."
+        end        
+
+        render json: folder
+      }
     end
+
   end
 
   def destroy

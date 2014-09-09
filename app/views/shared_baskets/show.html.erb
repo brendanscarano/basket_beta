@@ -4,28 +4,38 @@
 
 <% @links.each do |link| %>
 <div class="shared-link-container">
+  <div class="img-holder">
+    <img src="<%= link[0].image %>">
+  </div>
+
   <div class="folder-link">
     <div class="sender-info">
-      <img src="<%= link[1] %>">
+      <img src="<%= link[2] %>">
     <h4>
-        <%= link[0] %>
+        <%= link[1] %>
         <br />
-        <%= link[3] %>
+        <%= link[0].created_at.strftime("%A, %b %d %Y") %>
         <br />
-        <%= link[4] %>
+        <%= link[0].created_at.strftime("%l:%M%P") %>
       </h4>
     </div>
-    <div class="link-trash" data="<%= link[5] %>">
-      <i class="fa fa-trash"></i>
+
+    <div class="link-trash">
+      <%= link_to shared_links_path(id: link[5]), method: :delete do %>
+        <i class="fa fa-trash"></i>
+      <% end %>
     </div>
+
     <h3>
-      <a href="<%= link[2] %>" class="title">
-        This is a test title that will be filled in later
+      <a href="<%= link[0].url %>" class="title">
+        <%= link[0].title %>
       </a>
     </h3>
-    <a href="<%= link[2] %>">
-      <%= link[2] %>
+
+    <a href="<%= link[0].url %>">
+      <%= link[0].url %>
     </a>
+
   </div>
   <br />
 </div>

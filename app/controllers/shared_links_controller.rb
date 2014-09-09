@@ -1,6 +1,10 @@
 class SharedLinksController < ApplicationController
   skip_before_filter  :verify_authenticity_token
 
+  def destroy
+    p params
+  end
+
   def sent_link
     friend_id = params["friendId"].to_i
     shared_basket = SharedBasket.find(friend_id)
