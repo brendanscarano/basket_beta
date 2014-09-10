@@ -2,6 +2,9 @@
 <html>
 <head>
   <title>B@sket</title>
+  <link rel="shortcut icon" href="../assets/images/flavicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="../assets/images/favicon.ico">
+  <%= favicon_link_tag 'favicon.ico' %>
   <%= javascript_include_tag 'application' %>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= csrf_meta_tags %>
@@ -77,9 +80,9 @@
         </div>
 
         <ul id="friends-list">
-          <% if current_user %>
-            <%= render "users/friends" %>
-          <% end %>
+          <%# if current_user %>
+            <%#= render "users/friends" %>
+          <%# end %>
         </ul>
 
     </div>
