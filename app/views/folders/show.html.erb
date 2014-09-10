@@ -13,10 +13,13 @@
           <%= link.title %>
         </a>
       </h3>
+
       <div class="link-trash" data="<%= link.id %>">
-        <%= link_to link_path(link, folder_id: @folder.id), class: 'link-delete', method: :delete do %>
+        <%= link_to link_path(link, folder_id: @folder.id), class: 'link-delete', method: :delete, remote: true do %>
           <i class="fa fa-trash"></i>
         <% end %>
+
+
       </div>
       <a href="<%= link.url %>">
         <%= truncate(link.url, length: 80) %>

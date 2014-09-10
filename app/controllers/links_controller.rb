@@ -1,4 +1,6 @@
 class LinksController < ApplicationController
+  respond_to :js
+
   skip_before_filter  :verify_authenticity_token
 
   def new_link
@@ -20,10 +22,10 @@ class LinksController < ApplicationController
   def destroy
     folder = Folder.find(params[:folder_id])
 
-    link_dependencies = FolderLink.where(link_id: params[:id])
+    link_dependencies = FolderLink.where(link_id: params[:id]) # []
     
-    if link_dependencies == 1
-      Link.find(params[:id]).destroy
+    if link_dependencies.length == 1
+      @link = Link.find(params[:id]).destroy
       folder_link = FolderLink.where(link_id: params[:id],
                                       folder_id: params[:folder_id])
       folder_link[0].destroy
@@ -33,7 +35,7 @@ class LinksController < ApplicationController
       folder_link[0].destroy
     end
 
-    redirect_to folder_path(folder)
+    respond_with(@link)
   end
 
 end

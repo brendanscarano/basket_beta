@@ -1,0 +1,6 @@
+<% if @folder.valid? %>
+  $('.baskets').append("<%= escape_javascript(render 'basket_list_item', folder: @folder) %>");
+
+  $('#new-basket-form-container').slideUp("medium", function(){});
+  // $('form#new_review')[0].reset();
+<% end %>
