@@ -1,8 +1,9 @@
 <%= form_for @new_folder, remote: true do |f| %>
   <%= f.label :name %>
-  <%= f.text_field :name %>
+  <%= f.text_field :name, placeholder: "New Basket Name" %>
 
-  <%= f.submit %>
+  <%= f.submit "Create Basket", class: "create_button" %>
+  <%= f.submit "Cancel", class: "hide_button" %>
 <% end %>
 
 <!--   <form name="new_folder" id="new_basket_form" action="/folders" method="post">
