@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy', as: 'signout'
 
-  get 'about', to: 'users#about', as: 'about'
+  get 'about', to: 'public#about', as: 'about'
 
   resources :sessions, only: [:create, :destroy]
   
@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   resources :shared_baskets, only: [:show, :create]
   resources :shared_links
 
-  root "users#about"
+  root "public#about"
 
   #Extension Routes
   #============================
