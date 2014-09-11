@@ -3,11 +3,11 @@
 </div>
 
 <% @links.each do |link| %>
-  <div class="folder-container">
+  <div class="folder-container <%= link.id %>">
     <div class="img-holder">
       <img src="<%= link.image %>">
     </div>
-    <div class="folder-link <%= link.id %>">
+    <div class="folder-link">
       <h3 class="header-link-title">
         <a href="<%= link.url %>" class="title">  
           <%= link.title %>
@@ -21,13 +21,13 @@
 
 
       </div>
-      <a href="<%= link.url %>">
-        <%= truncate(link.url, length: 80) %>
-      </a>
       <div class="date">
-        <%= link.created_at.strftime("%A, %b %d") %> at
-        <%= link.created_at.strftime("%l:%M%P") %>
+        <i class="fa fa-calendar"></i> <%= link.created_at.strftime("%A, %b %d") %><br>
+        <i class="fa fa-clock-o"></i><%= link.created_at.strftime("%l:%M%P") %>
       </div>
+      <a href="<%= link.url %>">
+        <i class="fa fa-external-link"></i> <%= truncate(link.url, length: 60) %>
+      </a>
     </div>
     <br />
   </div>

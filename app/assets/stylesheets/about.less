@@ -31,7 +31,7 @@
 
   .chrome-extension {
     img {
-      width: 21%;
+      width: 83px;
     }
   }
 }
@@ -70,27 +70,60 @@
 /* Using the extension section
 ============================*/
 .extension {
+  min-height: 500px;
+  position: relative;
+
   h2 {
     text-align: center;
     margin-bottom: 16px;
   }
 
-  .basket-description,
-  .friend-description,
-  .extension-img {
-    width: 33%;
-    height: 100%; 
-    float: left;
-    text-align: center;
-
-    h4,
-    h6 {
-      margin: 0;
+  .extension-details {
+    min-height: 400px;
+    .basket-share,
+    .extension-img,
+    .friend-share {
+      position: relative;
+      float: left;
+      width: 25%;
+      height: 100px;
+      float: left;
     }
 
-    .fa-facebook-square {
+    .basket-share,
+    .friend-share {
+      margin-top: 75px;
       font-size: 80px;
       color: #2d2d2d;
     }
+
+    .extension-img{
+      width: 49%;
+    }
+
+    .basket-share{
+      .fa-hand-o-right,
+      h4,
+      h6 {
+        float: right;
+      }
+    }
   }
+
+  .using-extension {
+    .save-website-example,
+    .text,
+    .basket-saved-example {
+      position: relative;
+      width: 90%;
+      height: 100%;
+      margin: 10px auto;
+    }
+
+    .text {
+      font-size: 18px;
+      text-align: center;
+    }
+  }
+
 }

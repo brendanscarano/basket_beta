@@ -38,6 +38,8 @@ gem "koala", "~> 1.10.0rc"
 gem "font-awesome-rails"
 gem "jquery-ui-rails"
 
+gem "rails_12factor"
+
 group :development, :test do
   gem 'pry-rails'
   gem 'pry-remote'

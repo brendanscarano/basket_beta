@@ -1,3 +1,3 @@
 <% if @folder_link.destroyed? %>
-  $('.folder-link ' + <%= @folder_link.link_id %>).remove();
+  $('.folder-container.<%= @folder_link.link_id %>').remove();
 <% end %>

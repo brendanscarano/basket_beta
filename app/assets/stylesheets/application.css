@@ -14,12 +14,4 @@
  *= require_self
  *= require font-awesome
  */
-@import "nav_bar";
 
-body {
-  font-family: 'Montserrat', sans-serif;
-}
-
-#new_basket_form_container {
-  display: none;
-}
