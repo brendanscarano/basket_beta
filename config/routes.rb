@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   
   resources :folders
   resources :links, only: [:destroy]
+  resources :folder_links, only: [:destroy]
   resources :shared_baskets, only: [:show, :create]
   resources :shared_links
 
