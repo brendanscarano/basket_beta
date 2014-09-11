@@ -4,36 +4,25 @@ class FoldersController < ApplicationController
   respond_to :html, :js
 
   def show
-    folder = Folder.find(params[:id])
-    @links = folder.links.order('created_at DESC')
+    @new_folder = Folder.new
+    @links = @folder.links.order('created_at DESC')
   end
 
   def new
-    @folder = Folder.new
+    @new_folder = Folder.new
   end
 
   def create
-    user = current_user
-    folder = Folder.new(name: params["folder_name"], user_id: user.id)
+    @folder = Folder.new(folder_params)
+    @folder.user_id = current_user.id
 
-    respond_to do |format|
-      format.html {
-        if folder.save
-          flash[:notice] = "Folder has been created."
-        end
-
-        redirect_to folder_path(folder)
-      }
-
-      format.json {
-        if folder.save
-          flash[:notice] = "Folder has been created."
-        end        
-
-        render json: folder
-      }
+    if @folder.save
+      flash.now[:success] = "Request submitted successfully."
+    else
+      flash.now[:error] = "There was a problem submitting your request."
     end
 
+    respond_with(@folder)
   end
 
   def destroy

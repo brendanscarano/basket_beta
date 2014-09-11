@@ -8,25 +8,9 @@ $(document).ready(function() {
     })
   });
 
-  $('#new_basket_form').on('submit', function(e) {
-    e.preventDefault();
-
-    var user_input = $('#folder_name').val()
-    _this = this
-
-    $.ajax({
-      type: 'POST',
-      url: '/folders',
-      data: {folder_name: user_input},
-      dataType: "JSON",
-    }).done(function(response) {
-      console.log(response);
-      $('#user_folders').append('<li class="basket-list-item">' + 
-                                  response.name + 
-                                  '</li>');
-      $(_this).hide();
-    });
-  });
+  // $('#new_basket_form').on('submit', function() {
+    
+  // });
 
   $('#hide_button').on('click', function(){
     $('#new-basket-form-container').slideUp("medium", function() {});     
@@ -43,10 +27,10 @@ $(document).ready(function() {
 
   //Deleting a link
   //======================================
-  $('.link-delete').on('click', '.fa-trash', function(event){
-    event.preventDefault();
+  // $('.link-delete').on('click', '.fa-trash', function(event){
+  //   event.preventDefault();
 
-    linkId = $(this).attr("data");
-    console.log(linkId);  
-  });
+  //   linkId = $(this).attr("data");
+  //   console.log(linkId);  
+  // });
 });

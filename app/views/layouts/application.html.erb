@@ -1,10 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>b@sket</title>
+  <title>B@sket</title>
+  <link rel="shortcut icon" href="../assets/images/flavicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="../assets/images/favicon.ico">
+  <%= favicon_link_tag 'favicon.ico' %>
   <%= javascript_include_tag 'application' %>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= csrf_meta_tags %>
+  <meta name="description" content="Social bookmarking site to easily save and share your favorite links with your friends. Download the chrome extension to get the full functionality." />
+  <meta property="og:title" content="B@sket" />
+  <meta property="og:site_name" content="B@sket" />
+  <meta property="og:description" content="Social bookmarking site to easily save and share your favorite links with your friends. Download the chrome extension to get the full functionality." />
+  <meta property="twitter:card" content="summary" />
+  <meta property="twitter:title" content="B@sket" />
+  <meta property="twitter:description" content="Social bookmarking site to easily save and share your favorite links with your friends. Download the chrome extension to get the full functionality." />
+
 
   <link href="//fonts.googleapis.com/css?family=Lato:100italic,100,300italic,300,400italic,400,700italic,700,900italic,900" rel="stylesheet" type="text/css">
   <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
@@ -17,7 +28,8 @@
 <body>
   <div class="navbar">
     <div class="navbar-inner">
-      <h1>b@sket</h1>
+      <%= image_tag 'basketblack128.png', class: "basket-img"%>
+      <h1>B@sket</h1>
         <% if current_user %>
           <%= render "users/usernav" %>
         <% else %>
@@ -31,7 +43,6 @@
     <div class="baskets-wrapper">
       <br>
         <div class="new-basket-btn">
-          <%= image_tag 'icon.png' %>
           <%= link_to "+ New B@sket", new_folder_path, id: "new_folder", remote: true %>
         </div>
         <br>
@@ -69,9 +80,9 @@
         </div>
 
         <ul id="friends-list">
-          <% if current_user %>
-            <%= render "users/friends" %>
-          <% end %>
+          <%# if current_user %>
+            <%#= render "users/friends" %>
+          <%# end %>
         </ul>
 
     </div>

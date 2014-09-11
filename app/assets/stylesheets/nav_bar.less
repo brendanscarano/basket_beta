@@ -1,20 +1,34 @@
+@import "twitter/bootstrap/variables";
+@import "twitter/bootstrap/mixins";
+
 .navbar {
   margin-bottom: 0;
   position: fixed;
   width: 100%;
   height: 68px;
   z-index: 2;
+
+  @media(max-width: 768px){
+    margin-left: -6.5%;
+    width: 103%;
+  }
   
   .navbar-inner {
     background: #90EE90;
     height: 100%;
     position: relative;
 
+    .basket-img {
+      width: 37px;
+      position: absolute;
+      top: 9px;
+    }
+
     h1 {
       font-weight: 100;
       width: 25%;
       margin-right: 0;
-      margin-left: 8px;
+      margin-left: 39px;
       float: left;
       letter-spacing: -3px;
       margin-top: 11px;
@@ -27,6 +41,17 @@
       font-size: 16px;
       position: absolute;
       left: 62%;
+
+      @media(max-width: 1280px){
+        margin-right: 2%;
+        width: 100%; 
+      }
+
+      img {
+        @media(max-width: 768px){
+          display: none;
+        }
+      }
 
       li {
         font-family: "Montserrat";

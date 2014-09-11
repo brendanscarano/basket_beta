@@ -7,16 +7,19 @@
     <div class="img-holder">
       <img src="<%= link.image %>">
     </div>
-    <div class="folder-link">
+    <div class="folder-link <%= link.id %>">
       <h3 class="header-link-title">
         <a href="<%= link.url %>" class="title">  
           <%= link.title %>
         </a>
       </h3>
+
       <div class="link-trash" data="<%= link.id %>">
-        <%= link_to link_path(link, folder_id: @folder.id), class: 'link-delete', method: :delete do %>
+        <%= link_to folder_link_path(link, folder_id: @folder.id), class: 'link-delete', method: :delete, remote: true do %>
           <i class="fa fa-trash"></i>
         <% end %>
+
+
       </div>
       <a href="<%= link.url %>">
         <%= truncate(link.url, length: 80) %>

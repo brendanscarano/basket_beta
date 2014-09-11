@@ -1,10 +1,5 @@
-<% if current_user.folders != nil %>
+<% if current_user.folders.any? %>
   <% current_user.folders.each do |folder| %>
-    <li class="basket-list-item">
-      <%= link_to folder.name, folder_path(folder), class: "show_basket" %>
-      <%= link_to folder_path(folder), method: :delete do %>
-        <i class="fa fa-trash basket-trash"></i>
-      <% end %>
-    </li>
+    <%= render "folders/basket_list_item", folder: folder %>
   <% end %>
 <% end %>
