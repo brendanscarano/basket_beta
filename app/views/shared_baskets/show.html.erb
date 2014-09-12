@@ -14,17 +14,17 @@
     <h4>
         <%= link[1] %>
         <br />
-        <%= link[0].created_at.strftime("%A, %b %d %Y") %>
-        <br />
-        <%= link[0].created_at.strftime("%l:%M%P") %>
+        <i class="fa fa-calendar"></i> <%= link[0].created_at.strftime("%A, %b %d") %>
+        <br>
+        <i class="fa fa-clock-o"></i> <%= link[0].created_at.strftime("%l:%M%P") %>
       </h4>
     </div>
 
-    <div class="link-trash">
-      <%= link_to shared_links_path(id: link[5]), method: :delete do %>
+    <!-- <div class="link-trash">
+      <%#= link_to shared_links_path('<%= link[5] %>'), method: :delete do %>
         <i class="fa fa-trash"></i>
-      <% end %>
-    </div>
+      <%# end %>
+    </div> -->
 
     <h3>
       <a href="<%= link[0].url %>" class="title">
