@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'signout', to: 'sessions#destroy', as: 'signout'
 
   get 'about', to: 'public#about', as: 'about'
+  get 'extension', to: 'public#extension', as: 'extension'
 
   resources :sessions, only: [:create, :destroy]
   
