@@ -35,7 +35,7 @@ class FoldersController < ApplicationController
   def users_folders
     user = User.find(current_user.id)
 
-    @folders = user.folders
+    @folders = user.folders.order('created_at ASC')
     render partial: "folders"
     # render :json => { @folders }
   end
