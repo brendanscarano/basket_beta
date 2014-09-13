@@ -3,10 +3,14 @@
     <a href="/about">About</a>
   </li>
   <li>
-    <a href="https://chrome.google.com/webstore/detail/basket/jcglidocjalkkefbmnobddombekpancl?hl=en&gl=US">Extension</a>
+    <a href="https://chrome.google.com/webstore/detail/basket/jcglidocjalkkefbmnobddombekpancl?hl=en&gl=US">
+      <%= image_tag 'chrome2.png', class: "chrome-img" %>
+      Extension
+    </a>
   </li>
   <li>
-    <i class = "fa fa-facebook-square icon facebook"></i>
-    <%= link_to "Login", "/auth/facebook", id: "sign_in" %>
+    <%= link_to "/auth/facebook", id: "sign_in" do %>
+      <i class = "fa fa-facebook-square icon facebook"></i> Login
+    <% end %>
   </li>
 </ul>

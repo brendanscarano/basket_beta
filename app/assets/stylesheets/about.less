@@ -1,16 +1,44 @@
+.welcome {
+  margin: auto;
+  width: 100%;
+  font-family: 'Montserrat';
+  margin-top: 20px;
+  margin-bottom: 80px;
+
+  .basket-icon {
+    text-align: center;
+  }
+
+  .basket-slogan {
+    text-align: center;
+  }
+
+  .welcome-message{
+    font-family: 'Lato';
+    font-size: 22px;
+    text-align: center;
+    line-height: 26px;
+    margin: 0 124px;
+  }
+
+}
+
 /* Getting setup section
 ============================*/
 .getting-set-up {
   position: relative;
-  height: 200px;
+  margin-bottom: 80px;
 
   h2 {
     text-align: center;
     margin-bottom: 16px;
+    font-family: 'Montserrat';
   }
+
 
   .facebook-login,
   .chrome-extension {
+    font-family: 'Montserrat';
     width: 50%;
     height: 100%; 
     float: left;
@@ -18,20 +46,53 @@
 
     h4,
     h6 {
+      font-size: 20px;
       margin: 0;
+
+      a {
+        color: #999999;
+
+        &:hover {
+          color: black;
+        }
+      }
+    }
+
+    h6{
+      font-family: 'Lato';
+      font-size: 14px;      
     }
   }
 
   .facebook-login {
     .fa-facebook-square {
       font-size: 80px;
-      color: #2d2d2d;
+      color: #3b5998;
     }
   }
 
   .chrome-extension {
     img {
       width: 83px;
+    }
+  }
+
+  .extension-explanation{
+    clear: both;
+    padding-top: 32px;
+    font-family: 'Lato';
+    font-size: 22px;
+    text-align: center;
+    line-height: 26px;
+    margin: 0 100px;
+
+    a {
+      font-weight: bold;
+      color: #999999;
+
+      &:hover {
+        color: black;
+      }
     }
   }
 }
@@ -41,14 +102,18 @@
 .how-to-use {
   position: relative;
   height: 200px;
+  margin-bottom: 200px;
 
   h2 {
     text-align: center;
     margin-bottom: 16px;
+    margin-bottom: 16px;
+    font-family: 'Montserrat';
   }
 
   .basket-description,
   .friend-description {
+    font-family: 'Montserrat';
     width: 50%;
     height: 100%; 
     float: left;
@@ -56,7 +121,13 @@
 
     h4,
     h6 {
+      font-size: 20px;
       margin: 0;
+    }
+
+    h6{
+      font-family: 'Lato';
+      font-size: 14px;      
     }
 
     .fa-hand-o-right,
@@ -64,6 +135,12 @@
       font-size: 80px;
       color: #2d2d2d;
     }
+  }
+
+  .first-basket{
+    clear: both;
+    margin: 0 100px;
+    text-align: center;
   }
 }
 
@@ -121,6 +198,7 @@
     }
 
     .text {
+      font-family: 'Lato';
       font-size: 18px;
       text-align: center;
     }

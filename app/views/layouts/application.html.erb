@@ -12,6 +12,7 @@
   <meta property="og:title" content="B@sket" />
   <meta property="og:site_name" content="B@sket" />
   <meta property="og:description" content="Social bookmarking site to easily save and share your favorite links with your friends. Download the chrome extension to get the full functionality." />
+  <meta property=”og:image” content="../assets/images/basketgreen128.png" /> 
   <meta property="twitter:card" content="summary" />
   <meta property="twitter:title" content="B@sket" />
   <meta property="twitter:description" content="Social bookmarking site to easily save and share your favorite links with your friends. Download the chrome extension to get the full functionality." />
@@ -42,9 +43,15 @@
   <section id="baskets">
     <div class="baskets-wrapper">
       <br>
-        <div class="new-basket-btn">
-          <%= link_to "+ New B@sket", new_folder_path, id: "new_folder", remote: true %>
-        </div>
+        <% if current_user %>
+          <div class="new-basket-btn">
+            <%= link_to "+ New B@sket", new_folder_path, id: "new_folder", remote: true %>
+          </div>
+        <% else %>
+          <div class="login-to-create">
+            Login to start creating b@skets
+          </div>
+        <% end %>
         <br>
 
         <% if current_user %>
@@ -76,13 +83,13 @@
   <section id="friends">
     <div class="friends-wrapper">
         <div class="friends-header">
-          <h5>Friends using b@sket</h5>
+          <h5>Friends using B@sket</h5>
         </div>
 
         <ul id="friends-list">
-          <%# if current_user %>
-            <%#= render "users/friends" %>
-          <%# end %>
+          <% if current_user %>
+            <%= render "users/friends" %>
+          <% end %>
         </ul>
 
     </div>

@@ -129,20 +129,25 @@
     height: 130px;
     position: relative;
 
-    .img-holder {
-      position: absolute;
-      height: 100%;
-      width: 23%;
-      z-index: 1;
+
+    .sender-info {
+      top: 36px;
+      margin-left: 20px;
+      position: relative;
 
       img {
-        max-height: 86%;
         position: absolute;
-        top: 17px;
-        left: 8px;
+      }
+
+      h4 {
+        position: absolute;
+        font-size: 14px;
+        line-height: 16px;
+        left: 55px;
+        top: -8px;
       }
     }
-
+    
     .folder-link {
       height: 100%;
       background-color: #ffffff;
@@ -150,22 +155,23 @@
       border-bottom: 1px solid #ddd;
       padding: 0 0 10px 27%;
 
-        .sender-info {
-          position: relative;
-          margin: 9px 0 64px 0;
+      .img-holder {
+        position: absolute;
+        height: 50%;
+        width: 23%;
+        z-index: 1;
 
-          img {
-            position: absolute;
-          }
-
-          h4 {
-            position: absolute;
-            font-size: 14px;
-            line-height: 16px;
-            left: 55px;
-            top: -8px;
-          }
+        img {
+          max-width: 115px;
+          position: absolute;
+          top: 5px;
+          left: 1px;
         }
+      }
+
+      .text-holder {
+        margin-top: 70px;
+      }
 
         .link-trash {
           cursor: pointer;

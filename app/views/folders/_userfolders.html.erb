@@ -1,5 +1,5 @@
 <% if current_user.folders.any? %>
-  <% current_user.folders.each do |folder| %>
+  <% current_user.folders.order('created_at ASC').each do |folder| %>
     <%= render "folders/basket_list_item", folder: folder %>
   <% end %>
 <% end %>

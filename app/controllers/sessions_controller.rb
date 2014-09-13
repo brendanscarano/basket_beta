@@ -5,9 +5,7 @@ class SessionsController < ApplicationController
 
     if SharedBasket.where(user_id: user.id).first == nil
       SharedBasket.where(user_id: user.id).create
-      Folder.where(name: "Read Later", user_id: user.id).first_or_create
-      Folder.where(name: "Funny Links", user_id: user.id).first_or_create
-      Folder.where(name: "New Music", user_id: user.id).first_or_create
+      Folder.where(name: "Save For Later", user_id: user.id).first_or_create
     else
       SharedBasket.where(user_id: user.id).first
     end
