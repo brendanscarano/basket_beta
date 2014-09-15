@@ -26,6 +26,7 @@ class User < ActiveRecord::Base
       friends_list << User.find_by_uid(friend["id"])
     end
 
+    friends_list.delete_if {|friend| friend == nil}
     return friends_list
   end
 end
