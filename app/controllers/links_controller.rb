@@ -9,6 +9,7 @@ class LinksController < ApplicationController
     if link == nil 
       link = Link.create(url: params["url"],
                         title: params["pageInfo"]["title"],
+                        message: params["message"],
                         description: params["pageInfo"]["description"],
                         image: params["pageInfo"]["image"])
     end
