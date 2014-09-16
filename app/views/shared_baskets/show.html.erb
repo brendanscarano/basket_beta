@@ -14,17 +14,22 @@
       <i class="fa fa-clock-o"></i> <%= link[0].created_at.strftime("%l:%M%P") %>
     </h4>
   </div>
+  <div class="sender-message">
+    <div class="sender-message-container">
+      <i class="fa fa-pencil-square-o"></i>"<%= link[0].message %>"
+    </div>
+  </div>
 
   <div class="folder-link">
-    <div class="img-holder">
-      <img src="<%= link[0].image %>">
-    </div>
-
-    <!-- <div class="link-trash">
-      <%#= link_to shared_links_path('<%= link[5] %>'), method: :delete do %>
-        <i class="fa fa-trash"></i>
-      <%# end %>
+    <!-- <div class="img-holder">
+      <img src="<%#= link[0].image %>">
     </div> -->
+
+    <div class="link-trash">
+      <%= link_to shared_links_path(link), method: :delete do %>
+        <i class="fa fa-trash"></i>
+      <% end %>
+    </div>
     <div class="text-holder">
       <h3>
         <a href="<%= link[0].url %>" class="title">

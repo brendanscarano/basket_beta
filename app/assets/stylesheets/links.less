@@ -102,6 +102,12 @@
           }
         }
 
+        .message{
+          margin-bottom: 8px;
+          font-size: 16px;
+          font-family: 'Lato';
+        }
+
         /* URL
         =====================*/
         a {
@@ -115,8 +121,16 @@
         }
 
       .date {
+        font-size: 12px;
+        margin-bottom: -5px;
+
         @media(max-width: 768px){
           font-size: 10px;
+        }
+
+        .date-calendar,
+        .date-clock{
+          display: inline-block;
         }
       }
     }
@@ -126,13 +140,14 @@
 /* Shared Specific
 ===========================*/
 .shared-link-container {
+    font-family: 'Lato';
     height: 130px;
     position: relative;
 
 
     .sender-info {
-      top: 36px;
-      margin-left: 20px;
+      top: 41px;
+      margin-left: 22px;
       position: relative;
 
       img {
@@ -147,6 +162,18 @@
         top: -8px;
       }
     }
+
+    .sender-message{
+      position: absolute;
+      bottom: 76px;
+      left: 207px;
+      width: 63%;
+      font-size: 20px;
+
+      .sender-message-container{
+
+      }
+    }
     
     .folder-link {
       height: 100%;
@@ -156,13 +183,14 @@
       padding: 0 0 10px 27%;
 
       .img-holder {
-        position: absolute;
-        height: 50%;
-        width: 23%;
+        position: relative;
+        margin-left: 18px;
+        height: 60px;
+        width: 56px;
         z-index: 1;
 
         img {
-          max-width: 115px;
+          max-width: 100%;
           position: absolute;
           top: 5px;
           left: 1px;
@@ -170,14 +198,15 @@
       }
 
       .text-holder {
-        margin-top: 70px;
+        margin-top: 55px;
+        margin-left: 2px;
       }
 
         .link-trash {
           cursor: pointer;
           position: absolute;
           left: 97.5%;
-          margin-top: -7%;
+          margin-top: 1%;
 
           .fa-trash {
             font-size: 130%;
