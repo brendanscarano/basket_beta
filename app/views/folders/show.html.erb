@@ -10,25 +10,33 @@
     <div class="folder-link">
       <h3 class="header-link-title">
         <a href="<%= link.url %>" class="title">  
-          <%= link.title %>
+          <%= truncate(link.title, length: 60) %>
         </a>
       </h3>
 
       <div class="link-trash" data="<%= link.id %>">
+        <i class="fa fa-share"></i>
         <%= link_to folder_link_path(link, folder_id: @folder.id), class: 'link-delete', method: :delete, remote: true do %>
           <i class="fa fa-trash"></i>
         <% end %>
       </div>
 
+      <div class="message">
+        <i class="fa fa-pencil-square-o"></i><%= link.message %>
+      </div>
+
       <div class="date">
-        <i class="fa fa-calendar"></i> <%= link.created_at.strftime("%A, %b %d") %><br>
-        <i class="fa fa-clock-o"></i><%= link.created_at.strftime("%l:%M%P") %>
+        <div class="date-calendar">
+          <i class="fa fa-calendar"></i> <%= link.created_at.strftime("%A, %b %d") %>
+        </div>
+        <div class="date-clock">
+          <i class="fa fa-clock-o"></i><%= link.created_at.strftime("%l:%M%P") %>
+        </div>
       </div>
 
       <a href="<%= link.url %>">
         <i class="fa fa-external-link"></i> <%= truncate(link.url, length: 60) %>
       </a>
-      <i class="fa fa-pencil-square-o"></i>"<%= link.message %>"
     </div>
     <br />
   </div>

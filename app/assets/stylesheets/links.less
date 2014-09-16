@@ -102,6 +102,12 @@
           }
         }
 
+        .message{
+          margin-bottom: 8px;
+          font-size: 16px;
+          font-family: 'Lato';
+        }
+
         /* URL
         =====================*/
         a {
@@ -115,8 +121,16 @@
         }
 
       .date {
+        font-size: 12px;
+        margin-bottom: -5px;
+
         @media(max-width: 768px){
           font-size: 10px;
+        }
+
+        .date-calendar,
+        .date-clock{
+          display: inline-block;
         }
       }
     }
@@ -169,8 +183,8 @@
       .img-holder {
         position: relative;
         margin-left: 18px;
-        height: 50%;
-        width: 10%;
+        height: 60px;
+        width: 56px;
         z-index: 1;
 
         img {
