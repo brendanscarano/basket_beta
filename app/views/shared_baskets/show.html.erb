@@ -16,14 +16,14 @@
   </div>
   <div class="sender-message">
     <div class="sender-message-container">
-      "<%= link[0].message %>"
+      <i class="fa fa-pencil-square-o"></i>"<%= link[0].message %>"
     </div>
   </div>
 
   <div class="folder-link">
-    <div class="img-holder">
-      <img src="<%= link[0].image %>">
-    </div>
+    <!-- <div class="img-holder">
+      <img src="<%#= link[0].image %>">
+    </div> -->
 
     <div class="link-trash">
       <%= link_to shared_links_path(link), method: :delete do %>

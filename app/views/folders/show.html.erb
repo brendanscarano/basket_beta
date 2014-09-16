@@ -2,6 +2,7 @@
   <h1><%= @folder.name %></h1>
 </div>
 
+<div class="folder-links-wrapper">
 <% @links.each do |link| %>
   <div class="folder-container <%= link.id %>">
     <div class="img-holder">
@@ -15,7 +16,7 @@
       </h3>
 
       <div class="link-trash" data="<%= link.id %>">
-        <i class="fa fa-share"></i>
+        <!-- <i class="fa fa-share"></i> -->
         <%= link_to folder_link_path(link, folder_id: @folder.id), class: 'link-delete', method: :delete, remote: true do %>
           <i class="fa fa-trash"></i>
         <% end %>
@@ -41,3 +42,4 @@
     <br />
   </div>
 <% end %>
+</div>
