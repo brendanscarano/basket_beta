@@ -76,6 +76,8 @@
   </section>
 
   <section id="links">
+    <div id="fb-root">
+    </div>
     <div class="links-wrapper">
       <%= yield %>
     </div>
@@ -85,9 +87,9 @@
     <div class="friends-wrapper">
         <div class="friends-header">
           <h5>Friends using B@sket</h5>
-          <div id="fb-root">
-            <button class="invite-friends-btn">Invite Friends</button>
-          </div>
+            <% if current_user %>
+              <button class="invite-friends-btn"><i class="fa fa-facebook"></i> Invite Friends</button>
+            <% end %>
         </div>
 
         <ul id="friends-list">

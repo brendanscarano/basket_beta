@@ -1,6 +1,4 @@
 $(document).ready(function(){
-  
-
   FB.init({
     appId:'1444194725830602',
     cookie:true,
@@ -17,7 +15,6 @@ $(document).ready(function(){
 
 
   $('.invite-friends-btn').on('click', function(){
-    console.log("This was clicked");
     FacebookInviteFriends();
   })
 });
