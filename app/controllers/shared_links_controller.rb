@@ -1,12 +1,14 @@
 class SharedLinksController < ApplicationController
+  respond_to :js
   skip_before_filter  :verify_authenticity_token
 
   def destroy
-    p params
+    @shared_link = SharedLink.find(params[:id])
+    @shared_link.destroy
+    respond_with(@shared_link)
   end
 
   def sent_link
-    binding.pry
     friend_id = params["uniqueId"].to_i
     shared_basket = SharedBasket.find(friend_id)
 

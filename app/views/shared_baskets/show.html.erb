@@ -3,7 +3,7 @@
 </div>
 
 <% @links.each do |link| %>
-<div class="shared-link-container">
+<div class="shared-link-container <%= link[0].id %>">
   <div class="sender-info">
     <img src="<%= link[2] %>">
     <h4>
@@ -26,19 +26,19 @@
     </div> -->
 
     <div class="link-trash">
-      <%= link_to shared_links_path(link), method: :delete do %>
+      <%= link_to shared_link_path(link[0]), method: :delete, remote: true do %>
         <i class="fa fa-trash"></i>
       <% end %>
     </div>
     <div class="text-holder">
       <h3>
         <a href="<%= link[0].url %>" class="title">
-          <%= link[0].title %>
+          <%= truncate(link[0].title, length: 50) %>
         </a>
       </h3>
 
       <a href="<%= link[0].url %>">
-        <%= link[0].url %>
+        <%= truncate(link[0].url, length: 60) %>
       </a>
     </div>
 
