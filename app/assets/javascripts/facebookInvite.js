@@ -9,7 +9,7 @@ $(document).ready(function(){
   function FacebookInviteFriends(){
     FB.ui({
       method: 'apprequests',
-      message: 'Your Message diaolog'
+      message: 'Check out B@sket, an awesome way to save and share your favorite links!'
     });
   }
 
