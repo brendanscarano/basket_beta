@@ -15,8 +15,11 @@
         </a>
       </h3>
 
+      <div class="link-share" data="<%= link.id %>">
+        <i class="fa fa-share"></i>
+    </div>
+
       <div class="link-trash" data="<%= link.id %>">
-        <!-- <i class="fa fa-share"></i> -->
         <%= link_to folder_link_path(link, folder_id: @folder.id), class: 'link-delete', method: :delete, remote: true do %>
           <i class="fa fa-trash"></i>
         <% end %>
@@ -41,5 +44,25 @@
     </div>
     <br />
   </div>
+
+
+  <!--Share section-->
+  <div class="save-share-div">
+    <div class="save-share-div-container">
+      <div class="users-baskets">
+        <div class="basket-list">
+        </div>
+      </div>
+      <div class="users-friends">
+        <div class="friend-list-wrapper">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+  </script>
+
 <% end %>
 </div>
