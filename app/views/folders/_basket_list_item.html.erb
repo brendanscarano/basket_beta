@@ -1,7 +1,20 @@
-<li class="basket-list-item">
+<li class="basket-list-item <%= folder.id %>">
   <%= link_to folder.name, folder_path(folder), class: "show_basket" %>
 
-  <%= link_to folder_path(folder), method: :delete do %>
-    <i class="fa fa-trash basket-trash"></i>
-  <% end %>
+  <i class="fa fa-trash basket-trash" data="<%= folder.id %>"></i>
+
+  <div class="delete-basket <%= folder.id %>">
+    <div class="delete-btns">
+      Delete this basket?<br>
+      <div class="cancel-basket-delete">
+        Cancel
+      </div>
+
+      <div class="confirm-basket-delete">
+        <%= link_to folder_path(folder), method: :delete, remote: true do %>
+          Confirm
+        <% end %>
+      </div>
+    </div>
+  </div>
 </li>

@@ -1,0 +1,3 @@
+<% if @folder.destroyed? %>
+  $('.basket-list-item.<%= @folder.id %>').remove();
+<% end %>

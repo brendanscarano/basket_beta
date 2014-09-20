@@ -84,3 +84,33 @@
   }
 }
 
+
+.delete-basket{
+  display: none;
+
+  .delete-btns{
+    margin-top: 8px;
+    font-size: 16px;
+    color: red;
+
+    .cancel-basket-delete,
+    .confirm-basket-delete{
+      display: inline-block;
+      border: 2px solid #ddd;
+      background: #fff;
+      padding: 5px;
+      border-radius: 15px;
+      color: black;
+      cursor: pointer;
+
+      a{
+        color: black;
+        text-decoration: none;
+      }
+
+      &:hover{
+        background-color: #ddd;
+      }
+    }
+  }
+}
