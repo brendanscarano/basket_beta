@@ -17,12 +17,11 @@
 
       <div class="link-share" data="<%= link.id %>">
         <i class="fa fa-share"></i>
-    </div>
+      </div>
 
       <div class="link-trash" data="<%= link.id %>">
-        <%= link_to folder_link_path(link, folder_id: @folder.id), class: 'link-delete', method: :delete, remote: true do %>
-          <i class="fa fa-trash"></i>
-        <% end %>
+        
+        <i class="fa fa-trash"></i>
       </div>
 
       <div class="message">
@@ -45,20 +44,62 @@
     <br />
   </div>
 
-
-  <!--Share section-->
-  <div class="save-share-div">
-    <div class="save-share-div-container">
-      <div class="users-baskets">
-        <div class="basket-list">
-        </div>
+  <!-- section-->  
+  <div class="delete-link <%= link.id %>">
+    <div class="delete-question">
+      Delete this link?
+    </div>
+    <div class="delete-btns">
+      <div class="cancel-delete">
+        Cancel
       </div>
-      <div class="users-friends">
-        <div class="friend-list-wrapper">
+      <%= link_to folder_link_path(link, folder_id: @folder.id), class: 'link-delete', method: :delete, remote: true do %>
+        <div class="confirm-delete">
+          Delete
         </div>
-      </div>
+      <% end %>
     </div>
   </div>
+
+  <!--Share section-->
+<!--   <div class="save-share-div <%= link.id %>">
+    <div class="save-share-div-container">
+      <div class="users-baskets">
+        <h6 class="title">
+          <center class="title-text">Save to B@sket</center>
+        </h6>
+        <div class="basket-list <%= link.id %>">
+        </div>
+      </div>
+
+      <div class="users-friends">
+        <h6 class="title">
+          <center class="title-text">Share with Friend</center>
+        </h6>
+        <div class="friend-list-wrapper <%= link.id %>">
+        </div>
+      </div>
+
+      <div class="note-container">
+        <div class="alert">
+          You are about to send/save a link
+        </div>
+        <form class="msg-form">
+          <label for="note">Add note (optional):</label><br />
+          <p class="text-container"><textarea id="note" name="note" cols="50" rows="7"></textarea></p>
+        </form>
+        <div class="character-count">
+          <p id="message"></p>
+        </div>
+        <div class="send-btn">
+          <button class="send-btn-button">
+            <img src="icons/basketblack128.png"><p class="btn-text">Save</p>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div> -->
 
   <script>
 
