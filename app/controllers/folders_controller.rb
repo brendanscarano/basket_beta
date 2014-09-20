@@ -26,10 +26,12 @@ class FoldersController < ApplicationController
   end
 
   def destroy
-    Folder.find(params[:id]).destroy
-    FolderLink.where(folder_id: params[:id]).delete_all
+    @folder = Folder.find(params[:id])
+    @folder.destroy
 
-    redirect_to root_url
+    FolderLink.where(folder_id: @folder.id).delete_all
+
+    respond_with(@folder)
   end
 
   def users_folders

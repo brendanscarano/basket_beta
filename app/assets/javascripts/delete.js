@@ -9,9 +9,6 @@ $(document).ready(function(){
       id = $(this).attr('data');
       $('.delete-link.' + id).slideDown("medium", function(){})
     };
-
-
-    
   });
 
   $('.cancel-delete').on('click', function(){
