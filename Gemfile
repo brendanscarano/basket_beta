@@ -39,6 +39,7 @@ gem "font-awesome-rails"
 gem "jquery-ui-rails"
 
 gem "rails_12factor"
+gem "rest-client"
 
 group :development, :test do
   gem 'pry-rails'

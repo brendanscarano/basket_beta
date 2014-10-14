@@ -63,7 +63,12 @@
 
           <ul class="baskets">
             <div id="shared_basket">
-                <li><%= link_to "Shared", shared_basket_path(current_user.shared_basket) %></li>
+                <li>
+                  <%= link_to "Shared", shared_basket_path(current_user.shared_basket) %>
+                  <!-- <div class="notifications">
+                    <%#= SharedBasket.notifications(current_user.id) %>
+                  </div> -->
+                </li>
             </div>
 
 

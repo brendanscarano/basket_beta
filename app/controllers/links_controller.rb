@@ -1,7 +1,7 @@
 class LinksController < ApplicationController
   respond_to :js
 
-  skip_before_filter  :verify_authenticity_token
+  skip_before_filter  :verify_authentici ty_token
 
   def new_link
     # link = Link.find_by_url(params["url"])
