@@ -19,7 +19,21 @@ class SharedLinksController < ApplicationController
                                       title: params["pageInfo"]["title"],
                                       description: params["pageInfo"]["description"],
                                       image: params["pageInfo"]["image"])
+
+    # post_notification(friend_id, shared_basket)
+
     redirect_to root_url
   end
 
+  private
+
+  # def post_notification(friends_info, shared_basket)
+  #   RestClient.post(/{recipient_userid}/notifications?access_token= current_user.oauth_token)
+
+
+  #   POST /{recipient_userid}/notifications?
+  #        access_token= current_user.oauth_token
+  #        href= "http://www.mybasketsapp.com/shared_baskets/#{shared_basket}"
+  #        template=Test user has sent you a link on Basket!
+  # end
 end
