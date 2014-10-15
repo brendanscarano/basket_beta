@@ -8,6 +8,22 @@ class SharedLinksController < ApplicationController
     respond_with(@shared_link)
   end
 
+  def inbox_links
+    return_links = []
+    shared_basket = SharedBasket.find_by_user_id(current_user.id)
+
+    shared_basket.shared_links.each do |link|
+      data = {}
+      data["title"] = link.title
+      data["message"] = link.message
+      data["sender"] = User.find(link.sender_id).name
+      data["date"] = link.created_at
+      return_links << data
+    end
+
+    return return_links.to_json
+  end
+
   def sent_link
     friend_id = params["uniqueId"].to_i
     shared_basket = SharedBasket.find(friend_id)
@@ -24,6 +40,7 @@ class SharedLinksController < ApplicationController
 
     redirect_to root_url
   end
+
 
   private
 
