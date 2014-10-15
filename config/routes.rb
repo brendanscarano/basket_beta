@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   #============================
   get 'users_folders', to: 'folders#users_folders', as: 'users_folders'
   get 'users_friends', to: 'users#users_friends', as: 'users_friends'
+  get 'users_inbox_linsk', to: 'shared_links#inbox_links', as: 'inbox_links'
 
   post 'new_link', to: 'links#new_link', as: 'new_link'
   post 'sent_link', to: 'shared_links#sent_link', as: 'sent_link'

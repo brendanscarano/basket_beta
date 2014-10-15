@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>B@sket</title>
+  <title>Basket</title>
   <link rel="shortcut icon" href="../assets/images/flavicon.ico" type="image/x-icon" />
   <link rel="shortcut icon" href="../assets/images/favicon.ico">
   <%= favicon_link_tag 'favicon.ico' %>
@@ -9,12 +9,12 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= csrf_meta_tags %>
   <meta name="description" content="Social bookmarking site to easily save and share your favorite links with your friends. Download the chrome extension to get the full functionality." />
-  <meta property="og:title" content="B@sket" />
-  <meta property="og:site_name" content="B@sket" />
+  <meta property="og:title" content="Basket" />
+  <meta property="og:site_name" content="Basket" />
   <meta property="og:description" content="Social bookmarking site to easily save and share your favorite links with your friends. Download the chrome extension to get the full functionality." />
   <meta property=”og:image” content="../assets/images/basketgreen128.png" /> 
   <meta property="twitter:card" content="summary" />
-  <meta property="twitter:title" content="B@sket" />
+  <meta property="twitter:title" content="Basket" />
   <meta property="twitter:description" content="Social bookmarking site to easily save and share your favorite links with your friends. Download the chrome extension to get the full functionality." />
 
 
@@ -31,7 +31,7 @@
   <div class="navbar">
     <div class="navbar-inner">
       <%= image_tag 'basketblack128.png', class: "basket-img"%>
-      <h1>B@sket <div class="beta">beta</div></h1>
+      <h1>Basket <div class="beta">beta</div></h1>
         <% if current_user %>
           <%= render "users/usernav" %>
         <% else %>
@@ -46,11 +46,11 @@
       <br>
         <% if current_user %>
           <div class="new-basket-btn">
-            <%= link_to "+ New B@sket", new_folder_path, id: "new_folder", remote: true %>
+            <%= link_to "+ New Basket", new_folder_path, id: "new_folder", remote: true %>
           </div>
         <% else %>
           <div class="login-to-create">
-            Login to start creating b@skets
+            Login to start creating baskets
           </div>
         <% end %>
         <br>
@@ -91,7 +91,7 @@
   <section id="friends">
     <div class="friends-wrapper">
         <div class="friends-header">
-          <h5>Friends using B@sket</h5>
+          <h5>Friends using Basket</h5>
             <% if current_user %>
               <button class="invite-friends-btn"><i class="fa fa-facebook"></i> Invite Friends</button>
             <% end %>
