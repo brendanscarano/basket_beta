@@ -1,0 +1,7 @@
+<% @return_links.each do |link| %>
+    <div class="shared-link-wrapper">
+      <%= link["sender"] %> sent you:
+      <a href="<%= link['url'] %>"><%= link["title"] %></a>
+      <%= link["message"] %>
+    </div>
+<% end %>
