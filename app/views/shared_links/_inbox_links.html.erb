@@ -1,7 +1,19 @@
 <% @return_links.each do |link| %>
     <div class="shared-link-wrapper">
-      <%= link["sender"] %> sent you:
-      <a href="<%= link['url'] %>"><%= link["title"] %></a>
-      <%= link["message"] %>
+      <p class="sender-name">
+        <%= link["sender"] %> sent you:
+      </p>
+      <p class="shared-link-message">
+        <%= link["message"] %>
+      </p>
+      <p class="shared-link-title-url">
+        <a href="<%= link['url'] %>"><%= link["title"] %></a>
+      </p>
+      <p class="shared-link-date-time">
+        <%= link["date"] %>
+      </p>
+      <p class="shared-link-time">
+        <%= link["time"] %>
+      </p>
     </div>
 <% end %>

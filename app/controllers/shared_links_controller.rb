@@ -18,7 +18,8 @@ class SharedLinksController < ApplicationController
       data["message"] = link.message
       data["url"] = link.url
       data["sender"] = User.find(link.sender_id).name
-      data["date"] = link.created_at
+      data["date"] = link.created_at.strftime("%a, %b %d")
+      data["time"] = link.created_at.strftime("%l:%M%P")
       @return_links << data
     end
 
