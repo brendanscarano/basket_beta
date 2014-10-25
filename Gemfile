@@ -32,7 +32,7 @@ gem 'figaro'
 
 gem "therubyracer"
 gem "less-rails"
-gem "twitter-bootstrap-rails"
+gem "twitter-bootstrap-rails", "~> 2.2.8"
 gem "less-rails-bootstrap"
 gem "koala", "~> 1.10.0rc"
 gem "font-awesome-rails"
