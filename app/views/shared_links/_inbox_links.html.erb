@@ -1,19 +1,23 @@
 <% @return_links.each do |link| %>
     <div class="shared-link-wrapper">
-      <p class="sender-name">
-        <%= link["sender"] %> sent you:
-      </p>
-      <p class="shared-link-message">
-        <%= link["message"] %>
-      </p>
-      <p class="shared-link-title-url">
-        <a href="<%= link['url'] %>"><%= link["title"] %></a>
-      </p>
-      <p class="shared-link-date-time">
-        <%= link["date"] %>
-      </p>
-      <p class="shared-link-time">
-        <%= link["time"] %>
-      </p>
+      <div class="shared-link-wrapper-container">
+        <p class="sender-name">
+          <%= link["sender"] %>
+        </p>
+        <div class="shared-link-message-wrapper">
+          <p class="shared-link-message">
+            "<%= truncate(link["message"], length: 43) %>"
+          </p>
+        </div>
+        <p class="shared-link-title-url">
+          <a href="<%= link['url'] %>"><%= link["title"] %></a>
+        </p>
+        <p class="shared-link-date">
+          <%= link["date"] %>
+        </p>
+        <p class="shared-link-time">
+          <%= link["time"] %>
+        </p>
+      </div>
     </div>
 <% end %>
