@@ -9,19 +9,34 @@ class SharedLinksController < ApplicationController
   end
 
   def inbox_links
-    return_links = []
+    @return_links = []
     shared_basket = SharedBasket.find_by_user_id(current_user.id)
 
     shared_basket.shared_links.each do |link|
       data = {}
       data["title"] = link.title
       data["message"] = link.message
+      data["url"] = link.url
       data["sender"] = User.find(link.sender_id).name
-      data["date"] = link.created_at
-      return_links << data
+      data["date"] = link.created_at.strftime("%a, %b %d")
+      data["time"] = link.created_at.strftime("%l:%M%P")
+      @return_links << data
     end
 
-    return return_links.to_json
+    render partial: "inbox_links"
+    #For Angular
+    # shared_basket.shared_links.each do |link|
+    #   data = {}
+    #   data["title"] = link.title
+    #   data["message"] = link.message
+    #   data["sender"] = User.find(link.sender_id).name
+    #   data["date"] = link.created_at
+    #   return_links << data
+    # end
+
+    # return return_links.to_json
+
+
   end
 
   def sent_link

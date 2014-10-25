@@ -1,0 +1,25 @@
+<% @return_links.each do |link| %>
+    <a href="<%= link['url'] %>" target="_newtab" class="shared-link-wrapper">
+      <!-- <div class="shared-link-wrapper"> -->
+        <div class="shared-link-wrapper-container">
+          <p class="sender-name">
+            <%= link["sender"] %>
+          </p>
+          <div class="shared-link-message-wrapper">
+            <p class="shared-link-message">
+              "<%= truncate(link["message"], length: 33) %>"
+            </p>
+          </div>
+          <p class="shared-link-title-url">
+            <%= link["title"] %>
+          </p>
+          <p class="shared-link-date">
+            <%= link["date"] %>
+          </p>
+          <p class="shared-link-time">
+            <%= link["time"] %>
+          </p>
+        </div>
+      <!-- </div> -->
+    </a>
+<% end %>
