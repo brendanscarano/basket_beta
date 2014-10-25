@@ -21,7 +21,9 @@ class User < ActiveRecord::Base
     friends_list = []
 
     graph = Koala::Facebook::GraphAPI.new(self.oauth_token)
+    binding.pry
     friends = graph.get_connections("me", "friends", api_version: 'v2.0')
+    binding.pry
     friends.each do |friend|
       friends_list << User.find_by_uid(friend["id"])
     end

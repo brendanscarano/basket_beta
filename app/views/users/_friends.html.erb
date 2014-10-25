@@ -1,19 +1,19 @@
-<%# if current_user.friends_using_app != [nil, nil] %>
-  <%# current_user.friends_using_app.each do |friend| %>
-    <div class="friend-container" value="<%#= friend.id %>">
+<% if current_user.friends_using_app != [nil, nil] %>
+  <% current_user.friends_using_app.each do |friend| %>
+    <div class="friend-container" value="<%= friend.id %>">
       <li class='friend-img'>
-        <img alt="FB_Pic" src=<%#= friend.image %>>
+        <img alt="FB_Pic" src=<%= friend.image %>>
       </li>
       <li class='friend-name'>
-        <%#= p friend.name %>
+        <%= p friend.name %>
       </li>
     </div>
-  <%# end %>
+  <% end %>
 
-<%# else %>
+<% else %>
   <h6>It looks like none of your friends are using Basket<br />
       Why don't you invite some!</h6>
       
-<%# end %>
+<% end %>
 
 
