@@ -1,3 +1,4 @@
+<ul class="friend-list">
 <% if current_user.friends_using_app != [nil, nil] %>
   <% current_user.friends_using_app.each do |friend| %>
     <div class="friend-container" value="<%= friend.id %>">
@@ -15,5 +16,6 @@
       Why don't you invite some!</h6>
       
 <% end %>
+</ul>
 
 
