@@ -12,7 +12,7 @@ class SharedLinksController < ApplicationController
     @return_links = []
     shared_basket = SharedBasket.find_by_user_id(current_user.id)
 
-    shared_basket.shared_links.('created_at DESC').each do |link|
+    shared_basket.shared_links.order('created_at DESC').each do |link|
       data = {}
       data["title"] = link.title
       data["message"] = link.message
