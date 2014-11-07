@@ -211,19 +211,50 @@
 /*================================
            NEW ABOUT PAGE
 ================================*/
+.share-with-friends-wrapper {
+  margin-top: 32px;
+  h1 {
+    padding-left: 16px;
+    margin-bottom: 8px;
+    .basket-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size:  42px;
+      font-weight: 100;
+      width: 25%;
+      letter-spacing: -3px;
+      margin-top: 11px;
+    }
+  }
+  .description-wrapper {
+    p {
+      position: absolute;
+      width: 265px;
+      left: 466px;
+      font-size: 48px;
+      line-height: 45px;
+      top: 300px;
+      border: 1px solid #191919;
+      background: #191919;
+      color: white;
+      padding: 12px;
+      border-radius: 13px;
+    }
+  }
+}
 .share-with-friends-wrapper,
 .inbox-links-wrapper {
-  height: 360px;
+  height: 400px;
   width: 98%;
   .image-wrapper {
     float: left;
     width: 76%;
-    margin-left: 10px;
+    margin-left: 20px;
   }
   .description-wrapper {
     font-size: 32px;
     line-height: 31px;
     text-align: center;
+    font-family: 'Lato';
   }
 }
 
@@ -254,11 +285,18 @@
 
   .get-started-btn-wrapper {
     margin-bottom: 30px;
+
+    a:hover {
+      text-decoration: none;
+    }
+
     .download-the-extension,
     .sign-into-facebook {
+      color: #999999;
+      background-color: #fff;
+      border: 1px solid #c7c7c7;
       display: inline;
       width: 100px;
-      border: 1px solid black;
       border-radius: 40px;
       padding: 13px;
       p {
@@ -268,12 +306,23 @@
 
     .download-the-extension {
       img {
+        -webkit-filter: grayscale(100%);
         width: 30px;
+      }
+      &:hover {
+        color: black;
+        img {
+          -webkit-filter: grayscale(0%);
+          width: 30px;
+        } 
       }
     }
     .sign-into-facebook {
       .fa-facebook-square {
         font-size: 30px;
+      }
+      &:hover {
+        color: #3b5998;
       }
     }
   }
