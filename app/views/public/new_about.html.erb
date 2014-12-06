@@ -1,19 +1,55 @@
-The new about page!
-<div class='share-with-friends-wrapper'>
+<div class='basket-information-wrapper'>
+  <h1>Use <span class='basket-title'>Basket</span> to...</h1>
   <div class='image-wrapper'>
     <%= image_tag 'share_friend.gif' %>
   </div>
   <div class='description-wrapper'>
-    <p>Share links with friends easier than ever</p>
+    <p>Share links with friends</p>
+  </div>
+  <div class='select-buttons'>
+    <p>Share</p>
+    <p>Save</p>
+    <p>Inbox</p>
   </div>
 </div>
 
-<div class='save-to-basket-wrapper'>
+<div class='get-started-wrapper'>
+  <h4>Get Started</h4>
+  <div class="get-started-btn-wrapper">
+    <a href="#" class="download-extension-btn">
+      <div class='download-the-extension'>
+        <%= image_tag 'chrome2.png', class: "chrome-img" %>
+        Download the Extension
+      </div>
+    </a>
+  </div>
+  <div class="get-started-btn-wrapper">
+    <%= link_to "/auth/facebook", id: "sign_in" do %>
+      <div class='sign-into-facebook'>
+        <i class = "fa fa-facebook-square icon facebook"></i> 
+        <p>Login with Facebook</p>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+<!-- <div class='share-with-friends-wrapper'>
+  <h1>Use <span class='basket-title'>Basket</span> to...</h1>
   <div class='image-wrapper'>
     <%= image_tag 'share_friend.gif' %>
   </div>
   <div class='description-wrapper'>
-    <p>Save links to your Baskets for later</p>
+    <p>Share links with friends</p>
+  </div>
+</div> -->
+
+<!-- <div class='save-to-basket-wrapper'>
+  <div class='image-wrapper'>
+    <%= image_tag 'share_friend.gif' %>
+  </div>
+  <div class='description-wrapper'>
+    <p>Save links to your Baskets</p>
   </div>
 </div>
 
@@ -22,21 +58,6 @@ The new about page!
     <%= image_tag 'share_friend.gif' %>
   </div>
   <div class='description-wrapper'>
-    <p>See links your friends sent from anywhere</p>
+    <p>See links sent to you</p>
   </div>
-</div>
-
-<div class='get-started-wrapper'>
-  <h4>Get Started</h4>
-  <a href="https://chrome.google.com/webstore/detail/basket/jcglidocjalkkefbmnobddombekpancl?hl=en&gl=US" target="_newtab">
-    <div class='download-the-extension'>
-      <%= image_tag 'chrome2.png', class: "chrome-img" %>
-      Download the Extension
-    </div>
-  </a>
-  <%= link_to "/auth/facebook", id: "sign_in" do %>
-    <div class='sign-into-facebook'>
-      <i class = "fa fa-facebook-square icon facebook"></i> Login with Facebook
-    </div>
-  <% end %>
-</div>
+</div> -->
